@@ -145,5 +145,4 @@ const [css, js] = await Promise.all([
 await mkdir(at('dist'), { recursive: true });
 await writeFile(at('dist/index.html'), page(index, css, js));
 await cp(at('data/index.json'), at('dist/projects.json'));
-await writeFile(at('dist/.nojekyll'), '');
 console.log(`site: dist/index.html with ${index.entries.filter((e) => e.tier === 'verified').length} verified entries`);
