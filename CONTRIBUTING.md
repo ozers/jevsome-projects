@@ -59,7 +59,7 @@ being small.
 ## What is kept out
 
 Even with proof, these are not projects built on Jev, and each rejection is
-written to `data/rejected.json` with its reason:
+written to `data/not-listed.json` under `excluded`, with its reason:
 
 - personal dotfiles and machine configs that happen to export an API key
 - documentation repositories and model catalogues that describe the model
@@ -134,6 +134,8 @@ The daily job needs two secrets:
 | --- | --- | --- |
 | `GH_PAT` | yes | GitHub code search. The token Actions provides cannot query that endpoint, so discovery falls back to repository search without it. A fine-grained PAT with public read access is enough. |
 | `TYPESAFE_API_KEY` | no | Classification by Jev. Without it the keyword rules run and the README says so. |
+
+| `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` | for deploys | Publishes `dist/` to Cloudflare Workers at jevsome.ozersubasi.com. Without them the job refreshes the data and skips the deploy. |
 
 `data/index.json` is the only generated file kept in git. The intermediate caches
 (`candidates`, `repos`, `classified`, `health`) live in the Actions cache; losing

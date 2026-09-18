@@ -50,8 +50,13 @@ export async function build() {
 
   const blocked = new Map((blocklist.repos ?? []).map((b) => [(b.repo ?? b).toLowerCase(), b.reason]));
   const entries = [];
-  const rejected = [];
-  const reject = (repo, reason) => rejected.push({ repo: repo.fullName ?? repo, reason });
+  // Two very different kinds of "not listed": search hits where no proof was
+  // found (most of them were never Jev projects; some are and will be found),
+  // and repositories with proof that still do not belong.
+  const unverified = [];
+  const excluded = [];
+  const reject = (repo, reason, kind = 'excluded') =>
+    (kind === 'unverified' ? unverified : excluded).push({ repo: repo.fullName ?? repo, reason });
 
   for (const [key, repo] of Object.entries(repos)) {
     if (repo.gone) { reject(repo, 'repository no longer reachable'); continue; }
@@ -62,7 +67,7 @@ export async function build() {
     // Gate 1 — proof. A verified line, or nothing.
     const proof = verified[key]?.proof ?? null;
     if (!(proof?.strength >= 3) && !override?.force) {
-      reject(repo, proof ? `only a ${proof.kind} mention, no verified call` : 'no verifiable line of evidence');
+      reject(repo, proof ? `only a ${proof.kind} mention (${proof.source?.path ?? 'README'}), no call in code` : 'no line of code found that calls Jev', 'unverified');
       continue;
     }
 
@@ -173,22 +178,23 @@ export async function build() {
       }, {}),
       stars: entries.reduce((sum, e) => sum + (e.stars ?? 0), 0),
       examined: Object.keys(repos).length,
-      rejected: rejected.length,
+      unverified: unverified.length,
+      excluded: excluded.length,
     },
     entries,
   };
 
   await writeFile(at('data/index.json'), JSON.stringify(index) + '\n');
-  await writeFile(at('data/rejected.json'), JSON.stringify({
+  await writeFile(at('data/not-listed.json'), JSON.stringify({
     generatedAt: index.generatedAt,
-    note: 'Candidates that were discovered but kept out, with the reason. Published so the selection can be argued with.',
-    count: rejected.length,
-    rejected: rejected.sort((a, b) => a.repo.localeCompare(b.repo)),
+    note: 'Search hits that are not on the list, and why. "unverified" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. "excluded" means proof was found but the repository is not a project built on Jev.',
+    unverified: unverified.sort((a, b) => a.repo.localeCompare(b.repo)),
+    excluded: excluded.sort((a, b) => a.repo.localeCompare(b.repo)),
   }, null, 2) + '\n');
   await writeFile(at('README.md'), renderReadme(index));
 
-  console.log(`build: ${frontPage.length} verified for the front page · ${entries.length - frontPage.length} proven candidates kept in the index · ${rejected.length} rejected`);
-  const reasons = rejected.reduce((acc, r) => { acc[r.reason] = (acc[r.reason] ?? 0) + 1; return acc; }, {});
+  console.log(`build: ${frontPage.length} verified · ${entries.length - frontPage.length} candidates · ${unverified.length} unverified · ${excluded.length} excluded`);
+  const reasons = excluded.reduce((acc, r) => { acc[r.reason] = (acc[r.reason] ?? 0) + 1; return acc; }, {});
   for (const [reason, n] of Object.entries(reasons).sort((a, b) => b[1] - a[1]).slice(0, 6)) {
     console.log(`  ${String(n).padStart(4)} ${reason}`);
   }

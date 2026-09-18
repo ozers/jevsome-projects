@@ -30,7 +30,7 @@ export function renderReadme(index) {
   out.push('');
   out.push("> Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it.");
   out.push('');
-  out.push(`**${verified.length} verified projects · ${candidates} more in the JSON · ${counts.examined.toLocaleString('en-US')} repositories examined · ${counts.rejected.toLocaleString('en-US')} rejected · refreshed ${date}**`);
+  out.push(`**${verified.length} verified projects · ${candidates} more in the JSON · ${counts.examined.toLocaleString('en-US')} search hits examined · refreshed ${date}**`);
   out.push('');
   out.push('Deliberately short. Jev is days old and the ecosystem is mostly two-day-old experiments; this list starts with what can be shown to be real and grows from there. The bar is the same for every entry, and it is written down.');
   out.push('');
@@ -46,7 +46,7 @@ export function renderReadme(index) {
   out.push('6. **Five stars.** Someone besides the author cared. A presentation floor, not a correctness one; it is one number in [`pipeline/lib/quality.mjs`](pipeline/lib/quality.mjs) and will come down as the list matures.');
   out.push('7. **Health.** Stars, licence, last commit and demo links are re-checked daily.');
   out.push('');
-  out.push(`Everything kept out is recorded with a reason in [\`data/rejected.json\`](data/rejected.json) — ${counts.rejected.toLocaleString('en-US')} candidates so far. Argue with any of it.`);
+  out.push(`Search casts a wide net — "typesafe" matches a lot of repositories that have nothing to do with Jev. Every hit that is not on the list is recorded in [\`data/not-listed.json\`](data/not-listed.json): ${counts.unverified.toLocaleString('en-US')} where no line of code calling Jev was found, ${counts.excluded} where it was found but the repository is not a project built on Jev. Argue with any of it.`);
   out.push('');
   out.push('Generated from [`data/index.json`](data/index.json); do not edit by hand. See [CONTRIBUTING.md](CONTRIBUTING.md).');
   out.push('');
@@ -81,7 +81,7 @@ export function renderReadme(index) {
 
   out.push('## License');
   out.push('');
-  out.push('The list and the pipeline are released under [CC0 1.0](LICENSE). Linked projects keep their own licences.');
+  out.push('[MIT](LICENSE) — the pipeline, the site and the data. Linked projects keep their own licences.');
   out.push('');
   out.push('Not affiliated with TypeSafe AI.');
   out.push('');

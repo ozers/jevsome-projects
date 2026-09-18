@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Static site only: no Worker script, the assets binding serves dist/.
+  "name": "jevsome",
+  "compatibility_date": "2026-09-18",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "jevsome.ozersubasi.com", "custom_domain": true }
+  ],
+  "observability": { "enabled": true }
+}

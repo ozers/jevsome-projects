@@ -65,6 +65,10 @@ function page(index, css, js) {
 <meta property="og:url" content="${SITE_URL}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✓</text></svg>">
 <style>${css}</style>
+<script>
+  // Apply a remembered theme before first paint so there is no flash.
+  try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 </head>
 <body>
 <header class="top">
@@ -75,6 +79,7 @@ function page(index, css, js) {
       <a href="projects.json">JSON</a>
       <a href="${REPO_URL}/blob/main/CONTRIBUTING.md">Submit</a>
       <a href="https://typesafe.ai">About Jev</a>
+      <button class="theme" id="theme" type="button" aria-label="Switch theme">Theme</button>
     </nav>
   </div>
 </header>
@@ -82,11 +87,11 @@ function page(index, css, js) {
 <main>
   <section class="wrap hero">
     <h1>Projects that provably run on Jev.</h1>
-    <p>Jev is TypeSafe AI's System One model: state and a typed question in, a constrained answer with a probability out. Every project here <strong>links to the line of code that makes the call</strong>. Mentions, forks and catalogues are left out — and every rejection is published with its reason.</p>
+    <p>Jev is TypeSafe AI's System One model: state and a typed question in, a constrained answer with a probability out. Every project here <strong>links to the line of code that makes the call</strong>. Mentions, forks and catalogues are left out, and what is left out is published too.</p>
     <div class="stats">
       <div class="stat"><b>${entries.length}</b><span>verified</span></div>
       <div class="stat"><b>${counts.candidates.toLocaleString('en-US')}</b><span>more in JSON</span></div>
-      <div class="stat"><b>${counts.rejected.toLocaleString('en-US')}</b><span>rejected</span></div>
+      <div class="stat"><b>${counts.examined.toLocaleString('en-US')}</b><span>search hits read</span></div>
       <div class="stat"><b>${date}</b><span>refreshed</span></div>
     </div>
   </section>
@@ -119,8 +124,8 @@ function page(index, css, js) {
 <footer>
   <div class="wrap">
     <p><strong>What "verified" means.</strong> The repository exists because of Jev — created after the model went public, or naming it in its title, description or topics. Its proof is a real line of source: a call to <code>/v1/systemone</code>, an SDK import, a pinned <code>jev-latest</code> route in code, or a declared SDK dependency. Not a README sentence, not a comment, not a mock, not a catalogue entry. And at least five people besides the author starred it.</p>
-    <p><strong>What else exists.</strong> ${counts.candidates.toLocaleString('en-US')} more repositories passed the proof check but not the rest — too new, or frameworks that added Jev as one provider among many. They are in <a href="projects.json">projects.json</a> with a <code>tier</code> field, and will surface here as the bar is lowered. ${counts.rejected.toLocaleString('en-US')} candidates were rejected outright; each one is listed with its reason in <a href="${REPO_URL}/blob/main/data/rejected.json">rejected.json</a>.</p>
-    <p>Refreshed daily from GitHub. Nothing is copied from another list. Corrections: <a href="${REPO_URL}/issues/new">open an issue</a>. CC0 · not affiliated with TypeSafe AI.</p>
+    <p><strong>What else exists.</strong> ${counts.candidates.toLocaleString('en-US')} more repositories passed the proof check but not the rest — too new, or frameworks that added Jev as one provider among many. They are in <a href="projects.json">projects.json</a> with a <code>tier</code> field and surface here as the bar comes down. The remaining ${counts.unverified.toLocaleString('en-US')} search hits are in <a href="${REPO_URL}/blob/main/data/not-listed.json">not-listed.json</a>: no line of code calling Jev was found in them, which for most means they were never Jev projects, and for some means the search has not caught up yet.</p>
+    <p>Refreshed daily from GitHub. Nothing is copied from another list. Corrections: <a href="${REPO_URL}/issues/new">open an issue</a>. MIT · not affiliated with TypeSafe AI.</p>
   </div>
 </footer>
 

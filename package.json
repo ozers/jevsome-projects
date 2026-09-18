@@ -2,9 +2,12 @@
   "name": "jevsome-projects",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Evidence-backed directory of open-source projects built on Jev, TypeSafe AI's System One model.",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "discover": "node pipeline/discover.mjs",
     "enrich": "node pipeline/enrich.mjs",
@@ -14,9 +17,14 @@
     "build": "node pipeline/build.mjs && node site/build.mjs",
     "render": "node pipeline/render.mjs && node site/build.mjs",
     "refresh": "node pipeline/run.mjs",
-    "validate": "node pipeline/validate.mjs"
+    "validate": "node pipeline/validate.mjs",
+    "deploy": "node site/build.mjs && wrangler deploy",
+    "preview": "wrangler dev"
   },
   "dependencies": {
     "yaml": "^2.6.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.135.0"
   }
 }

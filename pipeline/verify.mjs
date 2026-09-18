@@ -136,26 +136,25 @@ export async function verifyOne(repo) {
   return weaker;
 }
 
-// Discovery records at most a handful of matching files, and the strongest one
-// is not always among them: a large agent framework can surface a type
-// declaration while the real call sits two directories away. For the most
-// promising failures, ask GitHub once more, scoped to that repository.
-const SECOND_CHANCE_LIMIT = Number(process.env.SECOND_CHANCE ?? 150);
+// Discovery records at most a handful of matching files, and repositories
+// found only through repository search have none at all. For every repository
+// that presents itself as a Jev project, ask GitHub once, scoped to it, and
+// read whatever files come back. One search per repo; "typesafe" matches the
+// endpoint, the SDK imports and the API key alike.
+const SECOND_CHANCE_LIMIT = Number(process.env.SECOND_CHANCE ?? 600);
+const RETRY_AFTER_DAYS = 14;
+const ANNOUNCES = /\bjev\b|typesafe|system[- ]one/i;
+const announces = (r) => ANNOUNCES.test(r.name ?? '') || ANNOUNCES.test(r.description ?? '')
+  || (r.topics ?? []).some((t) => ANNOUNCES.test(t));
 
 async function secondChance(repo) {
-  for (const term of ['"api.typesafe.ai/v1/systemone"', '"jev-latest"']) {
-    let res;
-    try {
-      res = await searchCode(`repo:${repo.fullName} ${term}`, { perPage: 5 });
-    } catch { return null; }
-    for (const item of res?.items ?? []) {
-      const found = await verifyOne({
-        evidence: [{ source: { path: item.path, url: item.html_url } }],
-      });
-      if (found?.strength >= 3) return found;
-    }
-  }
-  return null;
+  let res;
+  try {
+    res = await searchCode(`repo:${repo.fullName} typesafe`, { perPage: 10 });
+  } catch { return null; }
+  const files = (res?.items ?? []).map((item) => ({ source: { path: item.path, url: item.html_url } }));
+  if (!files.length) return null;
+  return verifyOne({ evidence: files });
 }
 
 export async function verify() {
@@ -179,23 +178,30 @@ export async function verify() {
     }
   }
 
-  // Retry the failures that look most likely to be real, strongest first.
+  // Repositories without proof that call themselves Jev projects get a
+  // repo-scoped search, strongest signals first. Each attempt is dated so a
+  // daily run does not re-search the same silence forever.
+  const cutoff = new Date(Date.now() - RETRY_AFTER_DAYS * 86_400_000).toISOString().slice(0, 10);
   const retries = Object.entries(repos)
     .filter(([key, r]) => !r.gone && !(store[key]?.proof?.strength >= 3))
-    .filter(([, r]) => r.stars >= 5 || (r.evidence ?? []).some((e) => e.source?.path))
+    .filter(([key, r]) => announces(r) && !(store[key]?.searchedAt > cutoff))
     .sort((a, b) => b[1].stars - a[1].stars)
     .slice(0, SECOND_CHANCE_LIMIT);
 
-  if (retries.length) console.log(`verify: second-chance search for ${retries.length} repos`);
+  if (retries.length) console.log(`verify: repo-scoped search for ${retries.length} self-described Jev repos`);
   let recovered = 0;
+  let i = 0;
   for (const [key, repo] of retries) {
     const proof = await secondChance(repo);
-    if (proof) {
-      store[key] = { pushedAt: repo.pushedAt, proof };
-      recovered++;
+    const today = new Date().toISOString().slice(0, 10);
+    if (proof?.strength >= 3) recovered++;
+    store[key] = { pushedAt: repo.pushedAt, proof: proof ?? store[key]?.proof ?? null, searchedAt: today };
+    if (++i % 50 === 0) {
+      console.log(`  ${i}/${retries.length}, recovered ${recovered}`);
+      await writeFile(VERIFIED, JSON.stringify(store, null, 2) + '\n');
     }
   }
-  if (recovered) console.log(`verify: recovered ${recovered} by repo-scoped search`);
+  if (retries.length) console.log(`verify: recovered ${recovered} by repo-scoped search`);
 
   await writeFile(VERIFIED, JSON.stringify(store, null, 2) + '\n');
   const proven = Object.values(store).filter((v) => v.proof?.strength >= 3).length;

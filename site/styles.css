@@ -11,8 +11,10 @@
   --radius: 12px;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
 }
+/* Dark: follows the system unless the visitor chose otherwise, and the
+   choice wins when there is one. The same block is stated twice on purpose. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #14130f;
     --surface: #1c1b17;
     --border: #322f28;
@@ -23,6 +25,18 @@
     --green: #6cc08a;
   }
 }
+:root[data-theme="dark"] {
+  --bg: #14130f;
+  --surface: #1c1b17;
+  --border: #322f28;
+  --text: #f0ece3;
+  --muted: #9a9384;
+  --accent: #e8836a;
+  --accent-soft: #3a241e;
+  --green: #6cc08a;
+}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 72px; }
 body {
@@ -42,7 +56,9 @@ header.top { border-bottom: 1px solid var(--border); background: var(--surface);
 .top-inner { display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 16px; max-width: 1120px; margin: 0 auto; }
 .logo { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; }
 .logo span { color: var(--accent); }
-.top nav { display: flex; gap: 16px; font-size: 14px; white-space: nowrap; }
+.top nav { display: flex; gap: 16px; font-size: 14px; white-space: nowrap; align-items: center; }
+.theme { font: inherit; font-size: 13px; cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--muted); border-radius: 999px; padding: 4px 10px; line-height: 1.4; }
+.theme:hover { color: var(--text); }
 
 /* Hero */
 .hero { padding: 36px 0 20px; }

@@ -82,3 +82,23 @@ for (const chip of document.querySelectorAll('.chip')) {
   });
 }
 render();
+
+// Theme: follows the system until the visitor picks one. Auto -> Light ->
+// Dark -> Auto. The choice is per browser and never leaves it.
+const themeBtn = document.getElementById('theme');
+const LABELS = { light: '☀ Light', dark: '☾ Dark' };
+function paintThemeButton() {
+  const chosen = document.documentElement.dataset.theme;
+  themeBtn.textContent = chosen ? LABELS[chosen] : '◐ Auto';
+  themeBtn.title = chosen ? `Theme: ${chosen}. Click to change.` : 'Theme follows your system. Click to override.';
+}
+themeBtn.addEventListener('click', () => {
+  const chosen = document.documentElement.dataset.theme;
+  const next = !chosen ? 'light' : chosen === 'light' ? 'dark' : null;
+  try {
+    if (next) { localStorage.setItem('theme', next); document.documentElement.dataset.theme = next; }
+    else { localStorage.removeItem('theme'); delete document.documentElement.dataset.theme; }
+  } catch {}
+  paintThemeButton();
+});
+paintThemeButton();

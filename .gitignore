@@ -10,3 +10,5 @@ data/repos.json
 data/verified.json
 data/classified.json
 data/health.json
+.wrangler/
+.dev.vars
