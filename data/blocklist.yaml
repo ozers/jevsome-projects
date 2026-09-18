@@ -7,3 +7,7 @@ repos:
     reason: Jev-compatible reimplementation on another model. Serves the "jev-latest" name; never calls Jev.
   - repo: iammrduncan/typesafe-ai-benchmark
     reason: Describes itself as "an imposter Jev" — a gateway that mimics the API shape. Does not call Jev.
+  - repo: kshetrajna12/reflex
+    reason: Describes itself as "a Jev / System One re-creation". Its own model; does not call Jev.
+  - repo: Mapika/decider
+    reason: Fine-tuned Qwen with a "System One style" interface. Its own model; does not call Jev.

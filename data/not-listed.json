@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T15:12:49.902Z",
+  "generatedAt": "2026-09-18T15:14:11.020Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -351,6 +351,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "bnsd55/jevmlx",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "BorisLeMeec/jev",
       "reason": "no line of code found that calls Jev"
     },
@@ -465,10 +469,6 @@
     {
       "repo": "cephalization/phoenix-jev-example",
       "reason": "no line of code found that calls Jev"
-    },
-    {
-      "repo": "cequence-io/openai-scala-client",
-      "reason": "only a sdk-import mention (README.md), no call in code"
     },
     {
       "repo": "CGnomazoid/Tripwire",
@@ -1168,7 +1168,7 @@
     },
     {
       "repo": "Jiezhi/dochub",
-      "reason": "only a sdk-import mention (docs/langchain-docs/oss/python/integrations/providers/typesafe.mdx), no call in code"
+      "reason": "only a api-call mention (docs/langchain-docs/oss/python/integrations/providers/typesafe.mdx), no call in code"
     },
     {
       "repo": "Jiiiin/codex-jev-compaction",
@@ -1232,7 +1232,7 @@
     },
     {
       "repo": "JoshuaSP/open-jev",
-      "reason": "only a sdk-import mention (EVERY_LAB.md), no call in code"
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "jourdanlabs/assay-001",
@@ -1423,10 +1423,6 @@
       "reason": "no line of code found that calls Jev"
     },
     {
-      "repo": "langchain-ai/langchainjs",
-      "reason": "only a sdk-import mention (libs/providers/langchain-typesafe/README.md), no call in code"
-    },
-    {
       "repo": "latitude-dev/latitude-llm",
       "reason": "only a api-call mention (docs/deployment/configuration.mdx), no call in code"
     },
@@ -1517,6 +1513,10 @@
     {
       "repo": "luiginotmario/postgres-Jev",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "lukaske/jev-doom-agent",
+      "reason": "only a api-key mention (.env.example), no call in code"
     },
     {
       "repo": "lukedj78/dev-flow",
@@ -2507,10 +2507,6 @@
       "reason": "no line of code found that calls Jev"
     },
     {
-      "repo": "taslabs-net/homeflare-kit",
-      "reason": "only a sdk-import mention (llms.txt), no call in code"
-    },
-    {
       "repo": "tatdt622989/blog",
       "reason": "only a api-call mention (source/_posts/2026-09-17-typesafe-jev-system-one-model-guide.md), no call in code"
     },
@@ -2681,14 +2677,6 @@
     {
       "repo": "vercel-labs/ai-cli",
       "reason": "no line of code found that calls Jev"
-    },
-    {
-      "repo": "vercel/ai",
-      "reason": "only a sdk-import mention (packages/typesafe-ai/README.md), no call in code"
-    },
-    {
-      "repo": "vercel/eve",
-      "reason": "only a sdk-import mention (docs/guides/evaluate.md), no call in code"
     },
     {
       "repo": "Verhex/xerify",
@@ -2969,8 +2957,24 @@
       "reason": "personal configuration, not a project"
     },
     {
+      "repo": "DanBennettUK/hermes-jev-compaction",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
+    },
+    {
+      "repo": "daseinlabs/open-jev",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
+    },
+    {
       "repo": "dmnkgrc/dotfiles",
       "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "ekzhang/openjev-sglang",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
+    },
+    {
+      "repo": "Heman10x-NGU/Verdict-open-jev",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
     },
     {
       "repo": "iammrduncan/typesafe-ai-benchmark",
@@ -2981,8 +2985,20 @@
       "reason": "personal configuration, not a project"
     },
     {
+      "repo": "kshetrajna12/reflex",
+      "reason": "blocklisted: Describes itself as \"a Jev / System One re-creation\". Its own model; does not call Jev."
+    },
+    {
+      "repo": "kw2828/OpenJev",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
+    },
+    {
       "repo": "manifoldfrs/dotfiles",
       "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "Mapika/decider",
+      "reason": "blocklisted: Fine-tuned Qwen with a \"System One style\" interface. Its own model; does not call Jev."
     },
     {
       "repo": "mikaelweiss/dotfiles",

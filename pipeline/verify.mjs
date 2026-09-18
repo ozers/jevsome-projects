@@ -18,7 +18,7 @@ const LINE_RULES = [
   { kind: 'api-call', strength: 3, re: /https?:\/\/api\.typesafe\.ai|["'`\/]v1\/systemone/i,
     label: 'calls the System One endpoint' },
   { kind: 'sdk-import', strength: 3,
-    re: /^\s*(?:from\s+typesafe|import\s+.*\btypesafe\b|const\s+.*=\s*require\(['"][^'"]*typesafe|use\s+typesafe|using\s+TypeSafe|import\s+['"]@typesafe-ai\/)/i,
+    re: /^\s*(?:from\s+typesafe(?:_sdk|_ai|\.\w+)?\s+import\b|import\s+(?:typesafe(?:_sdk|_ai)?\b|.*\bfrom\s+['"][^'"]*typesafe)|const\s+.*=\s*require\(['"][^'"]*typesafe|use\s+typesafe(?:_\w+)?::|using\s+TypeSafe\.|import\s+['"]@typesafe-ai\/)/i,
     label: 'imports a TypeSafe SDK' },
   { kind: 'sdk-call', strength: 3, re: /\.?system_?one\s*\(|systemOne\s*\(|typesafe\.\w+\s*\(/i,
     label: 'invokes the System One client' },

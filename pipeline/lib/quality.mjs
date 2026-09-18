@@ -9,6 +9,9 @@ const CONFIG_TOPICS = new Set(['dotfiles', 'dotfile', 'nixos-config', 'home-mana
 const PERSONAL_NOTES = /^(notes?|scratch|tmp|test|testing|playground-?\d*|untitled|new-?repo)$/i;
 
 const DOCS_REPO = /(^|[-_])(docs?|documentation|handbook|awesome)$/i;
+// Models that copy Jev's interface without calling Jev. They say so in the
+// first line of their own description.
+const REIMPLEMENTATION = /\b(re-?implementation|re-?creation|reimplements|recreates)\b|\bjev-?(style|like)\b|\bopen[- ]?jev\b/i;
 const CATALOGUE = /database of (ai )?models|model (catalog|catalogue|directory)|list of (ai )?models|documentation (site|for)/i;
 
 // A data file describing the model is not a call to it. Model catalogues,
@@ -44,6 +47,9 @@ export function disqualify(repo) {
   }
   if (CATALOGUE.test(repo.description ?? '')) {
     return 'catalogue of models, not a project built on Jev';
+  }
+  if (REIMPLEMENTATION.test(`${repo.name} ${repo.description ?? ''}`)) {
+    return 'reimplementation of the Jev interface on another model; does not call Jev';
   }
   return null;
 }
