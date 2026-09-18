@@ -1,0 +1,9 @@
+# Entries that are not GitHub repositories: hosted demos, playgrounds and
+# services. They are not auto-discovered, so each one is added by hand and must
+# still state what proves it runs on Jev.
+entries: []
+#  - name: Example demo
+#    url: https://example.com
+#    category: demo
+#    description: What it does, in our own words.
+#    evidence: "Its about page states it calls jev-latest for every move."

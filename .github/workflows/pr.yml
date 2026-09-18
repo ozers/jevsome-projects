@@ -1,0 +1,25 @@
+name: Validate
+
+on:
+  pull_request:
+    paths:
+      - 'data/*.yaml'
+      - 'pipeline/**'
+      - 'site/**'
+      - 'package.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run validate
+      - name: Rebuild README and site from the committed index
+        run: node pipeline/render.mjs && node site/build.mjs
+      - name: Fail if README is out of date
+        run: git diff --exit-code README.md

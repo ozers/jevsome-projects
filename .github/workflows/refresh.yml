@@ -1,0 +1,86 @@
+name: Refresh index
+
+on:
+  schedule:
+    - cron: '17 4 * * *'   # daily, 04:17 UTC
+  workflow_dispatch:
+    inputs:
+      stages:
+        description: 'Stages to run (space separated: discover enrich classify health build)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Restore pipeline caches
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/candidates.json
+            data/repos.json
+            data/classified.json
+            data/health.json
+          key: pipeline-cache-${{ github.run_id }}
+          restore-keys: pipeline-cache-
+
+      - name: Run pipeline
+        env:
+          # Code search needs a classic/fine-grained PAT; the default token
+          # cannot query it. Without GH_PAT the discovery stage degrades to
+          # repository search only.
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: with no key, classification falls back to keyword rules.
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+        run: node pipeline/run.mjs ${{ inputs.stages }}
+
+      - name: Build site
+        run: node site/build.mjs
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  'jevsome-bot'
+          git config user.email 'noreply@github.com'
+          git add data/index.json data/*.yaml README.md
+          if git diff --cached --quiet; then
+            echo 'no changes'
+          else
+            git commit -m "chore(data): daily refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

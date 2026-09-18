@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+.env
+
+# Pipeline caches: rebuilt by the refresh job, restored from Actions cache.
+# Only data/index.json (the published artefact) is committed.
+data/candidates.json
+data/repos.json
+data/classified.json
+data/health.json

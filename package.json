@@ -1,0 +1,21 @@
+{
+  "name": "jevsome-projects",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-backed directory of open-source projects built on Jev, TypeSafe AI's System One model.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "discover": "node pipeline/discover.mjs",
+    "enrich": "node pipeline/enrich.mjs",
+    "evidence": "node pipeline/evidence.mjs",
+    "classify": "node pipeline/classify.mjs",
+    "health": "node pipeline/health.mjs",
+    "build": "node pipeline/build.mjs && node site/build.mjs",
+    "refresh": "node pipeline/run.mjs",
+    "validate": "node pipeline/validate.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.6.1"
+  }
+}

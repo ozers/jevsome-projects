@@ -1,0 +1,8 @@
+# Human corrections, keyed by lowercased "owner/repo".
+# Use sparingly: an override that keeps being needed is a bug in the pipeline.
+#
+# ozers/example-repo:
+#   category: agent-tooling      # beats the classifier
+#   name: Example                # nicer display name
+#   description: One line, our own words.
+#   force: true                  # include despite weak evidence (explain why here)

@@ -1,0 +1,5 @@
+# Repositories deliberately kept out of the index.
+# Every exclusion needs a reason; the pipeline never drops a repo silently.
+repos:
+  - repo: ozers/jevsome-projects
+    reason: This directory itself.
