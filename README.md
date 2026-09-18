@@ -2,7 +2,7 @@
 
 > Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it. Browse: [jevsome.ozersubasi.com](https://jevsome.ozersubasi.com)
 
-**49 verified projects · 602 more in the JSON · 1,512 search hits examined · refreshed 2026-09-18**
+**62 verified projects · 702 more in the JSON · 1,512 search hits examined · refreshed 2026-09-18**
 
 Deliberately short. Jev is days old and the ecosystem is mostly two-day-old experiments; this list starts with what can be shown to be real and grows from there. The bar is the same for every entry, and it is written down.
 
@@ -16,7 +16,7 @@ Deliberately short. Jev is days old and the ecosystem is mostly two-day-old expe
 6. **Five stars.** Someone besides the author cared. A presentation floor, not a correctness one; it is one number in [`pipeline/lib/quality.mjs`](pipeline/lib/quality.mjs) and will come down as the list matures.
 7. **Health.** Stars, licence, last commit and demo links are re-checked daily.
 
-Search casts a wide net — "typesafe" matches a lot of repositories that have nothing to do with Jev. Every hit that is not on the list is recorded in [`data/not-listed.json`](data/not-listed.json): 848 where no line of code calling Jev was found, 13 where it was found but the repository is not a project built on Jev. Argue with any of it.
+Search casts a wide net — "typesafe" matches a lot of repositories that have nothing to do with Jev. Every hit that is not on the list is recorded in [`data/not-listed.json`](data/not-listed.json): 735 where no line of code calling Jev was found, 13 where it was found but the repository is not a project built on Jev. Argue with any of it.
 
 Generated from [`data/index.json`](data/index.json); do not edit by hand. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -26,12 +26,12 @@ Generated from [`data/index.json`](data/index.json); do not edit by hand. See [C
 
 - [SDKs & clients](#sdks-clients) (4)
 - [Integrations](#integrations) (1)
-- [Agent tooling](#agent-tooling) (21)
-- [Browser & computer use](#browser-computer-use) (5)
-- [Applications](#applications) (9)
-- [Games & simulation](#games-simulation) (4)
+- [Agent tooling](#agent-tooling) (24)
+- [Browser & computer use](#browser-computer-use) (6)
+- [Applications](#applications) (16)
+- [Games & simulation](#games-simulation) (5)
 - [Demos & playgrounds](#demos-playgrounds) (3)
-- [Benchmarks & research](#benchmarks-research) (2)
+- [Benchmarks & research](#benchmarks-research) (3)
 
 ## SDKs & clients
 
@@ -41,12 +41,12 @@ Generated from [`data/index.json`](data/index.json); do not edit by hand. See [C
 
 | Project | What it does | Language | License | Stars | Proof | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| [typesafe-sdk-js](https://github.com/typesafe-ai/typesafe-sdk-js) | The official TypeScript/JavaScript library for the TypeSafe API | TypeScript | MIT | 101 | [README.md:16](https://github.com/typesafe-ai/typesafe-sdk-js/blob/66880ccded6cb642dc1809620c2b108c33730214/README.md#L16) | 🟢 |
+| [typesafe-sdk-js](https://github.com/typesafe-ai/typesafe-sdk-js) | The official TypeScript/JavaScript library for the TypeSafe API | TypeScript | MIT | 101 | [src/client.ts:41](https://github.com/typesafe-ai/typesafe-sdk-js/blob/66880ccded6cb642dc1809620c2b108c33730214/src/client.ts#L41) | 🟢 |
 | [system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) | Drop-in TypeSafeClient replacement backed by LLM APIs | Python | MIT | 98 | [tests/cassettes/test_client_with_live_apis/test_live_typesafe_response_matches_reference_shape.json:7](https://github.com/typesafe-ai/system-one-adapter-python/blob/adffc2eab300a4fa3c0e92252d4ffd6ceaa53700/tests/cassettes/test_client_with_live_apis/test_live_typesafe_response_matches_reference_shape.json#L7) | 🟢 |
 | [typesafe-sdk-python](https://github.com/typesafe-ai/typesafe-sdk-python) | The official Python library for the TypeSafe API | Python | MIT | 70 | [tests/test_retry.py:14](https://github.com/typesafe-ai/typesafe-sdk-python/blob/2ce5c65f13646cab6e6f782328194c9d85f3300a/tests/test_retry.py#L14) | 🟢 |
 | [typesafeai-dotnet-sdk](https://github.com/saibimajdi/typesafeai-dotnet-sdk) | Community .NET SDK for the TypeSafe AI System One API — typed noul, choice, and score questions with structured, confidence-scored answers. Not affiliated with TypeSafe AI. | C# | MIT | 5 | [tests/TypeSafe.Sdk.Tests/ClientBehaviorTests.cs:28](https://github.com/saibimajdi/typesafeai-dotnet-sdk/blob/1acb4a7c1d469520e9235d5fc15146c5ff87abf9/tests/TypeSafe.Sdk.Tests/ClientBehaviorTests.cs#L28) | 🟢 |
 
-_17 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
+_24 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
 ## Integrations
 
@@ -58,7 +58,7 @@ _17 more in this section passed the proof check but not the rest of the bar — 
 | --- | --- | --- | --- | --- | --- | --- |
 | [dspy-typesafeify](https://github.com/typesafeainate/dspy-typesafeify) | Add a decorator for dspy Signatures that automatically uses TypeSafe where relevant | Python | MIT | 58 | [pyproject.toml:49](https://github.com/typesafeainate/dspy-typesafeify/blob/main/pyproject.toml#L49) | 🟢 |
 
-_7 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
+_11 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
 ## Agent tooling
 
@@ -71,12 +71,15 @@ _7 more in this section passed the proof check but not the rest of the bar — i
 | [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) | Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbatim. | TypeScript | MIT | 2,191 | [src/request.ts:3](https://github.com/tamaratran/fast-jev-compaction/blob/e3f262a7f4d42bd8dd32ced30d26176f7cb545b0/src/request.ts#L3) | 🟢 |
 | [foreman](https://github.com/thruwire/foreman) | Software Factory Foreman based on TypeSafe Jev model | Python | MIT | 254 | [src/foreman/foreman/jev.py:91](https://github.com/thruwire/foreman/blob/2c439828b9fe45ee5d40f6f57be81f7ff1f8a140/src/foreman/foreman/jev.py#L91) | 🟢 |
 | [jev-review](https://github.com/devagrawal09/jev-review) | A staged code-review workflow and local dashboard built with TypeSafe Jev. | TypeScript | MIT | 217 | [src/review/judgments.ts:2](https://github.com/devagrawal09/jev-review/blob/31f89602797fb7bea007f8a480bf368bf564954e/src/review/judgments.ts#L2) | 🟢 |
+| [skillbox](https://github.com/kitze/skillbox) | Self-hosted, versioned skills library for AI agents. MCP, scoped clients, and optional Jev recommendations. | TypeScript | MIT | 135 | [src/server/recommendations.ts:129](https://github.com/kitze/skillbox/blob/d83ba4ecd254c8dfa6a759d1feb5141384e26a9e/src/server/recommendations.ts#L129) | 🟢 |
 | [jev-router](https://github.com/gargpratyush/jev-router) | Route to the cheapest model in claude code for your task using jev-router | JavaScript | MIT | 109 | [src/router.mjs:1](https://github.com/gargpratyush/jev-router/blob/86660a0248eba0e4523f81645ac2925e9808c000/src/router.mjs#L1) | 🟢 |
 | [jev-review](https://github.com/NiazMorshed2007/jev-review) | Local-first MCP plugin for continuous software-quality review by AI coding agents, powered by Jev. | TypeScript | MIT | 98 | [src/jev/client.ts:4](https://github.com/NiazMorshed2007/jev-review/blob/57690af54ef7d862c2483342c1e61c14dffcf727/src/jev/client.ts#L4) | 🟢 |
 | [jev-mcp](https://github.com/jkudish/jev-mcp) | Proof of concept MCP for Typesafe's new Jev AI model | TypeScript | MIT | 59 | [src/provider.ts:7](https://github.com/jkudish/jev-mcp/blob/619abb58061934470bafb60217bead6db7f91d33/src/provider.ts#L7) | 🟢 |
+| [jev-drone](https://github.com/RomanSlack/jev-drone) | Camera-only autonomous drone in MuJoCo with a small judgment model (TypeSafe Jev) in the loop at 2.5Hz | Python | MIT | 56 | [tactics.py:12](https://github.com/RomanSlack/jev-drone/blob/cbeb53ce4f17a06ea490ae43effcdad231143610/tactics.py#L12) | 🟢 |
 | [pi-warden](https://github.com/DevMortimer/pi-warden) | Guardrails for Pi built on pi-typesafe that steer the agent instead of interrupting you: Jev judges irreversible and off-task tool calls, detects stuck loops, checks unverified done claims, flags slop | TypeScript | MIT | 56 | [tests/extension.test.ts:113](https://github.com/DevMortimer/pi-warden/blob/c523080c5729a07c2564a1bcee9ebc769af5fdb0/tests/extension.test.ts#L113) | 🟢 |
 | [typesafe-mcp](https://github.com/itsmostafa/typesafe-mcp) | mcp connector to give your AI agent direct access to typesafe ai's jev model | Go | MIT | 51 | [cmd/evaluate/main.go:107](https://github.com/itsmostafa/typesafe-mcp/blob/2137d0268badd5622243424fa7993a12f3330691/cmd/evaluate/main.go#L107) | 🟢 |
 | [pi-jev](https://github.com/y0usaf/pi-jev) | TypeSafe Jev as a decision layer for the Pi coding agent: a measured tool-call gate plus jev_ask for typed, calibrated answers | TypeScript | MIT | 37 | [src/client.ts:13](https://github.com/y0usaf/pi-jev/blob/b3478fd4ca1ac8ffcb703f6dc8d6069b555f531e/src/client.ts#L13) | 🟢 |
+| [ask-jev-skill](https://github.com/shantanugoel/ask-jev-skill) | Skill for Hermes, and other agents, to ask typesafe's jev | Python | MIT | 24 | [scripts/askjev.py:15](https://github.com/shantanugoel/ask-jev-skill/blob/72313d3c88f8dbff40a11ffe69656ff9843ea78e/scripts/askjev.py#L15) | 🟢 |
 | [supercov](https://github.com/supercorp-ai/supercov) | Code quality and coverage for coding agents | Rust | MIT | 21 | [crates/supercov-cli/src/quality.rs:29](https://github.com/supercorp-ai/supercov/blob/50572733085a23002ef88961bc27bbf2e66e5163/crates/supercov-cli/src/quality.rs#L29) | 🟢 |
 | [save-token-jev-clean](https://github.com/IAmUnbounded/save-token-jev-clean) | Portable, Jev-guided context compaction for coding agents. | TypeScript | MIT | 20 | [src/client.ts:5](https://github.com/IAmUnbounded/save-token-jev-clean/blob/a7007354a8d3747f06ff82130561edb2822a17df/src/client.ts#L5) | 🟢 |
 | [agent-router](https://github.com/nidhi-singh02/agent-router) | CLI that picks Cursor, Claude Code, Codex, or OpenCode + model/effort for a task, then launches it. Powered by Jev and Herdr | TypeScript | MIT | 17 | [packages/router/src/semantic/task-classifier.ts:1](https://github.com/nidhi-singh02/agent-router/blob/e1cc3c1bf11b52f845422ef38f9fa190f9fc16fb/packages/router/src/semantic/task-classifier.ts#L1) | 🟢 |
@@ -90,7 +93,7 @@ _7 more in this section passed the proof check but not the rest of the bar — i
 | [JevLint](https://github.com/huntedman/JevLint) | Configurable semantic linting powered by Jev, with file-level NOUL judgments and a magic-strings plugin. | TypeScript | MIT | 5 | [src/jev-client.ts:52](https://github.com/huntedman/JevLint/blob/96b9d693c6e7e9355b802d87f12354a2cbf405f9/src/jev-client.ts#L52) | 🟢 |
 | [perch](https://github.com/lakeday-org/perch) | AST powered semantic code linting with Jev | JavaScript | MIT | 5 | [test/systemone.test.js:10](https://github.com/lakeday-org/perch/blob/3289b85d233d35aba4996bc56a2cf8394e146005/test/systemone.test.js#L10) | 🟢 |
 
-_124 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
+_166 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
 ## Browser & computer use
 
@@ -105,8 +108,9 @@ _124 more in this section passed the proof check but not the rest of the bar —
 | [mobile-jev](https://github.com/droidrun/mobile-jev) | ▶ Watch the demo — Jev opens Uber, enters a route from San Francisco Airport to the Golden Gate Bridge, and reaches payment selection. The recorded task timer shows about 21 seconds for 9 actions. A completed booking is not demonstrated. | JavaScript | MIT | 71 | [scripts/mobile-agent/policy.mjs:157](https://github.com/droidrun/mobile-jev/blob/395fc222beac4f059f9a0beb337d114a2b066e99/scripts/mobile-agent/policy.mjs#L157) | 🟢 |
 | [jev-browser](https://github.com/jkudish/jev-browser) | Browser use using Typesafe's Jev model | TypeScript | MIT | 45 | [src/questions.ts:4](https://github.com/jkudish/jev-browser/blob/257edfc19dfe5194c153ba94f351425630a46aeb/src/questions.ts#L4) | 🟢 |
 | [jev-browser-use](https://github.com/wy-coliney/jev-browser-use) | 5–10x faster browser operations: Jev clicks, Codex thinks and verifies. Built at EZCollegeApp. | JavaScript | MIT | 17 | [skills/jev-browser-use/bridge.mjs:11](https://github.com/wy-coliney/jev-browser-use/blob/f2795fc278859ad0ff20b77626236050f82e9a22/skills/jev-browser-use/bridge.mjs#L11) | 🟢 |
+| [jev-voice-browser](https://github.com/moritzkremb/jev-voice-browser) | Control a real browser by voice. Jev (TypeSafe System One) decides intent + target in ~300 ms per spoken word; Playwright acts — often before you finish the sentence. | JavaScript | MIT | 7 | [src/jev.js:7](https://github.com/moritzkremb/jev-voice-browser/blob/054db0f3dbf537af63a8117632d3f941ccd520e1/src/jev.js#L7) | 🟢 |
 
-_22 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
+_27 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
 ## Applications
 
@@ -118,15 +122,22 @@ _22 more in this section passed the proof check but not the rest of the bar — 
 | --- | --- | --- | --- | --- | --- | --- |
 | [jev-trader](https://github.com/jarrodwatts/jev-trader) | One AI trade decision every Monad block. Jev on Kuru MON-USDC. | TypeScript | MIT | 707 | [src/config.ts:32](https://github.com/jarrodwatts/jev-trader/blob/b587759e459ea049590102e54a0b07800864cdc3/src/config.ts#L32) | 🟢 |
 | [unclutter](https://github.com/kitze/unclutter) | WXT browser extension: Jev-powered page clutter removal with reusable template rules. | TypeScript | MIT | 62 | [lib/jev.ts:6](https://github.com/kitze/unclutter/blob/9ef9beccc1e57b4e3115ae68644b8fc9c19c29f6/lib/jev.ts#L6) | 🟢 |
+| [advocaat](https://github.com/pithings/advocaat) | A small, type-safe client for asking AI questions about your data, powered by TypeSafe Jev. | TypeScript | MIT | 61 | [src/api.ts:219](https://github.com/pithings/advocaat/blob/75e35bec47ffbd2af0e002414d3a5ad748246197/src/api.ts#L219) | 🟢 |
+| [reflex](https://github.com/kshetrajna12/reflex) | A small open decision model: state + typed questions -> calibrated probabilities. A Jev / System One re-creation on Qwen3.5. | Python | MIT | 46 | [src/reflex/client.py:14](https://github.com/kshetrajna12/reflex/blob/84a5b0de0b5ff3ddd122aab6b1cbe3090fbc3475/src/reflex/client.py#L14) | 🟢 |
 | [typesafe-adblock](https://github.com/realZachi/typesafe-adblock) | 🧹 Fun project: a Chrome extension that asks a tiny AI decision model (TypeSafe Jev) "is this DOM element an ad?" and pops it off the page. BYOK, no backend, not a real ad blocker. | JavaScript | MIT | 40 | [src/typesafe.js:5](https://github.com/realZachi/typesafe-adblock/blob/7e067d243d87b7fe4d511653c0ddcd77b9beee18/src/typesafe.js#L5) | 🟢 |
 | [youtube-sponsor-detection](https://github.com/trungdq88/youtube-sponsor-detection) | Detect youtube sponsor segment with live audio and transcript powered by Jev | JavaScript | — | 28 | [test/extension-background.test.js:32](https://github.com/trungdq88/youtube-sponsor-detection/blob/de01f0568d043035889a296a61ce21e0accc8b16/test/extension-background.test.js#L32) | 🟢 |
+| [open-jev](https://github.com/daseinlabs/open-jev) | Disclaimer: This project was inspired by vinnylarouge/jevlike. It is an independent reimplementation and is not affiliated with or endorsed by the original author. | Python | — | 25 | [openjev/server.py:49](https://github.com/daseinlabs/open-jev/blob/861d1783f735929f4659dc73dc3f66cee4d2aa75/openjev/server.py#L49) | 🟢 |
 | [Jev-Moderation-Bot](https://github.com/brainstormity/Jev-Moderation-Bot) | A Discord moderation bot built with Python and TypeSafe AI (Jev System One). It filters spam and scam links in real time, escalates offenses automatically, and lets moderators profile members based on their message history. | Python | — | 21 | [profiler.py:16](https://github.com/brainstormity/Jev-Moderation-Bot/blob/1629ac80bea758883ee7541ffc654c83acfae4b6/profiler.py#L16) | 🟢 |
+| [commit-miner](https://github.com/devanshbatham/commit-miner) | Classify Git commit diffs and messages with Jev. Bug fixes, security fixes/CWEs, and change types. | Rust | — | 20 | [src/cost.rs:17](https://github.com/devanshbatham/commit-miner/blob/977617ebce07c56b965253a68577b1d92b93fdf1/src/cost.rs#L17) | 🟢 |
+| [jevmlx](https://github.com/bnsd55/jevmlx) | Jev-style parallel constrained decisions for any MLX model on Apple Silicon. Typed, schema-valid JSON in one forward pass. | Python | MIT | 18 | [benchmarks/leaderboard.py:21](https://github.com/bnsd55/jevmlx/blob/a26a114798147f1cd9260f7da222ca4f447e9d14/benchmarks/leaderboard.py#L21) | 🟢 |
+| [typesafe-snake](https://github.com/sorrycc/typesafe-snake) | Snake auto-played by TypeSafe's Jev model: one System One choice per tick, legal moves and facts generated in code | TypeScript | — | 17 | [server/index.ts:2](https://github.com/sorrycc/typesafe-snake/blob/8bf3f7c261ad35ece3345a02d21ba638ddfaf87f/server/index.ts#L2) | 🟢 |
 | [jev-shell-history](https://github.com/mrnugget/jev-shell-history) | Fish-style zsh history autosuggestions ranked by Jev (TypeSafe) | TypeScript | — | 15 | [src/suggest.ts:1](https://github.com/mrnugget/jev-shell-history/blob/4b2b75d26c0ccf5726263904514a22a8e11659ea/src/suggest.ts#L1) | 🟢 |
 | [blink](https://github.com/ellipsis-dev/blink) | Codebase search powered by Jev from @typesafe-ai | TypeScript | — | 14 | [src/search.ts:3](https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/src/search.ts#L3) | 🟢 |
 | [killmyidea](https://github.com/monteduro/killmyidea) | Describe your startup idea. Jev decides: kill it, fix it or ship it. | TypeScript | — | 12 | [src/lib/typesafe.ts:3](https://github.com/monteduro/killmyidea/blob/bc853421f2eb6f17da435621896dd6cd881a051c/src/lib/typesafe.ts#L3) | 🟢 |
 | [Jev-Trades](https://github.com/zadescoxp/Jev-Trades) | Trading bot with the all new TypeSafe AI's first system one model named as Jev | Python | Apache-2.0 | 7 | [pipeline/paper_trader.py:30](https://github.com/zadescoxp/Jev-Trades/blob/01fb18e4484d626f03345eaff2b93b641677b786/pipeline/paper_trader.py#L30) | 🟢 |
+| [typesafe-ai](https://github.com/Twister915/typesafe-ai) | Typed TypeSafe AI clients for Rust, with async and blocking backends and observable retries. | Rust | Apache-2.0 | 7 | [src/config.rs:38](https://github.com/Twister915/typesafe-ai/blob/d4455efb1d061ae6aac47b40c42ef390182201b1/src/config.rs#L38) | 🟢 |
 
-_109 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
+_132 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
 ## Games & simulation
 
@@ -136,12 +147,13 @@ _109 more in this section passed the proof check but not the rest of the bar —
 
 | Project | What it does | Language | License | Stars | Proof | Status |
 | --- | --- | --- | --- | --- | --- | --- |
+| [typesafe-mario](https://github.com/fhshaik/typesafe-mario) | A TypeSafe/Jev agent that plays Super Mario Bros. from structured emulator state. | Python | — | 252 | [src/typesafe_mario/policy.py:29](https://github.com/fhshaik/typesafe-mario/blob/ca22449ed187118d19326d1f54b01b6636578aa4/src/typesafe_mario/policy.py#L29) | 🟢 |
 | [jevpilot](https://github.com/standardagents/jevpilot) | A playable Three.js driving simulator with Jev-powered autopilot | JavaScript | — | 47 | [server/jev.js:78](https://github.com/standardagents/jevpilot/blob/e1beeb13b9a928fb76f167f86af584f4ce9cf180/server/jev.js#L78) | 🟢 |
 | [tsai-sc](https://github.com/phyous/tsai-sc) | TypeSafe Jev controls original StarCraft shareware through keyboard and mouse with recorded action probabilities. | Python | MIT | 11 | [tsai_sc/typesafe.py:24](https://github.com/phyous/tsai-sc/blob/6046ecc60156c4a3c04d384b41821a4ff08501b7/tsai_sc/typesafe.py#L24) | 🟢 |
 | [mario-jev](https://github.com/shantanugoel/mario-jev) | A uv-managed Python prototype that plays NES Super Mario Bros. (level 1-1 by default). Jev receives structured RAM observations and answers focused questions about movement, starting a jump, and sustaining a jump, plus timing hops under low | Python | — | 10 | [tests/test_policy.py:5](https://github.com/shantanugoel/mario-jev/blob/14f0c289e48cd99e3b5b91353d0456fb1f32d499/tests/test_policy.py#L5) | 🟢 |
 | [OneVOneJev](https://github.com/emrickgarrett/OneVOneJev) | 1v1 Jev quickscope arena — Three.js + TypeSafe System One | TypeScript | — | 5 | [server/src/jev.ts:7](https://github.com/emrickgarrett/OneVOneJev/blob/365b339d04446836352687b3650762106ea37f17/server/src/jev.ts#L7) | 🟢 |
 
-_19 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
+_20 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
 ## Demos & playgrounds
 
@@ -155,7 +167,7 @@ _19 more in this section passed the proof check but not the rest of the bar — 
 | [neo4jev](https://github.com/jexp/neo4jev) | Typesafe.ai System One Model Jev navigating a Neo4j graph by using a classifier over neighbouring relationships | Jupyter Notebook | MIT | 12 | [pyproject.toml:12](https://github.com/jexp/neo4jev/blob/main/pyproject.toml#L12) | 🟢 |
 | [typesafe-ai-playground](https://github.com/BunsDev/typesafe-ai-playground) | Community TypeSafe AI playground: 110 use cases, games, dilemmas and model challenges, with editable prompts, A/B comparisons and a mobile-friendly UI. | TypeScript | MIT | 6 | [lib/serverJev.ts:35](https://github.com/BunsDev/typesafe-ai-playground/blob/4413426c4283865329a310baccb769d53be2801f/lib/serverJev.ts#L35) | 🟢 |
 
-_29 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
+_34 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
 ## Benchmarks & research
 
@@ -166,9 +178,10 @@ _29 more in this section passed the proof check but not the rest of the bar — 
 | Project | What it does | Language | License | Stars | Proof | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 | [jev-eval-agent](https://github.com/vinilana/jev-eval-agent) | A personal-assistant agent built with eve (Vercel), with 100 mocked tools, served through OpenRouter. The repository exists to answer one question: how many steps does the agent need to finish the same task when the LLM picks the tool itsel | HTML | — | 76 | [agent/lib/jev-router.ts:1](https://github.com/vinilana/jev-eval-agent/blob/037de1120c84b4b63cdf748e2acf258ff66d7731/agent/lib/jev-router.ts#L1) | 🟢 |
+| [decider](https://github.com/Mapika/decider) | One-pass typed decisions with calibrated probabilities (System One style model), fine-tuned from Qwen3.5-2B | Python | — | 9 | [examples/routing_with_confidence.py:21](https://github.com/Mapika/decider/blob/1c15a48f199adc0eb1952b17441516b5358d79a0/examples/routing_with_confidence.py#L21) | 🟢 |
 | [jev-benchmarks](https://github.com/AbdelStark/jev-benchmarks) | Probability-aware evaluation for typed decision models: calibration, selective risk, latency, and reproducible benchmarks. | Python | Apache-2.0 | 6 | [tests/test_adapters.py:47](https://github.com/AbdelStark/jev-benchmarks/blob/0d610cc53e79bcbec691312b0c4adb4a0e371642/tests/test_adapters.py#L47) | 🟢 |
 
-_31 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
+_41 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
 ## License
 
