@@ -8,10 +8,11 @@
   "scripts": {
     "discover": "node pipeline/discover.mjs",
     "enrich": "node pipeline/enrich.mjs",
-    "evidence": "node pipeline/evidence.mjs",
+    "verify": "node pipeline/verify.mjs",
     "classify": "node pipeline/classify.mjs",
     "health": "node pipeline/health.mjs",
     "build": "node pipeline/build.mjs && node site/build.mjs",
+    "render": "node pipeline/render.mjs && node site/build.mjs",
     "refresh": "node pipeline/run.mjs",
     "validate": "node pipeline/validate.mjs"
   },

@@ -6,13 +6,16 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { ask, hasKey } from './lib/jev.mjs';
-import { CATEGORIES } from './lib/taxonomy.mjs';
+import { CHOICE_CRITERIA } from './lib/taxonomy.mjs';
 
 const REPOS = new URL('../data/repos.json', import.meta.url);
 const CLASSIFIED = new URL('../data/classified.json', import.meta.url);
 
 const RULES = [
-  [/awesome|directory|curated list|catalogue/i, 'list'],
+  // A gateway that speaks to a hundred models is not a Jev SDK; Jev is one
+  // provider among many. Checked first, because such repos also say "SDK".
+  [/gateway|proxy for|multi-?provider|unified (api|interface) (for|to) .*(llm|model)|100\+ (llm|model)|any (llm|model) provider/i, 'integration'],
+  [/^awesome[- ]|awesome list|curated list|directory of|catalogue of/i, 'list'],
   [/benchmark|eval\b|evals|calibration|reproduc|comparison|study|dataset/i, 'research'],
   [/\bsdk\b|client library|api client|bindings|wrapper for/i, 'sdk'],
   [/mcp|guardrail|agent|tool.?call|router|gate|code review|cli for/i, 'agent-tooling'],
@@ -57,7 +60,7 @@ const QUESTIONS = {
   category: {
     type: 'choice',
     instructions: 'Which single category best describes this GitHub repository?',
-    criteria: CATEGORIES,
+    criteria: CHOICE_CRITERIA,
   },
   is_project: {
     type: 'noul',

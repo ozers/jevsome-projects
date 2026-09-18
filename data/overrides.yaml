@@ -1,8 +1,67 @@
 # Human corrections, keyed by lowercased "owner/repo".
 # Use sparingly: an override that keeps being needed is a bug in the pipeline.
 #
-# ozers/example-repo:
-#   category: agent-tooling      # beats the classifier
-#   name: Example                # nicer display name
-#   description: One line, our own words.
-#   force: true                  # include despite weak evidence (explain why here)
+# Keys: category, name, description, focus (built-on|supports), tier
+# (verified|candidate), shelf (listed|new), force (include despite a weak proof
+# — say why in a comment).
+
+# --- Official repositories. The SDK's own README is its proof; a recorded
+# --- cassette of a live API call is a real call.
+typesafe-ai/typesafe-sdk-js:
+  force: true
+  tier: verified
+  category: sdk
+typesafe-ai/system-one-adapter-python:
+  force: true
+  tier: verified
+  category: sdk
+
+# --- Frameworks that predate Jev and grew a provider: integrations, whatever
+# --- they call themselves.
+vercel/ai:
+  category: integration
+effect-ts/effect:
+  category: integration
+lancedb/lancedb:
+  category: integration
+0xplaygrounds/rig:
+  category: integration
+vercel/eve:
+  category: integration
+ax-llm/ax:
+  category: integration
+elizaos/eliza:
+  category: integration
+
+# --- Category corrections on the verified set, checked by hand against the
+# --- section definitions in pipeline/lib/taxonomy.mjs.
+browser-use/jev-ultrafast:
+  category: browser-computer-use
+awlevin/typesafe-computer-use:
+  category: browser-computer-use
+droidrun/mobile-jev:
+  category: browser-computer-use
+fhshaik/typesafe-mario:
+  category: game-sim
+devagrawal09/jev-review:
+  category: agent-tooling
+devmortimer/pi-typesafe:
+  category: agent-tooling
+huntedman/jevlint:
+  category: agent-tooling
+lakeday-org/perch:
+  category: agent-tooling
+typesafeainate/dspy-typesafeify:
+  category: integration
+jexp/neo4jev:
+  category: demo
+bunsdev/typesafe-ai-playground:
+  category: demo
+kitze/unclutter:
+  category: app
+realzachi/typesafe-adblock:
+  category: app
+trungdq88/youtube-sponsor-detection:
+  category: app
+emrickgarrett/onevonejev:
+  category: game-sim

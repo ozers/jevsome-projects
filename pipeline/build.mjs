@@ -1,12 +1,12 @@
-// Stage 5 — build the index and the README.
-// data/index.json is the published artefact: the site reads it, and anything
-// else may too. README.md is generated from the same data and is never edited
-// by hand.
+// Stage 5 — assemble the index.
+// Three gates, in order: proof that the project calls Jev (verified line by
+// line), then whether it is a project at all, then which shelf it belongs on.
+// Every rejection is written to data/rejected.json with its reason.
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { parse } from 'yaml';
 import { CATEGORY_ORDER } from './lib/taxonomy.mjs';
-import { PROVEN, score } from './lib/evidence.mjs';
+import { OFFICIAL_OWNERS, catalogueOnly, disqualify, focus, shelf, tier } from './lib/quality.mjs';
 import { renderReadme } from './render.mjs';
 
 const at = (p) => new URL(`../${p}`, import.meta.url);
@@ -29,13 +29,18 @@ function status(repo) {
 }
 
 function describe(repo, override) {
-  const text = override?.description || repo.description || repo.readmeSummary || '';
+  // A one-liner like "i. am. speed." tells nobody anything; the README's
+  // first paragraph usually does.
+  const own = (repo.description ?? '').trim();
+  const usable = own.length >= 24 || !repo.readmeSummary;
+  const text = override?.description || (usable ? own : repo.readmeSummary) || repo.readmeSummary || '';
   return text.replace(/\s+/g, ' ').trim().slice(0, 240) || null;
 }
 
 export async function build() {
-  const [repos, classified, health, overrides, blocklist, seeds] = await Promise.all([
+  const [repos, verified, classified, health, overrides, blocklist, seeds] = await Promise.all([
     readJson('data/repos.json'),
+    readJson('data/verified.json'),
     readJson('data/classified.json'),
     readJson('data/health.json'),
     readYaml('data/overrides.yaml', {}),
@@ -43,25 +48,33 @@ export async function build() {
     readYaml('data/seeds.yaml', { entries: [] }),
   ]);
 
-  const blocked = new Set((blocklist.repos ?? []).map((b) => (b.repo ?? b).toLowerCase()));
+  const blocked = new Map((blocklist.repos ?? []).map((b) => [(b.repo ?? b).toLowerCase(), b.reason]));
   const entries = [];
-  const rejected = { blocked: 0, unverified: 0, notProject: 0, gone: 0, fork: 0 };
+  const rejected = [];
+  const reject = (repo, reason) => rejected.push({ repo: repo.fullName ?? repo, reason });
 
   for (const [key, repo] of Object.entries(repos)) {
-    if (repo.gone) { rejected.gone++; continue; }
-    if (blocked.has(key)) { rejected.blocked++; continue; }
+    if (repo.gone) { reject(repo, 'repository no longer reachable'); continue; }
 
     const override = overrides[key] ?? overrides[repo.fullName] ?? null;
-    const cls = classified[key] ?? {};
+    if (blocked.has(key)) { reject(repo, `blocklisted: ${blocked.get(key)}`); continue; }
 
-    // The whole point of this directory: no proof, no entry. A README that
-    // names the endpoint is a claim, not evidence.
-    const { evidence, strength } = score(repo.evidence);
-    if (strength < PROVEN && !override?.force) { rejected.unverified++; continue; }
-    if (cls.isProject !== null && cls.isProject !== undefined && cls.isProject < 0.5 && !override?.force) {
-      rejected.notProject++; continue;
+    // Gate 1 — proof. A verified line, or nothing.
+    const proof = verified[key]?.proof ?? null;
+    if (!(proof?.strength >= 3) && !override?.force) {
+      reject(repo, proof ? `only a ${proof.kind} mention, no verified call` : 'no verifiable line of evidence');
+      continue;
     }
-    if (repo.isFork && repo.stars < 5 && !override?.force) { rejected.fork++; continue; }
+
+    // Gate 2 — is it a project.
+    const bad = override?.force ? null : (catalogueOnly(proof) ?? disqualify(repo));
+    if (bad) { reject(repo, bad); continue; }
+
+    const cls = classified[key] ?? {};
+    if (cls.isProject != null && cls.isProject < 0.5 && !override?.force) {
+      reject(repo, `Jev judged it not a project (p=${cls.isProject.toFixed(2)})`);
+      continue;
+    }
 
     const home = health[key] ?? null;
     entries.push({
@@ -76,7 +89,6 @@ export async function build() {
       category: override?.category ?? cls.category ?? 'app',
       categoryBy: override?.category ? 'human' : (cls.by ?? 'rules'),
       categoryConfidence: cls.categoryConfidence ?? null,
-      substance: cls.substance ?? null,
       language: repo.language,
       license: repo.license,
       stars: repo.stars,
@@ -87,8 +99,25 @@ export async function build() {
       pushedAt: repo.pushedAt,
       firstSeen: repo.firstSeen,
       status: status(repo),
-      evidence,
-      evidenceStrength: strength,
+      shelf: override?.shelf ?? shelf(repo, { homepageLive: home?.ok }),
+      focus: override?.focus ?? focus(repo, proof),
+      // A directory of Jev projects is a neighbour, not a project; it stays a
+      // candidate however well it scores.
+      tier: override?.tier ?? (
+        (override?.category ?? cls.category) === 'list'
+          ? 'candidate'
+          : tier(repo, proof, override?.focus ?? focus(repo, proof))
+      ),
+      official: OFFICIAL_OWNERS.has((repo.owner ?? '').toLowerCase()),
+      proof: {
+        kind: proof?.kind ?? 'override',
+        label: proof?.label ?? 'included by maintainer override',
+        path: proof?.source?.path ?? null,
+        url: proof?.source?.url ?? repo.url,
+        line: proof?.line ?? null,
+        text: proof?.text ?? null,
+        verifiedAt: proof?.verifiedAt ?? null,
+      },
     });
   }
 
@@ -105,14 +134,20 @@ export async function build() {
       license: null,
       stars: null,
       status: 'external',
-      evidence: seed.evidence ? [{ kind: 'manual', strength: 3, label: seed.evidence, source: { url: seed.url } }] : [],
-      evidenceStrength: seed.evidence ? 3 : 1,
+      shelf: 'listed',
+      focus: seed.focus ?? 'built-on',
+      tier: 'verified',
+      official: false,
       isSeed: true,
+      proof: { kind: 'manual', label: seed.evidence, url: seed.url, path: null, line: null, text: null },
     });
   }
 
   entries.sort((a, b) => (b.stars ?? -1) - (a.stars ?? -1) || a.name.localeCompare(b.name));
 
+  const listed = entries.filter((e) => e.shelf === 'listed');
+  const builtOn = listed.filter((e) => e.focus === 'built-on');
+  const frontPage = entries.filter((e) => e.tier === 'verified');
   const classifiedBy = Object.values(classified).reduce((acc, c) => {
     acc[c.by ?? 'rules'] = (acc[c.by ?? 'rules'] ?? 0) + 1;
     return acc;
@@ -123,25 +158,40 @@ export async function build() {
     classifiedBy,
     counts: {
       total: entries.length,
-      byCategory: Object.fromEntries(
-        CATEGORY_ORDER.map((c) => [c, entries.filter((e) => e.category === c).length]),
-      ),
+      verified: frontPage.length,
+      candidates: entries.length - frontPage.length,
+      listed: listed.length,
+      new: entries.length - listed.length,
+      builtOn: entries.filter((e) => e.focus === 'built-on').length,
+      supports: entries.filter((e) => e.focus === 'supports').length,
+      byCategory: Object.fromEntries(CATEGORY_ORDER.map((c) => [c, entries.filter((e) => e.category === c).length])),
+      byCategoryListed: Object.fromEntries(CATEGORY_ORDER.map((c) => [c, builtOn.filter((e) => e.category === c).length])),
+      byCategoryVerified: Object.fromEntries(CATEGORY_ORDER.map((c) => [c, frontPage.filter((e) => e.category === c).length])),
       byStatus: ['active', 'stale', 'dormant', 'archived', 'external'].reduce((acc, s) => {
         acc[s] = entries.filter((e) => e.status === s).length;
         return acc;
       }, {}),
       stars: entries.reduce((sum, e) => sum + (e.stars ?? 0), 0),
-      hardEvidence: entries.filter((e) => e.evidenceStrength >= 3).length,
-      rejected,
+      examined: Object.keys(repos).length,
+      rejected: rejected.length,
     },
     entries,
   };
 
-  // Minified: this file is committed on every refresh, so its diff is churn.
   await writeFile(at('data/index.json'), JSON.stringify(index) + '\n');
+  await writeFile(at('data/rejected.json'), JSON.stringify({
+    generatedAt: index.generatedAt,
+    note: 'Candidates that were discovered but kept out, with the reason. Published so the selection can be argued with.',
+    count: rejected.length,
+    rejected: rejected.sort((a, b) => a.repo.localeCompare(b.repo)),
+  }, null, 2) + '\n');
   await writeFile(at('README.md'), renderReadme(index));
-  console.log(`build: ${entries.length} entries, ${index.counts.hardEvidence} with hard evidence`);
-  console.log(`build: rejected ${JSON.stringify(rejected)}`);
+
+  console.log(`build: ${frontPage.length} verified for the front page · ${entries.length - frontPage.length} proven candidates kept in the index · ${rejected.length} rejected`);
+  const reasons = rejected.reduce((acc, r) => { acc[r.reason] = (acc[r.reason] ?? 0) + 1; return acc; }, {});
+  for (const [reason, n] of Object.entries(reasons).sort((a, b) => b[1] - a[1]).slice(0, 6)) {
+    console.log(`  ${String(n).padStart(4)} ${reason}`);
+  }
   return index;
 }
 

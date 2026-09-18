@@ -1,0 +1,3451 @@
+{
+  "generatedAt": "2026-09-18T13:55:36.270Z",
+  "note": "Candidates that were discovered but kept out, with the reason. Published so the selection can be argued with.",
+  "count": 861,
+  "rejected": [
+    {
+      "repo": "0x963D/last-exit",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "0xnairb/research_desk",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "0xNatoshi/jev-codex-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "0xtrou/rubikjev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "24601/Augustus",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "2TheMoom/summit",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "3clyp50/a0-typesafe-ai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "4anti/jev-broadcast-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "4esv/jev-eval",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AbdelStark/awesome-typesafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AbdelStark/bicameral",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "AbdelStark/heist-one",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "AbdelStark/typesafe-rs",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "abeatrix/cline-plugin-jev-browser",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "abeldzan/jev-rs",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Abhi001vj/system-one-open",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "abhixhek/jevcal",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ably-labs/jev-pong",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AboveColin/HA-Jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AboveColin/jevclient",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "actions-marketplace-validations/shiftynick_jev-axi",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "adagora/try_pixelRAG_optional_BM25_hybrid_JEV",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "adarshmishra07/jcm-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "adebmbng/jev-trade-prediction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "adelvillar1/hermes-skills",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "adibhanna/typesafego",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "adiun/clinical-trial-screener",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aegsrl7/jevmap",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AesopScott/Aesop",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "agent-labs-dev/fastbrowse",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "agupta01/jev-8-ball",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ahastudio/til",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "ai-suifeng/comment-jev-chrome",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aidil2105/jev-browser-pilot",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "aieo-product/jev-gamebenchmark",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aigodsend9-boop/specter-decision-engine",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AIPI-mvoronovych/JEVBenchmark-Contradiction-Detection",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AIsa-team/worth-replying",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "akash-kamat/system-one-gemma",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AkashPriyadarshii/cdpx",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "AkashPriyadarshii/jev-curate",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AkashPriyadarshii/jev-git",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AlbionaHoti/refgarden",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "alex-sun-kuo/jev-consumer-research",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "alexbejan/jevkit",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "alexhawat/jev-catalog-gate",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ali-abassi/pi-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aliaihub/awesome-jev-usecases",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "AliyuYahaya/ritza-typesafe-trial",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "alterhq/typesafe-sdk-swift",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "altregubov/jev-antigravity-decider",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "altryne/jevify",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "altryne/twitter-timeline-analyzer",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "alxcrt/is-odd-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "alxndr/dotfiles",
+      "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "Amrit-Nigam/jev-royal",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "anandi1989/awesome-jev-usecases",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "and-rs/dotfiles",
+      "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "andred1729/minecraft-agents",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "andwaller/jev-movie-rerank-demo",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Anil-matcha/awesome-agent-apis",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Anil-matcha/awesome-generative-ai-apps",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Anil-matcha/awesome-gpt-6-astra",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aniruddh-krovvidi/switchboard",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "anisselbd/jev-phishing-bench",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "ankitkapooor/autocode",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "anomalyco/models.dev",
+      "reason": "a model catalogue entry, not a call"
+    },
+    {
+      "repo": "AnotiaWang/awesome-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "AnshChoudhary/typesafe-ai-firewall",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "aoprisan/jev-ts-repl",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aoprisan/tavern-brawl",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aoprisan/typesafe-ai-rust-sdk",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aoprisan/typesafe-ai-scala-sdk",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "aowang-ai/jev-trade",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AppSprout-dev/Unsga3",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "arielweinberger/jev-autopilot",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ArkadyBuryakov/jev-preview",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "arnabgho/rlcd-lite",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "arunav25/jev-mcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aruniyer/jevcoder",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "aserjam100/filing-radar",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "asfarsadewa/human-compiler",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ashaazami/river-run-typesafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ashunar0/ashunar0-site",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "ask-rb/ask-decisions",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ASpooky/jev-kata",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "AStox/paseo-chat-links",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Austin-Resi/grok-bot-go-fast",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "av/naiou",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "axiomarchitecture/axiom-agent-runtime",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Axodus/ACS",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "ayushgml/greenwash-oss",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "b-on-g/slop",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "baekenough/jev-study",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "benelog/devnote",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "benomahony/nouls",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "bensyverson/goodall",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Bereket-Belachew/four-mayors",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "bestagentkits/jev-skillful",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "BillionsBobby/JevRouter",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "binnash/typesafe-sdk",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "bitnovus/jev-spam-eval",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Bitwarelabscom/bwmem",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "blackopsrepl/jev-team-calendar",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "blosmo/super-UI",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "bnsd55/jevmlx",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "BorisLeMeec/jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Bossmann007/token-engine",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "bottlebrushes/jev-orb",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "box-community/box-jev-incident-triage",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "BradMyrick/Jev-Rug-Checker",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Brainwires/jevwire",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "brandonbryant12/transcript-scorecard",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "BrendanH18/jev-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "brendenehlers/syntax-highlighting",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "brimstone/stars",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "brnyxx/jev-ra",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "bryanweaver/mewscast",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "buchmark/claude-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Bud-ro/jev-demos",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "bugkiwi/elons-job",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "BunsDev/typesafe-ui",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Butochnikov/typesafe-sdk-php",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "BYK/jev-mcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "byte5digital/agentsweep",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "cagbal/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "caiovicentino/jev-shield",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Calq-dev/jev-ask",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "CamonZ/vertebrae",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "can1357/oh-my-pi",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "capek-dev/prokop",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cardotrejos/jev-ad-preflight",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cardotrejos/jev-should-i-apply",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cardotrejos/jev-user-jury",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Carldtitan/Ally",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "carllippert/jev-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "carlsonchik/judging-with-typesafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cartermccann/dotfiles",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "cbruyndoncx/AskJev-MCP",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cephalization/phoenix-jev-example",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cequence-io/openai-scala-client",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "CGnomazoid/Tripwire",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "chahero/tetris-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "chapel/hermes-jev-skills",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Charlyhno-eng/jev-document-classification",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "CharryLee0426/jev-test",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ChetasLua/jevmeter",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "chiragrohit/jev-extension",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "chrisXchen/typesafe-cookie-consent",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "chumputys/adjudge",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "chungsubeen0/jevmcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "clankagent/clankagent",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "clankagent/pi-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "clawdbotatg/clawd-research",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "clenfest/jev-compile",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cloudflare/cloudflare-docs",
+      "reason": "a model catalogue entry, not a call"
+    },
+    {
+      "repo": "cmartinez9/jev-judge-bench",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cmdahmad/VariantCourt",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "cobanov/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cocktailpeanut/jevthoven",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "codeitlikemiley/system-one-adapter-rust",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "codeitlikemiley/typesafe-sdk-rust",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cognesy/instructor-php",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "cognesy/instructor-polyglot",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "coil398/dotfiles",
+      "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "cole-gillespie/typesafe-go",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "colinmcdermott/emoji-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "colliber/duckdb-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "compozy/yoshi",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "conraddavisjr/ai-evals-cafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "constantinchik/dotfiles",
+      "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "cpaczek/s1s",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "CrackerCat/feed",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "CrimsonLuckyLabs/kev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "CryptoOda/typesafe-guard",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "CumulativeWebInc/cwi-voice-command",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "cympfh/jev-trial",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "daftAI2026/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "dagmawibabi/jevclassifier",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "dakdevs/decide-mcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "danielgshea/jev-graph",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "DanielKillenberger/jev-predict-skill",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "dannote/jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Danu28/pi-jev-harness",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "danvega/hello-jev-java",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "darioielardi/smart-filters-jev",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "daseinlabs/open-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "david1gp/jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "dbreunig/building-with-jev-skill",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "DECRUX9812/openjev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "DECRUX9812/typesafe-skill-router",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "deepakkumar1984/blazorly-harness",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "DeepBlueDynamics/typesafe-arena",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "denikuchero/jev-chess-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "depletionmode/mcpify-all-the-things",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "derinworks/penr-oz-jev-syslog-analyzer",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "devanshbatham/commit-miner",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Diabolacal/eo-map-carbon",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Dicklesworthstone/skillranker",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "digitalnivuk97-ctrl/safenet",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Diogolima-creator/diogo-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "divyekant/jev-qa",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "djangobeatty/textured",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "dmnkgrc/dotfiles",
+      "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "dnakhoa/jev-deferred-crispification",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "dnvriend/intro-to-akka-streams",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "docxology/daf-jev",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "doeixd/jev-pref",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "DoGMaTiiC/hermes-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "DomMonte/n8n-nodes-typesafe-ai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "dpaluy/jev-compact",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "dsandrade/jevra",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Dujaydis/JevSysUno",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "duketopceo/jev-compact",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "dvkm/hive",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "ec812/typesafe-playground",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "edsonayllon/jev-prototype",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "edteamlat/EDcheck",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "EdytaKucharska/ticket-quest",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "eiaserinnys/seosoyoung-blog",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "EliaAlberti/jev-rules",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "elizaOS/eliza",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "emaspa/parla",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "EmilLindfors/jev-horingssvar-eval",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "endomorphosis/lift_coding",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "enovikov11/tigor-ai",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "EricKwong/call-scope",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ermagent-star/jev-model-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "EugeneBoondock/jevsql",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Everloster/EverAgent",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "experientiallabs/experiential",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "exYze/rift",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "fabricio852/jevshift",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "fabricioctelles/skills",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "fatwang2/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "fatwang2/jev-review-action",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "fbettag/aquila",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "feliperfpereira/jevBrowser",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "felixfisher/pi-jev-compaction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "felpsdev/jev-classifier",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "fernandoviac/judged",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ferxalbs/aether-hold",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "FFatTiger/new-api-plugin-typesafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "fgn/jevgo",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "fhshaik/typesafe-mario",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "fiale-plus/jev-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "filippos95/cybercab-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Fizzyhex/great-chef",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "fla-sil/PyTorrent",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "FleeexCorp/jev-orchestrator",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Fox-Islam/typesafe-sdk-php",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Franzferdinan51/SystemOne",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "frostney/clean-code-review",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "fstandhartinger/auto-router-demo",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "fulmenhq/refbolt",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "gacktomo/quiz-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "galigutta/jev-use-cases",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Gaurav-Gosain/jev-alpha-bench",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Gaurav-Gosain/jev-go",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Gaurav-Gosain/jev-sec-bench",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "geilt/typesafe-cli",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "gemanor/jev-code-review-benchmark",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "genai-craft/openvons",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "GenieRobot/typesafe-ai-rails",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "getexcited/stepwarden",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "GhalebDweikat/winnow",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "GhrezaKh74/JevTicktRouter",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "giangeralcus/gee-fundriving",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "gilljon/typesafe-ai-rs",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "giuliosmall/pg_typesafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Gliangquan/awesome-ai-radar",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Glubiz/zirv-cli",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "gmaxxxie/jev-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "gnoviawan/omp-jev-tools",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "godie/just-another-job-application-tracker",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "godovasik/infcraft-typesafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "goodrahstar/jev-column-race",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "gorock007/jev-atlas",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Gracker/awesome-ai-field-notes",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "greenyamao/Antigravity-mcp-semantic-search-with-TypeSafeAi",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "gtaras7/typesafe-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "gxbvc/agent-toolkit",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "gxbvc/typesafe-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "gzawadzki/jev-usecases",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "HackSing/jev-report",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "hakari-bench/hakari-bench",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "hangarbay/jev.mcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "harperreed/harperreed",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "harshil1712/slidepilot",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "harukishimo/trader",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "HarzerHeribert/glasshouse",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "haseeb-heaven/jev-system-one",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "hatt-io/jevkeep",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "hegargarcia/jev-playground",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "hellogumbo/awesome-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Heman10x-NGU/Verdict-open-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "henrikengstrom/akka-kata-java",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "henrikengstrom/akka-meetup-sthlm",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "henteko/jev-dev-cloudflare",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Hexdigest123/typesafe-comment",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "hfiguera/typesafe_ai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "hhhapz/typesafe-go",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "hide-G/magi-system-on-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "himomohi/aside-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "HomenShum/jev-swap",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "hongsw/clawfit",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "hr98w/jev-visual",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "hyg/blog",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "HyunjunJeon/jev-judgment",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "iammrduncan/typesafe-ai-benchmark",
+      "reason": "blocklisted: Describes itself as \"an imposter Jev\" — a gateway that mimics the API shape. Does not call Jev."
+    },
+    {
+      "repo": "ianb/beebox",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "IAnMove/jev-game-agent",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "iefnaf/pi-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "IgorGanapolsky/ThumbGate",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "ikermoel/open-alternative-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "impruthvi/impruthvi",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "inematds/jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "inematds/jev-curso",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "infosiragpt-ops/SiraGPT-APP",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Infrawrench/Jeeves",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ingebyd/fast-jev-compaction-openrouter",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "inkwell-finance/jev-switchyard",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "InsaneArts/typesafe-sdk-swift",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "iomiras/sponsor-skipper",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ioOvOoi/Pi-Jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "its-panzer/jev-model-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "its-panzer/skilltree",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "JackZeng/Jev_apps",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jagenaujagenau/ground-truth",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jamesward/evals-demo",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "jamesward/zio-evals",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "jamesward/zio-typesafe-ai",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "jammaru/jev-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jangya/jev-webmcp",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "JanOstrowka/typesafe-assist",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jasondotsetHacked/jev-discord-gate-v1",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jasondotsetHacked/jev-test-1",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jasonduncan/jev-browser",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jawauntb/lattice-animal",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jbookout/carr-system",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "JedimEmO/typesafe-client",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jellli/dotfiles",
+      "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "jellydn/personal-ai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jem-computer/bb-live",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jfariasf87/Krilin",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jgridifier/jev-research-eval",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Jibbarth/Jibbarth",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Jiezhi/dochub",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "Jiiiin/codex-jev-compaction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "JLarky/chess-jev-web",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "JLarky/jev-chess",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "jmanhype/jev-dspy-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "joaofnds/rehearse",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "Joaov41/Cua_jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jodan-alberts/sokit",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Joehl1103/counter-strike-facsimile",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "johnathanacortesd/tonosafe-news",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "JohnDotOwl/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jomatsu/zod-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jon-devlapaz/jev-decisions",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jon-devlapaz/jev-me",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jon-devlapaz/Jevvy-chase",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "JordiParraCrespo/typesafe-go-review",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Joshirod/Acervo",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "joshmn/typesafe-sdk",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "JoshuaSP/open-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jourdanlabs/assay-001",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jsagir/mindrian-os-plugin",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "jsaluja/voice-mirror",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "juancristobalgd1/jevRemote",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "July24/pier",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "JustSuperHuman/bro-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "jwtiyar/cement-quality-intelligence",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "kai-kou/claude-code-repository-base",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "kai-kou/gem-hunter",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Kaidera-AI/skills",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "kamesan1577/re-heitan",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "KamilPostrozny/pi-fast-jev-compaction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "karanb192/awesome-claude-code-mods",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "karthikBalasubramanian/jev-tutorials",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "KazutoMakino/oniwa",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kazz187/jev-sdk-go",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kedi-lang/kedi-typesafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kedi-lang/kedi-vscode",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "keeltrace/hermes-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kejun/blogpost",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "Kelp710/moderation-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "keltokhy/jlink",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kenhuangus/jev-usecases",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "kevin9327/jev-master",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "keyshotrenders/jev-news-trading-terminal",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "KG-NINJA/SiranKeed",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kgonia/typesafe-sdk-java",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kieranklaassen/ruby_llm-typesafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kikoncuo/jevfire",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "killop/anything_about_game",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kitfunso/luminus",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "kitze/skillbox",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "kleosr/cursor-clijev-compaction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "komorra/Eugeniusz",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "konsumer/opendecision",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "krw82/jev-playwright-mcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "KrzysztofStaron/jev-experiments",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kshetrajna12/reflex",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kt3k/jevchat",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ktleary/tailspin-client",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ktleary/termite.moe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kubet/azdaja",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kun432/kun432",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kunalkushwaha/jevkart",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kunchenguid/axi",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "kunobi-ninja/kunobi-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Kush614/MLforge",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "KyleKreuter/jev2048",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "lab-dados/jev-anotacao-sentencas",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "lainollll/lm-studio-typesafe-chat",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "lambertsj/beatjev",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "lambertsj/beatjevv",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "LamplighterPaul/forma-system1-experiment",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "langchain-ai/langchainjs",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "latitude-dev/latitude-llm",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "lautaroalejo02/TypeSafe-Test-Project",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Le0C/jev-mechanic",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "learn-ukrainian/learn-ukrainian.github.io",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "leftspace89/JevBird",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "legacybridge-tech/pi-typesafe-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Leoguy77/pi-packages.nix",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "leonaaardob/fast-dev-compaction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "leotavares26/octavus-dual-brain",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "letrud/decision-engine",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "lhemerly/mcts-agent",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "lhotwll217/jev-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "liby/dotfiles",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "LilDojd/dendritic-slop",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "linny006/awesome-agent-skills",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "liuliangbin899/typesafe-tetris",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "liuyejinghong/ai-mud",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "llevasseur/my-command",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "lm15-dev/lm15-python",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "lmvdz/rpg-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "logicrw/awesome-jev-projects",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "lu-zero/systemone",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "lucasfth/config",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "lucasmartins-ai/lcc",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "luiginotmario/postgres-Jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "lukaske/jev-doom-agent",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "lukedj78/dev-flow",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "lukevs/jev-at-home",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Lulzx/awesome",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "luomo66ccff/reflexmesh",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "luxus/ha-conversation-jev",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "lwlee2608/aiwire",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "LYJW131/lyjwpage",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "maccam912/assistant-bot",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "macgyver13/bip-gate",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "maci0/rebrew",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "maddygoround/typesafeai-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "maharshi365/oc-agent-router",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "mahavirn/mnjev-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mahynotch/newsscore",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "maito1201/jev-harness",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "majiayu000/anosomejev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "maker-KK/todo-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "malDuffin/typesafe-3d-chess",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "MalinrRuwan/experiments",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "mameli/jev-vs-luna",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "manankapoor23/typed-decision",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "MANI8148/the-daily-byte",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "manifoldfrs/dotfiles",
+      "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "Mapika/decider",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "MarissaFamularo/citation-verifier",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "MartinPuli/f1",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "marwan562/agents-skills",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "masaki39/natural-language-interface",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mastnacek/pi-decision-gate",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mastra-ai/mastra",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "matthewdonsemail-lab/open-typesafe-camoufox",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mattneel/typesafe",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "mattneel/typesafe.zig",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "maustin10/OpenSystem1-classifier",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "max1874/jev-computer-use",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "maximebrmd/relanmo",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "mejiasd3v/pi-jev-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "memorysaver/jev-atari-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mhmdkzr/jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "MichitoSugawara/jev-lint",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mikaelweiss/dotfiles",
+      "reason": "personal configuration, not a project"
+    },
+    {
+      "repo": "milokuo/tagtrim",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "minhgv/jev-mcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "miounet11/jevcode",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "misaalya/snbt-jev-bench",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "misbahsy/doc-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mithalouni/system-one-open",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mkotlikov/jev-grug",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mlux-ops/Material-Collager-Website",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "mmogib/research-toolkit",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "MNWinn/agent-switchboard",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mocchalera/naimono-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "moezubair/check-risk",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mohamedmenasy/job_posting_fit_scorer",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mohhh-ok/blog-examples",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mojomast/velvetrp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "molis-ai/jev-workbench",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "MongLong0214/jev-gate",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "morcoan/JevSeek",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "moritzkremb/jev-voice-browser",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "moto-taka/jev-orchestrator",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "MrDesjardins/jevrealtimecodecheck",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "MrJev/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "muonTelescope/glowcost-geiger",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "mwijanarko1/pi-jev-agent",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "myokoym/misereru-slide-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "mzainzulifqar/jev-php-sdk",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Nachom3/jevTrader",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "nafisazizir/x-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Nainish-Rai/jev-frontend-qa",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "NandhaKishorM/laya",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ndolinschi/harnessjudge",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ndolinschi/jev-wave",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "ndolinschi/jevplay",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ndolinschi/mcpmatch",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ndolinschi/swarmrouter",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ndolinschi/toolgate",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "neddes/sloppy-jevs-extension",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Nibir1/typesafe-go",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "nican2018/shade-arena-jev-monitor",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "NicolasMontone/jev-evals",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ninilich/Cookbook",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "nirgal-soft/skills",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "nitoba/opencode-jev-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "nitoba/questions",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "NobleSpartan6/otto",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Noctilucenty/directorloop",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "noelzappy/tripwire",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "noetion/dsh-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "nola-lang/nola-typesafe-test",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "noplan-inc/limpet",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "NorbertBodziony/guard-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "notque/vexjoy-agent",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "nozomi-koborinai/dotfiles",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ns2250225/nameType",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "nshkrdotcom/typesafe_sdk",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "nternet-company/hater",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ntgussoni/ntorres.dev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Ntizar/MasterMind",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "nunziogianfelice/awesome-tool-ai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "obekt/jev-agentic-ops",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "oceanByte/tsai-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ocportal-dev/oc-permissions-classifier",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ohernandezdev/jevmod",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ojusave/seefood",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "olanotolu/jevbetter",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Olli0103/openclaw-typesafe-ai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "omauser119/JaxModels",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "OmniJev/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "omsenjalia/weathergpt",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "onehopeA10/jev-x-spam-filter",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "onlyoneaman/jev-eval",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "opaielsheikh/ai-elo-ranker",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "opaielsheikh/jev-polymarket-arb",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "opaielsheikh/ps2-ai-agent",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "opaielsheikh/typesafe-migration-guard",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "opaielsheikh/zero-shot-vision-robotics",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "opedoussaut/lean-ai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "opencx-labs/zevals",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "OpenScribbler/syllago-docs",
+      "reason": "documentation repository, not a project"
+    },
+    {
+      "repo": "oxwen11/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "pahndev/Type-Safe-Maze-Demo-",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "PaoloGalianoBove/pacom",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "PaoloGalianoBove/pacom-ustreamer",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "parkers0405/neoism",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Parth-Hariyani3001/Jev-Bench",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "pauloportella/codex-dots",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "pavy23/jev_typesafeai_test",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "pcarrier/skibidu",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "pepijnfrenken/agent-bullwhip-replication",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "phd-peter/ego-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "PhiBao/nightdesk",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "philiporange/supervisor",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "philippmerz/polyclaude",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "phureewat29/got-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "phuthuycoding/jev-audit",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "phyous/tsai-civ2",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "picaye/jev-compaction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "PistachioAIHQ/jev-synergy-screening",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "pistachiopranay/jev-synergy-screening",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "pithings/advocaat",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "piyush97/piyush97",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "piyush97/PiyushMehta.com",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "poponline63/hermes-jev-north-star",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ppweni/typesafe_rs",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "PranavAchar01/CoreWeave-Hacks-2026",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "PranavAchar01/scrutineer",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "pst2154/Typesafe_Testing",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "pumpkinredbean/bside",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "pZacca/askjev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "qddegtya/qualm",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "qdriven/goqa-feeds",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "qiz029/dscode",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "qjy0128/Jevtest",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "qkal/Canny",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "qte77/2026-09-12-WandB-AGIH-CoreWeave-Hack",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "QuentinDanblon/pi-fast-jev-compaction",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Quriosity-agent/articles",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "r-ms/mini-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "r4ghv/TokenOpt",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "RachidChabane/my-blog",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "raihankhan-rk/jevarena",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "ranjan2829/AskJev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rashedInt32/jev-gates",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rashedInt32/jev-mcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ratacat/ratacats-skills",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Ravinder82/jev-flash-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Ravinder82/Ravinder82",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Rawson08/the-llm-dispatcher",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Ray0907/security-scan",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "raydocs/egolite-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "raydocs/egolite-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "razaanstha/ulka",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "razorback16/openjev",
+      "reason": "blocklisted: Jev-compatible reimplementation on another model. Serves the \"jev-latest\" name; never calls Jev."
+    },
+    {
+      "repo": "rchovatiya88/cyber-breach-jev",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "reachjalil/jev-tree",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "reachjalil/jevlogs",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "recodelabs/duckdb-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "redrossa/pi-model-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "renatosousa/jev-trader",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rhc98/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Rhyn0w0/Flashbang",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rhythmbhiwani/rhythmbhiwani",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Rika-Labs/proof",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "RINNECODER/jev-behavior-study",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Riti0208/jevbug",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rivianpratama/JevPixelArt",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rkendel1/open-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "robbyczgw-cla/web-search-plus-mcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rogeriochaves/jev-experiments",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rolki-png/JevArena",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "romain-girardi-eng/EleutherIA",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "romaluev/jev-ego",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "RomanSlack/jev-drone",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "rorshopping/jev-on-a-laptop",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "roshni2020/Autecia-ai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Roxabi/hermes-proactive-heartbeats",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rrmadmin/rrm-academy-cf",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "RshaCuDeVidro/jev-recon",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "rubenvitt/cefr-loop",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "rubichandrap/hermes-jev-guard",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Rubiss-Projects/docker",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "rustfuture/reflex-control",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "safal207/Liminal-Rail-Metro",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sambhav/jev-explained",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "SamSaffron/term-llm",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "samtay32/jev-system-architect",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "SamuelSacco/jev-exploration",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "SamurAIGPT/llm-wiki-agent",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sanketny8/ai-daily-digest",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sashimikun/sql-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sava-software/typesafe-client",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "schulxf/browser-qa",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sderosiaux/every-single-day-i-tldr",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "seanperkins/omp-jev-watchdog",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "seby-dev/sebby",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "SeeAPI/awesome-jev-use-cases",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "serejaris/sereja.tech",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "serejaris/voice-browser",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sermakarevich/tutorials",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sethsaler/jevgram",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sfriedowitz/toy-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "shamazharikh/qwen-rlcd",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "shanginn/jev-php",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "shantanugoel/ask-jev-skill",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "sharif-alqaabi/Coreweave",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sharosoo/jev-omok",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "sharziki/groundcheck",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sharziki/semdecide",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Shashank-H/pi-jev-context-curator",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "shellneko/minigrid-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sherajdev/jev-research",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Shifros/RageBot",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "shinyeonjun/epistemic-runtime",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "shinyeonjun/jev_clean",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "shiro-0x/hersona",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "shishiv/pi-jeev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "shivam2003-dev/typesafe-triage-guard",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ShivamPansuriya/jev-skill-gate",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Shogo-nfrealmusic/jev-eval",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Shubham510/typesafe-go",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "shufflethis/agent-tracking",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "shunta-furukawa/jev-tick-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sightmap/jev-turbo",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "simota/tenbin",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sinanawad/omp-bash-gate",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sio-funmatsu/fmjev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "skastr0/pulsar",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "skcache/jevtrafficsim",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "slandau3/pi-fast-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "smalltownrobotics/proxima-1024",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "smasato/jev-jp-address",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sneezejayhauser/harmony",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "SonghaiFan/MONASH-Hold-em",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "SongJunSub/knowledge-garden",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sontakey/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sorrycc/typesafe-snake",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "sosopop/jev_stock",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Soulxlight/nauqtype",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "SoundBlaster/Jev4Mellea",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "spencer-thompson/dotfiles",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "spivi/cloudforge-jev",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "stbenjam/jevagotchi",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "StefanoITA/ts-jev-cost-calculator",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "stephanj/parallelConstraintDecoding",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "street-labs/buzz-agents",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "STRML/omp-classifier",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Stumble/jev-go",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "SudhansuuRanjan/typesafe_xlabeller",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sufianetaouil/every",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sumitrevolt/leadgenrationaivoiceagent",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "sunfloweratnight/discord-bot-with-llm",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "superagents-lab/jev-search",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "superfly/sprites-docs",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "suraj-phanindra/wellposed",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "suryanshu-singh/capbroker",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "suwa-sh/zenn-contents",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "swamp-club/swamp-extensions",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Sylwenn/Sift",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "syndicalt/docjev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sypherin/jev-trace-classifier",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "sypherin/quorum",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "szocpaul/jev-compaction-prime",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "tamnd/hn-daily-index",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Tangerg/typesafe-sdk-go",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "TannerMidd/specpi-jev-guard",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "tanzeelak/house-agent",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "tapiocaTakeshi/Qubit",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "TarunTomar122/jev-askable-arm",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "taslabs-net/homeflare-kit",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "tatdt622989/blog",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Taufique-Ansari/dunjev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "TDL-133/ai-weekly-fr",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "tea1013/jev-guard",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "techadnank9/traceclaw",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "tgiridhar/claude-code-jev-smart-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "TheEpTic/hermes-plugins",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "TheGali/terrarium",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "thejorgg/omp-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "themsquared/jev-benchmark",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "thenewpotato/privacy-facts",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "TheoLeeCJ/openjev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "theSekyi/jevusecases",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "thiago-ss/jev-review",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "thijmenkam/jev-benchmarks",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "thomasschafer/jev-bench",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Tigercoll/AI-RSS",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Timileyin-Agbaje/Nem",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "tinyhumansai/tinyjevclient",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "tirukovelamanoj/jev-plays-doom",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "tirukovelamanoj/tirukovelamanoj",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "tivojn/gpt-live-avatar",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "tkersey/dotfiles",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "tkersey/skills-zig",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Toby-Faucher/oarfish",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "TokenTrim/jev-agent-failure-benchmark",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "TokenTrim/jev-routing-experiment",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "tolowa-studio/konative-website",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "tonyzdev/PiJ",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "toorop/veille-by-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "TravisGibbs/penelope",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "treygoff24/warrant",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "tryaksh/jev-pick-and-place-study",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "tvdavies/jev-review-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "twilson724/tw_typesafe",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "Twister915/typesafe-ai",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "typesafe-ai/skills",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "typesend/typesafe_ai",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "udirobert/elcaro",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "ugin-man/jev-bridge",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "unownone/jevsume",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "using76/JEV-EVAC",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "usingcolor/jev-browser-plugin",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ussyverse/hermes-jev-router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "valksor/typesafe-sdk-go",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "valksor/typesafe-sdk-php",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "vava-nessa/pi-jev-compaction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "vehas/thaiexam-jev-charts",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "vercel-labs/ai-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "vercel/ai",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "vercel/eve",
+      "reason": "only a sdk-import mention, no verified call"
+    },
+    {
+      "repo": "Verhex/xerify",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "vertexcover-io/who-is-hiring",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Vicente-MD/jev-resilience",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "vinhnx/VTCode",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "vinilana/live-jev",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "vinnylarouge/jevlike",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "vishesh-baghel/typesafe",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "vishivishvish/jev-typesafeai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "vizuh/sabi",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "vnmoorthy/siege",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Wang-auspicious/codex-jev-compaction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Wang-auspicious/pi-jev-compaction",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "wbarakat/jev-bomb",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "wbarakat/jev-snake",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "WebGrga/jev-board-lab",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "whiletrueee/router",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "whyihaveyou/s1-bench",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "WiktorB2004/llama-index-jev",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "wilhelmjung/TokenResearch",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "willfish/pi-observational-memory-jev",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "willprout/magic-8-ball",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "windymelt/ddskk-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "wisent-ai/ster",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "withzombies/jev-go",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "wmoto-ai/local-decision-playground",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "wncu/OpenJudge",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "wondertwins/jev-benchmark",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "wundercorp/loki",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "wustep/jev-playground",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "wuwudeqi/github-learning-site",
+      "reason": "only a api-key mention, no verified call"
+    },
+    {
+      "repo": "WXK-AI/jev-ex",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "wydrox/apassy",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "xingwudao/OpenJev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "xshubhamg/twtry",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Xy2002/poker-jev-test-bench",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "XyraSinclair/llmsort",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "y0usaf/jev-lm",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "y0usaf/typesafe-cli",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "y0usaf/typesafe-mcp",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yangzhou-chaofan/awesome-jev-prompt",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yanmad27/jev-ask",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yannip1234/astra-jev-review",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Yashilot/Jev-HA",
+      "reason": "only a dependency mention, no verified call"
+    },
+    {
+      "repo": "Yasserbhb/Agent-JEV-Tetris",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Yasserbhb/conflict-atlas",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yeger00/jev-chess",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yibie/awesome-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yonatangross/orchestkit",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "youkiti/tiab-review-plugin",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "youshinh/md-memo",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yousudip/lizard-agent",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yu1745/pi-extensions",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yuda-lyu/w-dispatch-ai",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "YYK2007/jev-flappy",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "yzfly/awesome-jev-zh",
+      "reason": "only a api-call mention, no verified call"
+    },
+    {
+      "repo": "Zahrannnn/zcode-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zaidmukaddam/cascade-search",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zampierid4p/n8n-nodes-typesafe",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zbush/jev-context",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zefir1990/openjev-experiments",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "ZENOTME/TypeAsking",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zephel01/Jev-sample",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zhangxaochen/dsh-jev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zhengxuyu/litjev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zhihz/openjev",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zhirschtritt/typesafe-go",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "Zhu-song/Zhu-song",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zhuyansen/jev-cold-start-prior",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zhuyansen/jev-issue-pulse",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zhuyansen/jev-search-rerank-eval",
+      "reason": "only a model-route mention, no verified call"
+    },
+    {
+      "repo": "ziyu/sytem-one-sdk",
+      "reason": "only a sdk-call mention, no verified call"
+    },
+    {
+      "repo": "zmtomorrow/TypeAR",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zsoXi/agent-handoff-gate",
+      "reason": "no verifiable line of evidence"
+    },
+    {
+      "repo": "zsoXi/FeedGate",
+      "reason": "no verifiable line of evidence"
+    }
+  ]
+}

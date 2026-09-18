@@ -7,5 +7,6 @@ dist/
 # Only data/index.json (the published artefact) is committed.
 data/candidates.json
 data/repos.json
+data/verified.json
 data/classified.json
 data/health.json

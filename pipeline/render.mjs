@@ -1,67 +1,82 @@
 // Rendering: data/index.json -> README.md.
-// Kept apart from the pipeline so the README can be regenerated from the
-// committed index alone — a pull request never needs the caches.
+// Separate from the pipeline so the README can be rebuilt from the committed
+// index alone — a pull request never needs the caches.
 
 import { readFile, writeFile } from 'node:fs/promises';
-import { CATEGORY_LABELS, CATEGORY_ORDER } from './lib/taxonomy.mjs';
+import { CATEGORIES, CATEGORY_ORDER } from './lib/taxonomy.mjs';
 
 const at = (p) => new URL(`../${p}`, import.meta.url);
 
 const STATUS_MARK = { active: '🟢', stale: '🟡', dormant: '⚪', archived: '📦', external: '🔗' };
+const anchor = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 function row(e) {
-  const link = `[${e.name}](${e.url})`;
   const desc = (e.description ?? '').replace(/\|/g, '\\|');
-  const proof = e.evidence[0]?.source?.url
-    ? `[${e.evidence[0].kind}](${e.evidence[0].source.url})`
+  const proof = e.proof?.url
+    ? `[${e.proof.line ? `${e.proof.path}:${e.proof.line}` : e.proof.kind}](${e.proof.url})`
     : '—';
   const stars = e.stars == null ? '—' : e.stars.toLocaleString('en-US');
-  return `| ${link} | ${desc} | ${e.language ?? '—'} | ${e.license ?? '—'} | ${stars} | ${proof} | ${STATUS_MARK[e.status]} |`;
+  return `| [${e.name}](${e.url}) | ${desc} | ${e.language ?? '—'} | ${e.license ?? '—'} | ${stars} | ${proof} | ${STATUS_MARK[e.status]} |`;
 }
 
 export function renderReadme(index) {
   const { counts, entries } = index;
   const date = index.generatedAt.slice(0, 10);
+  const verified = entries.filter((e) => e.tier === 'verified');
+  const candidates = entries.length - verified.length;
   const out = [];
 
   out.push('# Jevsome Projects');
   out.push('');
-  out.push('> Every open-source project we can **prove** calls Jev, TypeSafe AI\'s System One model.');
+  out.push("> Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it.");
   out.push('');
-  out.push(`**${counts.total} projects · ${counts.stars.toLocaleString('en-US')} stars · refreshed ${date} · ${counts.rejected.unverified} candidates rejected for lack of proof**`);
+  out.push(`**${verified.length} verified projects · ${candidates} more in the JSON · ${counts.examined.toLocaleString('en-US')} repositories examined · ${counts.rejected.toLocaleString('en-US')} rejected · refreshed ${date}**`);
   out.push('');
-  out.push('Other Jev lists are hand-curated link dumps. This one is a pipeline:');
+  out.push('Deliberately short. Jev is days old and the ecosystem is mostly two-day-old experiments; this list starts with what can be shown to be real and grows from there. The bar is the same for every entry, and it is written down.');
   out.push('');
-  out.push('1. **Discovery** searches GitHub code and repositories directly — no entry is copied from another list.');
-  out.push('2. **Evidence** links each entry to the file that proves it: the `/v1/systemone` call, the pinned `jev-latest` route, or the declared SDK dependency. A mention in a README is a claim, not proof — documentation matches are rated down and do not earn an entry.');
+  out.push('## How an entry gets here');
+  out.push('');
+  out.push('1. **Discovery.** GitHub code and repository search, run against the API surface itself. Nothing is copied from another list.');
+  out.push('2. **Proof.** The matching file is downloaded and the matching *line* is located and read. A call to `/v1/systemone`, an SDK import, a pinned `jev-latest` route or a declared dependency counts. A README sentence, a comment, a changelog entry, or a `package.json` whose own name happens to contain "jev" does not.');
   out.push(index.classifiedBy?.jev
-    ? `3. **Classification** is done by Jev itself, one typed \`choice\` per repository (${index.classifiedBy.jev} of ${counts.total} entries; the rest fall back to keyword rules).`
-    : '3. **Classification** currently runs on keyword rules. The Jev path is wired up and takes over as soon as a `TYPESAFE_API_KEY` is configured — see [`pipeline/classify.mjs`](pipeline/classify.mjs).');
-  out.push('4. **Health** re-checks stars, licences, last commit and demo links every day.');
+    ? `3. **Classification.** Jev itself, one typed \`choice\` per repository against the section rules below (${index.classifiedBy.jev} entries).`
+    : '3. **Classification.** Keyword rules against the section definitions below. The Jev path is wired up and takes over once a `TYPESAFE_API_KEY` is configured.');
+  out.push('4. **Subject, not support.** The repository exists because of Jev: created after the model went public, or naming Jev or TypeSafe in its title, description or topics. Frameworks that predate Jev and added it as one provider among many are kept in the JSON as candidates, not listed here.');
+  out.push('5. **Real code.** The proof line is source, not a mock, a recorded cassette or a data file.');
+  out.push('6. **Five stars.** Someone besides the author cared. A presentation floor, not a correctness one; it is one number in [`pipeline/lib/quality.mjs`](pipeline/lib/quality.mjs) and will come down as the list matures.');
+  out.push('7. **Health.** Stars, licence, last commit and demo links are re-checked daily.');
   out.push('');
-  out.push('Everything below is generated from [`data/index.json`](data/index.json). Do not edit this file by hand — see [CONTRIBUTING.md](CONTRIBUTING.md).');
+  out.push(`Everything kept out is recorded with a reason in [\`data/rejected.json\`](data/rejected.json) — ${counts.rejected.toLocaleString('en-US')} candidates so far. Argue with any of it.`);
   out.push('');
-  out.push('🟢 active (30d) · 🟡 stale (90d) · ⚪ dormant · 📦 archived · 🔗 external');
+  out.push('Generated from [`data/index.json`](data/index.json); do not edit by hand. See [CONTRIBUTING.md](CONTRIBUTING.md).');
+  out.push('');
+  out.push('🟢 pushed in 30 days · 🟡 90 days · ⚪ older · 📦 archived · 🔗 no repository');
   out.push('');
   out.push('## Contents');
   out.push('');
   for (const cat of CATEGORY_ORDER) {
-    const n = counts.byCategory[cat] ?? 0;
+    const n = verified.filter((e) => e.category === cat).length;
     if (!n) continue;
-    const label = CATEGORY_LABELS[cat];
-    out.push(`- [${label}](#${label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}) (${n})`);
+    out.push(`- [${CATEGORIES[cat].label}](#${anchor(CATEGORIES[cat].label)}) (${n})`);
   }
   out.push('');
 
   for (const cat of CATEGORY_ORDER) {
-    const list = entries.filter((e) => e.category === cat);
+    const list = verified.filter((e) => e.category === cat);
     if (!list.length) continue;
-    out.push(`## ${CATEGORY_LABELS[cat]}`);
+    const extra = entries.filter((e) => e.category === cat && e.tier !== 'verified' && e.focus === 'built-on').length;
+    out.push(`## ${CATEGORIES[cat].label}`);
     out.push('');
-    out.push('| Project | What it does | Language | License | Stars | Evidence | Status |');
+    out.push(`**In this section:** ${CATEGORIES[cat].what}`);
+    out.push('');
+    out.push(`**Not here:** ${CATEGORIES[cat].not}`);
+    out.push('');
+    out.push('| Project | What it does | Language | License | Stars | Proof | Status |');
     out.push('| --- | --- | --- | --- | --- | --- | --- |');
     for (const e of list) out.push(row(e));
     out.push('');
+    if (extra) out.push(`_${extra} more in this section passed the proof check but not the rest of the bar — in [\`data/index.json\`](data/index.json) as candidates._`);
+    if (extra) out.push('');
   }
 
   out.push('## License');

@@ -39,6 +39,7 @@ jobs:
           path: |
             data/candidates.json
             data/repos.json
+            data/verified.json
             data/classified.json
             data/health.json
           key: pipeline-cache-${{ github.run_id }}
@@ -54,6 +55,7 @@ jobs:
           # Optional: with no key, classification falls back to keyword rules.
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
         run: node pipeline/run.mjs ${{ inputs.stages }}
+      # Stages, in order: discover enrich verify classify health build
 
       - name: Build site
         run: node site/build.mjs
@@ -62,7 +64,7 @@ jobs:
         run: |
           git config user.name  'jevsome-bot'
           git config user.email 'noreply@github.com'
-          git add data/index.json data/*.yaml README.md
+          git add data/index.json data/rejected.json data/*.yaml README.md
           if git diff --cached --quiet; then
             echo 'no changes'
           else

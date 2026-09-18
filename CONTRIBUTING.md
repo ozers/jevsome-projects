@@ -5,16 +5,65 @@ a pull request that edits them by hand will fail CI.
 
 ## The one rule
 
-**Every entry names the evidence that it uses Jev.** A project that only mentions
-Jev in prose does not belong here. Accepted evidence, strongest first:
+**Every entry points at the line of code that proves the call.** Not the repo,
+not the README — the line. The pipeline downloads each candidate file and reads
+the matching line before anything is listed. What counts:
 
-1. A file that calls `https://api.typesafe.ai/v1/systemone`.
-2. A file that pins a model route such as `jev-latest`.
-3. A manifest (`package.json`, `Cargo.toml`, `pyproject.toml`, `Gemfile`, `go.mod`, …)
-   that declares a TypeSafe SDK.
-4. A file that reads `TYPESAFE_API_KEY`.
+1. A line that calls `https://api.typesafe.ai/v1/systemone`.
+2. A line that imports a TypeSafe SDK, or invokes its client.
+3. A line that pins a model route such as `jev-latest`.
+4. A manifest that *declares* a TypeSafe SDK as a dependency — parsed as a
+   dependency, so a `package.json` whose own name contains "jev" does not count.
 
-The pipeline finds most of these on its own.
+What does not count, however often it is repeated: README prose, code comments,
+changelog entries, a model catalogue listing Jev among a hundred models, an
+`.env.example` on its own.
+
+## Subject or support
+
+Proof of a call answers "does it use Jev". It does not answer "is it a Jev
+project". A gateway that speaks to a hundred models and a game that cannot run
+without Jev both call the API.
+
+The other directories in this ecosystem disagree on where that line sits. The
+largest of them lists framework providers alongside single-purpose projects;
+others set the bar at "a concrete Jev decision loop" or ask whether a repository
+is "genuinely about Jev", and big multi-provider frameworks do not appear in
+them at all.
+
+This list keeps both and refuses to blur them:
+
+- **Built on Jev** — created after Jev went public, or naming Jev or TypeSafe in
+  its title, description or topics. It exists because the model does. These fill
+  the sections of this README.
+- **Supports Jev** — predates Jev and added it as one option among many. Real,
+  worth knowing, and kept in its own section at the bottom, with a link to the
+  file where Jev actually lives in that codebase.
+
+Both are decided from repository metadata, not from an opinion about how
+important the project is.
+
+## The two shelves
+
+Proof is the gate; it is not the whole question. A weekend experiment proven to
+call Jev is real, and still should not sit next to a maintained library.
+
+- **Listed** — something beyond the author points at it: stars, a licence, a
+  live demo, or a described and tagged repository. These are in the README.
+- **New** — proven, but with none of those signals yet. On the site behind the
+  "show newer projects" toggle, and counted in the totals.
+
+A project moves shelf on its own as the signals appear. Nothing is deleted for
+being small.
+
+## What is kept out
+
+Even with proof, these are not projects built on Jev, and each rejection is
+written to `data/rejected.json` with its reason:
+
+- personal dotfiles and machine configs that happen to export an API key
+- documentation repositories and model catalogues that describe the model
+- unmodified forks with no traction of their own
 
 ## Adding a project
 

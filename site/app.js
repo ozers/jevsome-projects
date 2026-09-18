@@ -1,5 +1,5 @@
 // Client-side filtering over the published index. No framework, no build step:
-// the page ships with the data inlined and stays usable without JavaScript.
+// the page ships with the data inlined and stays readable without JavaScript.
 
 const state = { q: '', category: 'all', sort: 'stars' };
 const data = window.__JEVSOME__;
@@ -12,8 +12,8 @@ const haystack = (e) =>
 
 const SORTS = {
   stars: (a, b) => (b.stars ?? -1) - (a.stars ?? -1),
-  newest: (a, b) => new Date(b.createdAt ?? 0) - new Date(a.createdAt ?? 0),
   updated: (a, b) => new Date(b.pushedAt ?? 0) - new Date(a.pushedAt ?? 0),
+  newest: (a, b) => new Date(b.createdAt ?? 0) - new Date(a.createdAt ?? 0),
   name: (a, b) => a.name.localeCompare(b.name),
 };
 
@@ -24,31 +24,47 @@ function render() {
     .filter((e) => !q || haystack(e).includes(q))
     .sort(SORTS[state.sort]);
 
-  count.textContent = `${list.length} project${list.length === 1 ? '' : 's'}`;
+  // The active section states its own rule, so the boundary is never a guess.
+  for (const el of document.querySelectorAll('.scope')) {
+    el.hidden = el.dataset.scope !== state.category;
+  }
+
+  count.textContent = `${list.length} of ${data.entries.length} projects`;
   grid.innerHTML = list.length
     ? list.map(card).join('')
     : '<p class="empty">Nothing matches. Try a broader search.</p>';
 }
 
+function ago(iso) {
+  if (!iso) return '';
+  const days = Math.floor((Date.now() - new Date(iso)) / 86_400_000);
+  if (days < 1) return 'updated today';
+  if (days < 30) return `updated ${days}d ago`;
+  if (days < 365) return `updated ${Math.floor(days / 30)}mo ago`;
+  return `updated ${Math.floor(days / 365)}y ago`;
+}
+
 function card(e) {
-  const proof = e.evidence && e.evidence[0];
-  const proofHtml = proof && proof.source && proof.source.url
-    ? `<a class="proof${e.evidenceStrength >= 3 ? '' : ' weak'}" href="${esc(proof.source.url)}" title="${esc(proof.label)}">${e.evidenceStrength >= 3 ? '✓' : '~'} ${esc(proof.kind)}</a>`
+  const p = e.proof;
+  const file = p && p.path ? `${p.path.split('/').pop()}${p.line ? `:${p.line}` : ''}` : (p ? p.kind : '');
+  const proofTitle = p ? `${p.label}${p.path ? ` — ${p.path}` : ''}${p.text ? `\n${p.text}` : ''}` : '';
+  const proofHtml = p && p.url
+    ? `<a class="proof" href="${esc(p.url)}" title="${esc(proofTitle)}"><span class="check">✓</span><span class="file">${esc(file)}</span></a>`
     : '';
   const home = e.homepage
     ? `<a href="${esc(e.homepage)}">${e.homepageLive === false ? 'site (down)' : 'site'}</a>`
     : '';
   return `<article class="card">
-    <h3><a href="${esc(e.url)}">${esc(e.name)}</a>${e.owner ? ` <span class="owner">by ${esc(e.owner)}</span>` : ''}</h3>
+    <h3><a href="${esc(e.url)}">${esc(e.name)}</a>${e.owner ? `<span class="owner">${esc(e.owner)}</span>` : ''}</h3>
     <p>${esc(e.description || 'No description provided.')}</p>
     <div class="meta">
-      <span class="dot ${e.status}" title="${e.status}"></span>
       ${e.language ? `<span class="tag">${esc(e.language)}</span>` : ''}
       ${e.license ? `<span class="tag">${esc(e.license)}</span>` : ''}
       ${e.stars != null ? `<span class="stars">★ ${e.stars.toLocaleString('en-US')}</span>` : ''}
-      ${proofHtml}
+      <span class="upd ${e.status}">${ago(e.pushedAt)}</span>
       ${home}
     </div>
+    ${proofHtml}
   </article>`;
 }
 

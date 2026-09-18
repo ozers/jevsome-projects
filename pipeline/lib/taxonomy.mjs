@@ -1,32 +1,68 @@
-// Shared category definitions. The descriptions are sent to Jev verbatim as
-// choice criteria, so the heuristic path and the model path classify against
-// exactly the same wording.
+// Category definitions.
+// Each one states what belongs in it *and* what does not, because a directory
+// whose sections are vague is just a pile. The `what` text is sent to Jev as
+// the choice criteria, and both lines are printed in the README and on the
+// site, so a reader can check any entry against the same rule we used.
 
 export const CATEGORIES = {
-  sdk: 'A client library or SDK that wraps the TypeSafe System One API for a language or runtime.',
-  integration: 'Plugs Jev into an existing framework, platform or product (web framework, ORM, home automation, LLM gateway, CMS).',
-  'agent-tooling': 'Tooling for AI agents and developers: tool-call gates, routers, guardrails, MCP servers, code review, CLIs.',
-  'browser-computer-use': 'Drives a browser, desktop or operating system by making typed decisions about what to click or do next.',
-  app: 'An end-user application or hosted service whose product value comes from Jev decisions.',
-  'game-sim': 'A game, robotics controller or physical simulation where Jev reacts to game or sensor state.',
-  demo: 'A small demo, playground, example, tutorial or starter template rather than a maintained product.',
-  research: 'Benchmarks, evaluations, calibration studies, reproductions or comparisons against other models.',
-  list: 'A directory, awesome list or catalogue of other Jev projects rather than a project itself.',
-};
-
-export const CATEGORY_LABELS = {
-  sdk: 'SDKs & clients',
-  integration: 'Integrations',
-  'agent-tooling': 'Agent tooling',
-  'browser-computer-use': 'Browser & computer use',
-  app: 'Applications',
-  'game-sim': 'Games & simulation',
-  demo: 'Demos & playgrounds',
-  research: 'Benchmarks & research',
-  list: 'Other directories',
+  sdk: {
+    label: 'SDKs & clients',
+    what: 'A library whose whole purpose is talking to the System One API from one language or runtime: request signing, typed Choice/Score/Noul answers, retries.',
+    not: 'Applications that happen to ship a thin wrapper, and provider adapters that live inside a larger framework (those are integrations).',
+  },
+  integration: {
+    label: 'Integrations',
+    what: 'An existing framework, platform or product that gained Jev support: a provider, adapter or plugin inside a codebase that is not about Jev.',
+    not: 'Standalone tools built around Jev from the start.',
+  },
+  'agent-tooling': {
+    label: 'Agent tooling',
+    what: 'Tools that sit in an AI agent or developer workflow and use typed decisions to act: tool-call gates, routers, guardrails, MCP servers, code review, CLIs.',
+    not: 'General applications that merely call a model, and browser automation (its own section).',
+  },
+  'browser-computer-use': {
+    label: 'Browser & computer use',
+    what: 'Drives a browser, desktop or operating system, deciding what to click, type or do next from page or screen state.',
+    not: 'Scrapers and extensions that never decide an action.',
+  },
+  app: {
+    label: 'Applications',
+    what: 'A product or hosted service someone uses, where a Jev decision is part of what it does: moderation, triage, matching, scoring, pricing.',
+    not: 'Examples and experiments with no users (those are demos), and internal libraries.',
+  },
+  'game-sim': {
+    label: 'Games & simulation',
+    what: 'A game, robot controller or physics simulation where Jev reacts to game or sensor state, usually in a loop.',
+    not: 'Game-themed demos with no running loop.',
+  },
+  demo: {
+    label: 'Demos & playgrounds',
+    what: 'Built to show or learn one thing: examples, playgrounds, starters, tutorials, weekend experiments.',
+    not: 'Anything with real users or a published package.',
+  },
+  research: {
+    label: 'Benchmarks & research',
+    what: 'Measures Jev: benchmarks, calibration studies, accuracy or latency comparisons, reproductions, datasets.',
+    not: 'Projects that merely report a benchmark number in their README.',
+  },
+  list: {
+    label: 'Directories',
+    what: 'Catalogues of Jev projects — the neighbours of this repository, listed so the ecosystem stays navigable.',
+    not: 'Anything with running code of its own.',
+  },
 };
 
 export const CATEGORY_ORDER = [
   'sdk', 'integration', 'agent-tooling', 'browser-computer-use',
   'app', 'game-sim', 'demo', 'research', 'list',
 ];
+
+export const CATEGORY_LABELS = Object.fromEntries(
+  Object.entries(CATEGORIES).map(([key, c]) => [key, c.label]),
+);
+
+// Sent to Jev as choice criteria: the "what" line, plus the exclusion so the
+// model sees the boundary rather than guessing it.
+export const CHOICE_CRITERIA = Object.fromEntries(
+  Object.entries(CATEGORIES).map(([key, c]) => [key, `${c.what} Not: ${c.not}`]),
+);

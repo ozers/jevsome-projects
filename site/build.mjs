@@ -1,9 +1,9 @@
 // Static site generator: data/index.json -> dist/.
-// The entries are inlined so the page works from a file:// URL, and the same
-// data is published as dist/projects.json for anyone who wants to consume it.
+// Only verified entries are rendered. The full index, candidates included, is
+// published next to the page as projects.json for anyone who wants more.
 
 import { cp, mkdir, readFile, writeFile } from 'node:fs/promises';
-import { CATEGORY_LABELS, CATEGORY_ORDER } from '../pipeline/lib/taxonomy.mjs';
+import { CATEGORIES, CATEGORY_ORDER } from '../pipeline/lib/taxonomy.mjs';
 
 const at = (p) => new URL(`../${p}`, import.meta.url);
 const SITE_URL = process.env.SITE_URL ?? 'https://ozers.github.io/jevsome-projects/';
@@ -28,23 +28,27 @@ const slim = (e) => ({
   status: e.status,
   createdAt: e.createdAt,
   pushedAt: e.pushedAt,
-  evidenceStrength: e.evidenceStrength,
-  evidence: e.evidence?.slice(0, 1).map((x) => ({ kind: x.kind, label: x.label, source: { url: x.source?.url } })),
+  proof: e.proof && { kind: e.proof.kind, label: e.proof.label, url: e.proof.url, path: e.proof.path, line: e.proof.line, text: e.proof.text },
 });
 
 function page(index, css, js) {
-  const { counts, entries, generatedAt } = index;
+  const { counts, generatedAt } = index;
+  const entries = index.entries.filter((e) => e.tier === 'verified');
+  const byCat = Object.fromEntries(CATEGORY_ORDER.map((c) => [c, entries.filter((e) => e.category === c).length]));
   const date = generatedAt.slice(0, 10);
+
   const chips = [
-    `<button class="chip" data-category="all" aria-pressed="true">All<span class="n">${counts.total}</span></button>`,
-    ...CATEGORY_ORDER.filter((c) => counts.byCategory[c]).map(
-      (c) => `<button class="chip" data-category="${c}" aria-pressed="false">${esc(CATEGORY_LABELS[c])}<span class="n">${counts.byCategory[c]}</span></button>`,
+    `<button class="chip" data-category="all" aria-pressed="true">All<span class="n">${entries.length}</span></button>`,
+    ...CATEGORY_ORDER.filter((c) => byCat[c]).map(
+      (c) => `<button class="chip" data-category="${c}" aria-pressed="false">${esc(CATEGORIES[c].label)}<span class="n">${byCat[c]}</span></button>`,
     ),
   ].join('\n        ');
 
-  // Rendered server-side too, so the list is readable without JavaScript and
-  // indexable by search engines.
-  const noscript = entries.slice(0, 200).map((e) =>
+  const scopes = CATEGORY_ORDER.filter((c) => byCat[c]).map((c) =>
+    `<div class="scope" data-scope="${c}" hidden><b>${esc(CATEGORIES[c].label)}.</b> ${esc(CATEGORIES[c].what)} <span class="not">Not here: ${esc(CATEGORIES[c].not)}</span></div>`,
+  ).join('\n      ');
+
+  const noscript = entries.map((e) =>
     `<li><a href="${esc(e.url)}">${esc(e.name)}</a> — ${esc(e.description ?? '')}</li>`).join('\n');
 
   return `<!doctype html>
@@ -52,11 +56,11 @@ function page(index, css, js) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jevsome Projects — evidence-backed directory of Jev projects</title>
-<meta name="description" content="${counts.total} open-source projects that provably call Jev, TypeSafe AI's System One model. Each entry links to the code that proves it. Refreshed daily.">
+<title>Jevsome Projects</title>
+<meta name="description" content="${entries.length} open-source projects that provably call Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it.">
 <link rel="canonical" href="${SITE_URL}">
 <meta property="og:title" content="Jevsome Projects">
-<meta property="og:description" content="${counts.total} projects that provably call Jev. Each entry links to the proof.">
+<meta property="og:description" content="${entries.length} projects that provably call Jev. Each entry links to the proof.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${SITE_URL}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✓</text></svg>">
@@ -68,9 +72,9 @@ function page(index, css, js) {
     <div class="logo">Jev<span>some</span></div>
     <nav>
       <a href="${REPO_URL}">GitHub</a>
-      <a href="projects.json">JSON API</a>
-      <a href="${REPO_URL}/blob/main/CONTRIBUTING.md">Submit a project</a>
-      <a href="https://typesafe.ai">What is Jev?</a>
+      <a href="projects.json">JSON</a>
+      <a href="${REPO_URL}/blob/main/CONTRIBUTING.md">Submit</a>
+      <a href="https://typesafe.ai">About Jev</a>
     </nav>
   </div>
 </header>
@@ -78,35 +82,35 @@ function page(index, css, js) {
 <main>
   <section class="wrap hero">
     <h1>Projects that provably run on Jev.</h1>
-    <p>Jev is TypeSafe AI's System One model: it takes state plus a typed question and returns a constrained answer with a probability. This directory indexes what people build with it — and <strong>links to the code that proves each project actually calls it</strong>. Repositories that only mention Jev are left out.</p>
+    <p>Jev is TypeSafe AI's System One model: state and a typed question in, a constrained answer with a probability out. Every project here <strong>links to the line of code that makes the call</strong>. Mentions, forks and catalogues are left out — and every rejection is published with its reason.</p>
     <div class="stats">
-      <div class="stat"><b>${counts.total}</b><span>projects</span></div>
-      <div class="stat"><b>${counts.hardEvidence}</b><span>hard evidence</span></div>
-      <div class="stat"><b>${counts.stars.toLocaleString('en-US')}</b><span>stars</span></div>
-      <div class="stat"><b>${counts.byStatus.active}</b><span>active (30d)</span></div>
-      <div class="stat"><b>${date}</b><span>last refresh</span></div>
+      <div class="stat"><b>${entries.length}</b><span>verified</span></div>
+      <div class="stat"><b>${counts.candidates.toLocaleString('en-US')}</b><span>more in JSON</span></div>
+      <div class="stat"><b>${counts.rejected.toLocaleString('en-US')}</b><span>rejected</span></div>
+      <div class="stat"><b>${date}</b><span>refreshed</span></div>
     </div>
   </section>
 
   <div class="controls">
     <div class="controls-inner">
-      <input id="q" type="search" placeholder="Search projects, languages, topics…" aria-label="Search projects">
+      <input id="q" type="search" placeholder="Search…" aria-label="Search projects">
       <select id="sort" aria-label="Sort by">
         <option value="stars">Most stars</option>
         <option value="updated">Recently updated</option>
         <option value="newest">Newest</option>
         <option value="name">Name</option>
       </select>
-      <span id="count" class="stars"></span>
-    </div>
-    <div class="wrap">
-      <div class="chips">
-        ${chips}
-      </div>
     </div>
   </div>
 
   <div class="wrap">
+    <div class="chips">
+      ${chips}
+    </div>
+    <div id="scopes">
+      ${scopes}
+    </div>
+    <div class="summary"><span id="count"></span><span>✓ = the file and line that proves the call</span></div>
     <div id="grid" class="grid"></div>
     <noscript><ul>${noscript}</ul></noscript>
   </div>
@@ -114,13 +118,13 @@ function page(index, css, js) {
 
 <footer>
   <div class="wrap">
-    <p><strong>How entries get here.</strong> A daily job searches GitHub code and repositories, keeps only projects where a file calls <code>/v1/systemone</code>, pins a <code>jev-latest</code> route or declares a TypeSafe SDK, then asks Jev itself to categorise each one. Stars, licences, last commit and demo links are re-checked on every run.</p>
-    <p>Nothing here is copied from another list. Corrections and submissions: <a href="${REPO_URL}/issues/new">open an issue</a>.</p>
-    <p>Community directory · CC0 1.0 · not affiliated with TypeSafe AI.</p>
+    <p><strong>What "verified" means.</strong> The repository exists because of Jev — created after the model went public, or naming it in its title, description or topics. Its proof is a real line of source: a call to <code>/v1/systemone</code>, an SDK import, a pinned <code>jev-latest</code> route in code, or a declared SDK dependency. Not a README sentence, not a comment, not a mock, not a catalogue entry. And at least five people besides the author starred it.</p>
+    <p><strong>What else exists.</strong> ${counts.candidates.toLocaleString('en-US')} more repositories passed the proof check but not the rest — too new, or frameworks that added Jev as one provider among many. They are in <a href="projects.json">projects.json</a> with a <code>tier</code> field, and will surface here as the bar is lowered. ${counts.rejected.toLocaleString('en-US')} candidates were rejected outright; each one is listed with its reason in <a href="${REPO_URL}/blob/main/data/rejected.json">rejected.json</a>.</p>
+    <p>Refreshed daily from GitHub. Nothing is copied from another list. Corrections: <a href="${REPO_URL}/issues/new">open an issue</a>. CC0 · not affiliated with TypeSafe AI.</p>
   </div>
 </footer>
 
-<script>window.__JEVSOME__ = ${JSON.stringify({ entries: entries.map(slim), counts })};</script>
+<script>window.__JEVSOME__ = ${JSON.stringify({ entries: entries.map(slim) })};</script>
 <script>${js}</script>
 </body>
 </html>
@@ -137,4 +141,4 @@ await mkdir(at('dist'), { recursive: true });
 await writeFile(at('dist/index.html'), page(index, css, js));
 await cp(at('data/index.json'), at('dist/projects.json'));
 await writeFile(at('dist/.nojekyll'), '');
-console.log(`site: dist/index.html with ${index.entries.length} entries`);
+console.log(`site: dist/index.html with ${index.entries.filter((e) => e.tier === 'verified').length} verified entries`);

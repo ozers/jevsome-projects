@@ -3,3 +3,7 @@
 repos:
   - repo: ozers/jevsome-projects
     reason: This directory itself.
+  - repo: razorback16/openjev
+    reason: Jev-compatible reimplementation on another model. Serves the "jev-latest" name; never calls Jev.
+  - repo: iammrduncan/typesafe-ai-benchmark
+    reason: Describes itself as "an imposter Jev" — a gateway that mimics the API shape. Does not call Jev.
