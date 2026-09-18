@@ -1,6 +1,6 @@
 # Jevsome Projects
 
-> Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it.
+> Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it. Browse: [jevsome.ozersubasi.com](https://jevsome.ozersubasi.com)
 
 **49 verified projects · 602 more in the JSON · 1,512 search hits examined · refreshed 2026-09-18**
 

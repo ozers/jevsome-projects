@@ -6,7 +6,7 @@ import { cp, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { CATEGORIES, CATEGORY_ORDER } from '../pipeline/lib/taxonomy.mjs';
 
 const at = (p) => new URL(`../${p}`, import.meta.url);
-const SITE_URL = process.env.SITE_URL ?? 'https://ozers.github.io/jevsome-projects/';
+const SITE_URL = process.env.SITE_URL ?? 'https://jevsome.ozersubasi.com/';
 const REPO_URL = 'https://github.com/ozers/jevsome-projects';
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));

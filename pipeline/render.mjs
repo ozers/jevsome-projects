@@ -28,7 +28,7 @@ export function renderReadme(index) {
 
   out.push('# Jevsome Projects');
   out.push('');
-  out.push("> Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it.");
+  out.push("> Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it. Browse: [jevsome.ozersubasi.com](https://jevsome.ozersubasi.com)");
   out.push('');
   out.push(`**${verified.length} verified projects · ${candidates} more in the JSON · ${counts.examined.toLocaleString('en-US')} search hits examined · refreshed ${date}**`);
   out.push('');
