@@ -41,6 +41,12 @@ export async function gh(path, { params, method = 'GET', accept } = {}) {
     });
 
     if (res.status === 403 || res.status === 429) {
+      // A 403 with quota left is a permission problem, not throttling: the
+      // Actions token, for one, cannot use code search at all.
+      const remaining = res.headers.get('x-ratelimit-remaining');
+      if (res.status === 403 && remaining && Number(remaining) > 0) {
+        throw new Error(`GitHub 403 on ${url.pathname} with quota left — the token lacks access. Set GH_PAT.`);
+      }
       const retryAfter = Number(res.headers.get('retry-after') ?? 0);
       const reset = Number(res.headers.get('x-ratelimit-reset') ?? 0);
       const waitMs = retryAfter

@@ -77,7 +77,15 @@ async function drainCode(store, q, signal, weight, maxPages) {
 
 async function pagedCode(store) {
   for (const { q, signal, weight } of CODE_QUERIES) {
-    const found = await drainCode(store, q, signal, weight, MAX_PAGES);
+    let found;
+    try {
+      found = await drainCode(store, q, signal, weight, MAX_PAGES);
+    } catch (err) {
+      // Code search is the strongest signal but not the only one; a token
+      // without access should still leave a usable run behind.
+      console.warn(`  code ${q} -> skipped: ${err.message}`);
+      continue;
+    }
     console.log(`  code ${q} -> ${found} hits`);
 
     if (found >= MAX_PAGES * 100 && FACET_PAGES > 0) {
