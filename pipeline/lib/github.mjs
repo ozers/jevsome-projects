@@ -54,8 +54,11 @@ export async function gh(path, { params, method = 'GET', accept } = {}) {
         : reset
           ? Math.max(0, reset * 1000 - Date.now()) + 1000
           : 2 ** attempt * 2000;
-      console.warn(`  rate limited on ${url.pathname}, waiting ${Math.ceil(waitMs / 1000)}s`);
-      await sleep(Math.min(waitMs, 90_000));
+      // Code search resets on a ~12 minute window. Capping below that made
+      // every retry fire inside the same window and then give up.
+      const capped = Math.min(waitMs, 15 * 60 * 1000);
+      console.warn(`  rate limited on ${url.pathname}, waiting ${Math.ceil(capped / 1000)}s`);
+      await sleep(capped);
       continue;
     }
     if (res.status === 404) return null;
