@@ -91,8 +91,12 @@ async function pagedCode(store) {
     if (found >= MAX_PAGES * 100 && FACET_PAGES > 0) {
       console.log('    capped, re-running by language');
       for (const lang of FACET_LANGUAGES) {
-        const n = await drainCode(store, `${q} language:${lang}`, signal, weight, FACET_PAGES);
-        if (n) console.log(`    ${lang}: ${n}`);
+        try {
+          const n = await drainCode(store, `${q} language:${lang}`, signal, weight, FACET_PAGES);
+          if (n) console.log(`    ${lang}: ${n}`);
+        } catch (err) {
+          console.warn(`    ${lang}: skipped: ${err.message}`);
+        }
       }
     }
   }
