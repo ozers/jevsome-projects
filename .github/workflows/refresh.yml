@@ -20,7 +20,10 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-24.04
-    timeout-minutes: 120
+    # Code search spends long stretches waiting out a ~12 minute window.
+    # 120 minutes expired on 2026-09-25 before discovery finished, so the
+    # index was never committed. Six hours is the hosted-runner maximum.
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v7
 
@@ -62,7 +65,7 @@ jobs:
         run: |
           git config user.name  'jevsome-bot'
           git config user.email 'noreply@github.com'
-          git add data/index.json data/not-listed.json data/*.yaml README.md
+          git add data/index.json data/not-listed.json data/candidates.json data/*.yaml README.md
           if git diff --cached --quiet; then
             echo 'no changes'
           else

@@ -75,6 +75,10 @@ async function drainCode(store, q, signal, weight, maxPages) {
   return found;
 }
 
+async function save(store) {
+  await writeFile(CANDIDATES, JSON.stringify(store, null, 2) + '\n');
+}
+
 async function pagedCode(store) {
   for (const { q, signal, weight } of CODE_QUERIES) {
     let found;
@@ -99,22 +103,28 @@ async function pagedCode(store) {
         }
       }
     }
+    await save(store);
   }
 }
 
 async function pagedRepos(store) {
   for (const { q, signal } of REPO_QUERIES) {
     let found = 0;
-    for (let page = 1; page <= MAX_PAGES; page++) {
-      const res = await searchRepos(q, { page });
-      const items = res?.items ?? [];
-      for (const item of items) {
-        touch(store, item.full_name, { signal, weight: 1, url: item.html_url, query: q });
+    try {
+      for (let page = 1; page <= MAX_PAGES; page++) {
+        const res = await searchRepos(q, { page });
+        const items = res?.items ?? [];
+        for (const item of items) {
+          touch(store, item.full_name, { signal, weight: 1, url: item.html_url, query: q });
+        }
+        found += items.length;
+        if (items.length < 100) break;
       }
-      found += items.length;
-      if (items.length < 100) break;
+      console.log(`  repo ${q} -> ${found} hits`);
+    } catch (err) {
+      console.warn(`  repo ${q} -> skipped: ${err.message}`);
     }
-    console.log(`  repo ${q} -> ${found} hits`);
+    await save(store);
   }
 }
 
@@ -126,7 +136,7 @@ export async function discover() {
   await pagedRepos(store);
   const after = Object.keys(store).length;
   console.log(`discover: ${after} candidates (+${after - before} new)`);
-  await writeFile(CANDIDATES, JSON.stringify(store, null, 2) + '\n');
+  await save(store);
   return store;
 }
 
