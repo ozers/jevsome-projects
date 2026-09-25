@@ -29,6 +29,7 @@ export async function gh(path, { params, method = 'GET', accept } = {}) {
   const url = new URL(path.startsWith('http') ? path : API + path);
   for (const [k, v] of Object.entries(params ?? {})) url.searchParams.set(k, String(v));
 
+  let longWaits = 0;
   for (let attempt = 0; attempt < 5; attempt++) {
     const res = await fetch(url, {
       method,
@@ -49,13 +50,18 @@ export async function gh(path, { params, method = 'GET', accept } = {}) {
       }
       const retryAfter = Number(res.headers.get('retry-after') ?? 0);
       const reset = Number(res.headers.get('x-ratelimit-reset') ?? 0);
-      const waitMs = retryAfter
-        ? retryAfter * 1000
-        : reset
-          ? Math.max(0, reset * 1000 - Date.now()) + 1000
-          : 2 ** attempt * 2000;
-      // Code search resets on a ~12 minute window. Capping below that made
-      // every retry fire inside the same window and then give up.
+      const resetMs = reset ? Math.max(0, reset * 1000 - Date.now()) + 1000 : 0;
+      const retryAfterMs = retryAfter > 0 ? retryAfter * 1000 : 0;
+      // A 1s Retry-After while the quota window is still open burns the
+      // attempt. When the quota is empty, wait for the reset instead.
+      const waitMs = Math.max(retryAfterMs, remaining === '0' ? resetMs : 0) || resetMs || 2 ** attempt * 2000;
+      // One ~12 minute penalty per call. A second one means this query is
+      // stuck, and five of them used up the whole job before discovery finished.
+      if (waitMs >= 60_000 && longWaits >= 1) {
+        console.warn(`  rate limited on ${url.pathname}, not waiting again`);
+        break;
+      }
+      if (waitMs >= 60_000) longWaits++;
       const capped = Math.min(waitMs, 15 * 60 * 1000);
       console.warn(`  rate limited on ${url.pathname}, waiting ${Math.ceil(capped / 1000)}s`);
       await sleep(capped);

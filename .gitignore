@@ -4,8 +4,8 @@ dist/
 .env
 
 # Pipeline caches: rebuilt by the refresh job, restored from Actions cache.
-# Only data/index.json (the published artefact) is committed.
-data/candidates.json
+# candidates.json is committed too. The Actions cache is empty after a
+# cancelled run, and discovery would otherwise start from zero every day.
 data/repos.json
 data/verified.json
 data/classified.json

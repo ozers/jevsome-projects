@@ -137,6 +137,8 @@ The daily job needs two secrets:
 
 | `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` | for deploys | Publishes `dist/` to Cloudflare Workers at jevsome.ozersubasi.com. Without them the job refreshes the data and skips the deploy. |
 
-`data/index.json` is the only generated file kept in git. The intermediate caches
-(`candidates`, `repos`, `classified`, `health`) live in the Actions cache; losing
-them only costs one slower run.
+`data/index.json` is the published index. `data/candidates.json` is committed as
+well, because a cancelled run never writes the Actions cache and the next day
+would otherwise search from zero. The other caches (`repos`, `verified`,
+`classified`, `health`) still live in the Actions cache; losing them only costs
+one slower run.
