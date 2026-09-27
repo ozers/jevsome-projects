@@ -20,10 +20,8 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-24.04
-    # Code search spends long stretches waiting out a ~12 minute window.
-    # 120 minutes expired on 2026-09-25 before discovery finished, so the
-    # index was never committed. Six hours is the hosted-runner maximum.
-    timeout-minutes: 360
+    # One page per query, no language facets. A full crawl never finished.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v7
 
@@ -55,6 +53,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Optional: with no key, classification falls back to keyword rules.
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          # First page only. The published index is carried forward, so this
+          # picks up new repos without re-crawling thousands of hits.
+          MAX_PAGES: '1'
+          FACET_PAGES: '0'
+          SECOND_CHANCE: '0'
         run: node pipeline/run.mjs ${{ inputs.stages }}
       # Stages, in order: discover enrich verify classify health build
 

@@ -117,8 +117,8 @@ node site/build.mjs            # writes dist/
 
 Single stages: `node pipeline/run.mjs classify build`.
 
-A full discovery pass takes ~15 minutes — GitHub allows 10 code searches a minute.
-`MAX_PAGES=1` gives a fast, partial run for development.
+The daily job searches the first page of each query and keeps every project
+already in `data/index.json`. A deeper crawl is `MAX_PAGES=10 FACET_PAGES=3`.
 
 ## Writing style
 
