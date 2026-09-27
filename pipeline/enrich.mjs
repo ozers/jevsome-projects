@@ -94,14 +94,24 @@ export async function enrich() {
   for (const key of keys) {
     const cand = candidates[key];
     i++;
-    const repo = await getRepo(cand.fullName);
+    // Already enriched on a previous run. The daily job only fetches new names.
+    if (store[key]?.pushedAt && !store[key].gone) continue;
+    let repo;
+    try {
+      repo = await getRepo(cand.fullName);
+    } catch (err) {
+      console.warn(`  ${cand.fullName} -> skipped: ${err.message}`);
+      continue;
+    }
     if (!repo) {
       store[key] = { ...store[key], fullName: cand.fullName, gone: true };
       continue;
     }
 
     // Code-search hits from discovery are already file-level proof.
-    const evidence = cand.sources
+    let evidence;
+    try {
+    evidence = cand.sources
       .filter((s) => s.path && (s.weight ?? 0) >= 2)
       .map((s) => ({
         kind: s.signal,
@@ -142,6 +152,10 @@ export async function enrich() {
       evidenceStrength: strongestOf(evidence),
       gone: false,
     };
+    } catch (err) {
+      console.warn(`  ${cand.fullName} -> skipped: ${err.message}`);
+      continue;
+    }
 
     if (i % 25 === 0) {
       console.log(`  ${i}/${keys.length}`);
