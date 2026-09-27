@@ -6,9 +6,10 @@ on:
   workflow_dispatch:
     inputs:
       stages:
-        description: 'Stages to run (space separated: discover enrich classify health build)'
+        description: 'Leave empty for a full refresh. Or name stages, space separated: discover enrich verify classify health build'
         required: false
         default: ''
+        type: string
 
 permissions:
   contents: write

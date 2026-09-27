@@ -128,6 +128,18 @@ Descriptions are plain statements of what a project does. No "blazing fast", no
 
 ## Running in CI
 
+The daily job also runs when you ask it to. On GitHub: Actions → Refresh index → Run workflow. Leave the stages box empty for a full refresh. From a checkout of `main`:
+
+```bash
+gh workflow run "Refresh index" --ref main
+```
+
+To rerun only the later stages once discovery has already been committed:
+
+```bash
+gh workflow run "Refresh index" --ref main -f stages="verify classify health build"
+```
+
 The daily job needs two secrets:
 
 | Secret | Required | What it is for |
