@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T10:43:32.421Z",
+  "generatedAt": "2026-09-30T10:56:19.267Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -251,6 +251,10 @@
       "reason": "only a model-route mention (examples/deerflow-extension-jev-screening/README.md), no call in code"
     },
     {
+      "repo": "caiovicentino/jev-risk-check-provider",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "calebl/ynab-mcp-server",
       "reason": "no line of code found that calls Jev"
     },
@@ -483,12 +487,20 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "fstandhartinger/jevbench",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "GeekLinkDev/jev-subtitle-translator",
       "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "genspark-ai/genoffice",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "getsentry/sentry-docs",
+      "reason": "only a sdk-call mention (docs/platforms/javascript/common/configuration/integrations/typesafe.mdx), no call in code"
     },
     {
       "repo": "GhalebDweikat/winnow",
@@ -543,8 +555,24 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "HITsz-TMG/JevEmbed",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "hotovo/aider-desk",
+      "reason": "only a api-call mention (packages/extensions/extensions/jev/README.md), no call in code"
+    },
+    {
       "repo": "hqman/JevScout",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "http4k/agent-skills",
+      "reason": "only a sdk-call mention (plugins/http4k/skills/http4k-development/references/connect-ai-typesafe.md), no call in code"
+    },
+    {
+      "repo": "http4k/www",
+      "reason": "only a sdk-call mention (src/website/content/ecosystem/ai/reference/typesafe/example.kt), no call in code"
     },
     {
       "repo": "Human-Agent-Society/reef",
@@ -735,6 +763,10 @@
       "reason": "only a sdk-import mention (src/langsmith/llm-gateway-decision-models.mdx), no call in code"
     },
     {
+      "repo": "lgy1027/jevshield",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "Li-Evan/awesome-jev",
       "reason": "no line of code found that calls Jev"
     },
@@ -749,6 +781,10 @@
     {
       "repo": "lioensky/VCPToolBox",
       "reason": "only a api-call mention (docs/jev调用文档.md), no call in code"
+    },
+    {
+      "repo": "Liuziyu77/Valen",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "LLPhant/LLPhant",
@@ -1071,6 +1107,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "sausheong/invadersapp",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "savka777/jev-use",
       "reason": "no line of code found that calls Jev"
     },
@@ -1132,6 +1172,10 @@
     },
     {
       "repo": "simota/tenbin",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "skydiving94/klint",
       "reason": "no line of code found that calls Jev"
     },
     {

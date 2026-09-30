@@ -2,7 +2,7 @@
 
 > Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it. Browse: [jevsome.ozersubasi.com](https://jevsome.ozersubasi.com)
 
-**71 verified projects · 778 more in the JSON · 1,194 search hits examined · refreshed 2026-09-29**
+**72 verified projects · 782 more in the JSON · 1,210 search hits examined · refreshed 2026-09-30**
 
 Deliberately short. Jev is days old and the ecosystem is mostly two-day-old experiments; this list starts with what can be shown to be real and grows from there. The bar is the same for every entry, and it is written down.
 
@@ -16,7 +16,7 @@ Deliberately short. Jev is days old and the ecosystem is mostly two-day-old expe
 6. **Five stars.** Someone besides the author cared. A presentation floor, not a correctness one; it is one number in [`pipeline/lib/quality.mjs`](pipeline/lib/quality.mjs) and will come down as the list matures.
 7. **Health.** Stars, licence, last commit and demo links are re-checked daily.
 
-Search casts a wide net — "typesafe" matches a lot of repositories that have nothing to do with Jev. Every hit that is not on the list is recorded in [`data/not-listed.json`](data/not-listed.json): 340 where no line of code calling Jev was found, 5 where it was found but the repository is not a project built on Jev. Argue with any of it.
+Search casts a wide net — "typesafe" matches a lot of repositories that have nothing to do with Jev. Every hit that is not on the list is recorded in [`data/not-listed.json`](data/not-listed.json): 351 where no line of code calling Jev was found, 5 where it was found but the repository is not a project built on Jev. Argue with any of it.
 
 Generated from [`data/index.json`](data/index.json); do not edit by hand. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -29,7 +29,7 @@ Generated from [`data/index.json`](data/index.json); do not edit by hand. See [C
 - [Agent tooling](#agent-tooling) (27)
 - [Browser & computer use](#browser-computer-use) (6)
 - [Applications](#applications) (14)
-- [Games & simulation](#games-simulation) (7)
+- [Games & simulation](#games-simulation) (8)
 - [Demos & playgrounds](#demos-playgrounds) (5)
 - [Benchmarks & research](#benchmarks-research) (3)
 
@@ -100,7 +100,7 @@ _11 more in this section passed the proof check but not the rest of the bar — 
 | [JevLint](https://github.com/huntedman/JevLint) | Configurable semantic linting powered by Jev, with file-level NOUL judgments and a magic-strings plugin. | TypeScript | MIT | 5 | [src/jev-client.ts:52](https://github.com/huntedman/JevLint/blob/96b9d693c6e7e9355b802d87f12354a2cbf405f9/src/jev-client.ts#L52) | 🟢 |
 | [perch](https://github.com/lakeday-org/perch) | AST powered semantic code linting with Jev | JavaScript | MIT | 5 | [test/systemone.test.js:10](https://github.com/lakeday-org/perch/blob/3289b85d233d35aba4996bc56a2cf8394e146005/test/systemone.test.js#L10) | 🟢 |
 
-_168 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
+_170 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
 ## Browser & computer use
 
@@ -158,6 +158,7 @@ _136 more in this section passed the proof check but not the rest of the bar —
 | [typesafe-snake](https://github.com/sorrycc/typesafe-snake) | Snake auto-played by TypeSafe's Jev model: one System One choice per tick, legal moves and facts generated in code | TypeScript | — | 17 | [server/index.ts:2](https://github.com/sorrycc/typesafe-snake/blob/8bf3f7c261ad35ece3345a02d21ba638ddfaf87f/server/index.ts#L2) | 🟢 |
 | [tsai-sc](https://github.com/phyous/tsai-sc) | TypeSafe Jev controls original StarCraft shareware through keyboard and mouse with recorded action probabilities. | Python | MIT | 11 | [tsai_sc/typesafe.py:24](https://github.com/phyous/tsai-sc/blob/6046ecc60156c4a3c04d384b41821a4ff08501b7/tsai_sc/typesafe.py#L24) | 🟢 |
 | [mario-jev](https://github.com/shantanugoel/mario-jev) | A uv-managed Python prototype that plays NES Super Mario Bros. (level 1-1 by default). Jev receives structured RAM observations and answers focused questions about movement, starting a jump, and sustaining a jump, plus timing hops under low | Python | — | 10 | [tests/test_policy.py:5](https://github.com/shantanugoel/mario-jev/blob/14f0c289e48cd99e3b5b91353d0456fb1f32d499/tests/test_policy.py#L5) | 🟢 |
+| [JEV_sees](https://github.com/CharlesFeng0314/JEV_sees) | Eyes are All JEV Needs - real time visual devisions from RGB, video and RGB-D cameras. | Python | MIT | 5 | [pyproject.toml:14](https://github.com/CharlesFeng0314/JEV_sees/blob/main/pyproject.toml#L14) | 🟢 |
 | [OneVOneJev](https://github.com/emrickgarrett/OneVOneJev) | 1v1 Jev quickscope arena — Three.js + TypeSafe System One | TypeScript | — | 5 | [server/src/jev.ts:7](https://github.com/emrickgarrett/OneVOneJev/blob/365b339d04446836352687b3650762106ea37f17/server/src/jev.ts#L7) | 🟢 |
 
 _20 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
