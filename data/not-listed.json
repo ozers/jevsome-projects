@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T10:56:19.267Z",
+  "generatedAt": "2026-10-01T11:14:52.595Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -8,6 +8,10 @@
     },
     {
       "repo": "1Panel-dev/laya-server",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "24601/rh-guard",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -33,6 +37,10 @@
     {
       "repo": "abrar225/Abrar-Akhunji",
       "reason": "only a sdk-import mention (src/content/blogs/2026-09-25-typesafe-ai-jev-non-autoregressive-decision-engine.md), no call in code"
+    },
+    {
+      "repo": "adrianliechti/wingman",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "agent-chaperone/agent-chaperone",
@@ -407,6 +415,10 @@
       "reason": "only a sdk-import mention (docs/clients.md), no call in code"
     },
     {
+      "repo": "dwmkerr/spaceinvaders",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "dzhng/jevgrep",
       "reason": "no line of code found that calls Jev"
     },
@@ -443,6 +455,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "eulogik/nirnay",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "everyinfra/jev-radar",
       "reason": "no line of code found that calls Jev"
     },
@@ -456,6 +472,10 @@
     },
     {
       "repo": "fatwang2/awesome-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "fazlerocks/jev-adblock",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1099,6 +1119,14 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "ruyianry/JevGym",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "ryanolson/roundhouse",
+      "reason": "only a model-route mention (crates/roundhouse-server/src/typesafe_shadow.rs), no call in code"
+    },
+    {
       "repo": "Sac-Y/Jev-cu",
       "reason": "no line of code found that calls Jev"
     },
@@ -1240,6 +1268,10 @@
     },
     {
       "repo": "thusinh1969/BrighTO_Router",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "TianyuCodings/JevHarness",
       "reason": "no line of code found that calls Jev"
     },
     {
