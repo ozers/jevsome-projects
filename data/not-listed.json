@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T11:14:52.595Z",
+  "generatedAt": "2026-10-02T10:32:22.391Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -121,6 +121,10 @@
     {
       "repo": "ankit-aglawe/tinyjev",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "AnotiaWang/awesome-decision-models",
+      "reason": "only a api-call mention (README_zh.md), no call in code"
     },
     {
       "repo": "AnotiaWang/awesome-jev",
@@ -248,6 +252,10 @@
     },
     {
       "repo": "buberlo/dsh-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "BudEcosystem/Bud-Decision-Engine",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -651,6 +659,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "irzix/nestjs-agentic",
+      "reason": "only a sdk-call mention (packages/jev/CHANGELOG.md), no call in code"
+    },
+    {
       "repo": "ItisShikhar/gg-friggin-ez",
       "reason": "no line of code found that calls Jev"
     },
@@ -699,6 +711,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "JustineDevs/meta-architect",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "Jwuthri/SelfJev",
       "reason": "no line of code found that calls Jev"
     },
@@ -708,6 +724,10 @@
     },
     {
       "repo": "kerpopule/hermes-jev-skills",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "keta1930/what-the-jev",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1215,6 +1235,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "spdaly/brain",
+      "reason": "only a api-call mention (raw/sources/SRC-2026-09-21-020/extracted.md), no call in code"
+    },
+    {
       "repo": "spring-ai-community/spring-ai-typesafe",
       "reason": "no line of code found that calls Jev"
     },
@@ -1223,7 +1247,15 @@
       "reason": "only a dependency mention (requirements.txt), no call in code"
     },
     {
+      "repo": "stefanwebb/meta-awesome-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "stefw/lkclean",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "strands-labs/strands-decider",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1369,6 +1401,10 @@
     {
       "repo": "wdobry/laya-playground",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "Wei-Shaw/sub2api",
+      "reason": "only a api-call mention (README_CN.md), no call in code"
     },
     {
       "repo": "wfzyx/von",
