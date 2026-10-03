@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T10:32:22.391Z",
+  "generatedAt": "2026-10-03T09:54:09.437Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -364,6 +364,10 @@
     },
     {
       "repo": "daseinlabs/open-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "datawhalechina/jev-cookbook",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -803,6 +807,10 @@
       "reason": "only a sdk-import mention (src/langsmith/llm-gateway-decision-models.mdx), no call in code"
     },
     {
+      "repo": "laurentkempe/TypeSafeJevPlayground",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "lgy1027/jevshield",
       "reason": "no line of code found that calls Jev"
     },
@@ -1083,6 +1091,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "promptfoo/promptfoo",
+      "reason": "only a model-route mention (examples/provider-typesafe/README.md), no call in code"
+    },
+    {
       "repo": "PsiACE/dohnuts",
       "reason": "no line of code found that calls Jev"
     },
@@ -1112,6 +1124,10 @@
     },
     {
       "repo": "reticlehq/reticle",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "RevocGG/typesafe-jev-bridge",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1421,6 +1437,10 @@
     {
       "repo": "xingwudao/OpenJev",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "xuzhougeng/wisp-science",
+      "reason": "only a api-key mention (src-tauri/src/models.rs), no call in code"
     },
     {
       "repo": "YaoApp/yao",
