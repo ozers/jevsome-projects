@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T09:54:09.437Z",
+  "generatedAt": "2026-10-04T10:37:30.231Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -232,6 +232,10 @@
     },
     {
       "repo": "Bodila51/grok-bot-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "botassembly/thinkthen",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -883,6 +887,14 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "majiayu000/claude-skill-registry",
+      "reason": "only a model-route mention (skills/ai-llm/jev/SKILL.md), no call in code"
+    },
+    {
+      "repo": "malevrigns/agent-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "MANISH007700/tab-bouncer",
       "reason": "no line of code found that calls Jev"
     },
@@ -1131,6 +1143,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "rickmark/garage-rag",
+      "reason": "only a sdk-import mention (garage_python/tests/corpora/second-brain-os/docs/track-jev/build-swap-in-jev.md), no call in code"
+    },
+    {
       "repo": "Rizzo-AI-Academy/rizzo-flow",
       "reason": "no line of code found that calls Jev"
     },
@@ -1263,6 +1279,10 @@
       "reason": "only a dependency mention (requirements.txt), no call in code"
     },
     {
+      "repo": "statelyai/jevspresso",
+      "reason": "only a sdk-call mention (packages/jev/src/types.ts), no call in code"
+    },
+    {
       "repo": "stefanwebb/meta-awesome-jev",
       "reason": "no line of code found that calls Jev"
     },
@@ -1300,6 +1320,10 @@
     },
     {
       "repo": "tanxarx/awesome-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "teddylee777/fastcampus-jev",
       "reason": "no line of code found that calls Jev"
     },
     {
