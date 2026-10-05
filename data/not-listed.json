@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:37:30.231Z",
+  "generatedAt": "2026-10-05T11:42:42.689Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -37,6 +37,10 @@
     {
       "repo": "abrar225/Abrar-Akhunji",
       "reason": "only a sdk-import mention (src/content/blogs/2026-09-25-typesafe-ai-jev-non-autoregressive-decision-engine.md), no call in code"
+    },
+    {
+      "repo": "adem-rguez/Chimera",
+      "reason": "only a api-call mention (docs/model-cards/kev-0.6b-qwen3.md), no call in code"
     },
     {
       "repo": "adrianliechti/wingman",
@@ -891,6 +895,10 @@
       "reason": "only a model-route mention (skills/ai-llm/jev/SKILL.md), no call in code"
     },
     {
+      "repo": "majiayu000/claude-skill-registry-data",
+      "reason": "only a sdk-import mention (quality/agent-plugin-eval/SKILL.md), no call in code"
+    },
+    {
       "repo": "malevrigns/agent-jev",
       "reason": "no line of code found that calls Jev"
     },
@@ -1183,6 +1191,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "SamratDuttaOfficial/WaterSheep",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "samuelfaj/distill",
       "reason": "no line of code found that calls Jev"
     },
@@ -1216,6 +1228,10 @@
     },
     {
       "repo": "sharziki/semdecide",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "Sheltercosmo/jev4pg",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1277,6 +1293,14 @@
     {
       "repo": "Sreehari05055/thesys-core",
       "reason": "only a dependency mention (requirements.txt), no call in code"
+    },
+    {
+      "repo": "stackql-registry/stackql-provider-typesafe",
+      "reason": "only a model-route mention (NOTES.md), no call in code"
+    },
+    {
+      "repo": "stackql/stackql.io",
+      "reason": "only a model-route mention (blog/providers/2026-10-05-new-typesafe-provider-available.md), no call in code"
     },
     {
       "repo": "statelyai/jevspresso",
