@@ -2,7 +2,7 @@
   "langchain-ai/langchain": {
     "fullName": "langchain-ai/langchain",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -36,7 +36,7 @@
   "berriai/litellm": {
     "fullName": "BerriAI/litellm",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -77,7 +77,7 @@
   "composiohq/composio": {
     "fullName": "ComposioHQ/composio",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -201,7 +201,7 @@
   "vercel/ai": {
     "fullName": "vercel/ai",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -271,13 +271,55 @@
         "path": "examples/ai-functions/src/evaluate/typesafe-ai/structured-rubrics.ts",
         "url": "https://github.com/vercel/ai/blob/91345da69958dc3587effe3121eb44e897d6ea09/examples/ai-functions/src/evaluate/typesafe-ai/structured-rubrics.ts",
         "query": "\"jev-latest\""
+      },
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": "examples/ai-functions/src/telemetry/otel/decide.ts",
+        "url": "https://github.com/vercel/ai/blob/758b092b39df784ed06abdf7af42fa31b74c853f/examples/ai-functions/src/telemetry/otel/decide.ts",
+        "query": "\"jev-latest\""
+      },
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": "examples/ai-functions/src/telemetry/console/decide.ts",
+        "url": "https://github.com/vercel/ai/blob/758b092b39df784ed06abdf7af42fa31b74c853f/examples/ai-functions/src/telemetry/console/decide.ts",
+        "query": "\"jev-latest\""
+      },
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": "examples/ai-functions/src/decide/typesafe-ai/basic.ts",
+        "url": "https://github.com/vercel/ai/blob/758b092b39df784ed06abdf7af42fa31b74c853f/examples/ai-functions/src/decide/typesafe-ai/basic.ts",
+        "query": "\"jev-latest\""
+      },
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": "examples/ai-functions/src/decide/typesafe-ai/registry.ts",
+        "url": "https://github.com/vercel/ai/blob/758b092b39df784ed06abdf7af42fa31b74c853f/examples/ai-functions/src/decide/typesafe-ai/registry.ts",
+        "query": "\"jev-latest\""
+      },
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": "examples/ai-functions/src/telemetry/tracing-channel/decide.ts",
+        "url": "https://github.com/vercel/ai/blob/758b092b39df784ed06abdf7af42fa31b74c853f/examples/ai-functions/src/telemetry/tracing-channel/decide.ts",
+        "query": "\"jev-latest\""
+      },
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": "examples/ai-functions/src/decide/typesafe-ai/error-handling.ts",
+        "url": "https://github.com/vercel/ai/blob/758b092b39df784ed06abdf7af42fa31b74c853f/examples/ai-functions/src/decide/typesafe-ai/error-handling.ts",
+        "query": "\"jev-latest\""
       }
     ]
   },
   "pydantic/pydantic-ai": {
     "fullName": "pydantic/pydantic-ai",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -324,7 +366,7 @@
   "effect-ts/effect": {
     "fullName": "Effect-TS/effect",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -364,7 +406,7 @@
   "openchamber/openchamber": {
     "fullName": "openchamber/openchamber",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -384,7 +426,7 @@
   "0xplaygrounds/rig": {
     "fullName": "0xPlaygrounds/rig",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -450,7 +492,7 @@
   "browser-use/jev-ultrafast": {
     "fullName": "browser-use/jev-ultrafast",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -482,7 +524,7 @@
   "tamaratran/fast-jev-compaction": {
     "fullName": "tamaratran/fast-jev-compaction",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -566,7 +608,7 @@
   "jarrodwatts/jev-trader": {
     "fullName": "jarrodwatts/jev-trader",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -637,7 +679,7 @@
   "anil-matcha/awesome-jev-by-typesafe": {
     "fullName": "Anil-matcha/awesome-jev-by-typesafe",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -709,7 +751,7 @@
   "wrongstack/wrongstack": {
     "fullName": "WrongStack/WrongStack",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -755,7 +797,7 @@
   "thruwire/foreman": {
     "fullName": "thruwire/foreman",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -774,7 +816,7 @@
   "fhshaik/typesafe-mario": {
     "fullName": "fhshaik/typesafe-mario",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -793,7 +835,7 @@
   "cequence-io/openai-scala-client": {
     "fullName": "cequence-io/openai-scala-client",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -858,7 +900,7 @@
   "devagrawal09/jev-review": {
     "fullName": "devagrawal09/jev-review",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -909,7 +951,7 @@
   "awlevin/typesafe-computer-use": {
     "fullName": "awlevin/typesafe-computer-use",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -941,7 +983,7 @@
   "millionsend/millionsend": {
     "fullName": "MillionSend/millionsend",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -973,7 +1015,7 @@
   "donvito/ai-backends": {
     "fullName": "donvito/ai-backends",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1044,7 +1086,7 @@
   "gargpratyush/jev-router": {
     "fullName": "gargpratyush/jev-router",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1089,7 +1131,7 @@
   "realzachi/pg-jev": {
     "fullName": "realZachi/pg-jev",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1108,7 +1150,7 @@
   "typesafe-ai/typesafe-sdk-js": {
     "fullName": "typesafe-ai/typesafe-sdk-js",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1128,7 +1170,7 @@
   "dabit3/jev-experiments": {
     "fullName": "dabit3/jev-experiments",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1147,7 +1189,7 @@
   "niazmorshed2007/jev-review": {
     "fullName": "NiazMorshed2007/jev-review",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1172,7 +1214,7 @@
   "typesafe-ai/system-one-adapter-python": {
     "fullName": "typesafe-ai/system-one-adapter-python",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1230,7 +1272,7 @@
   "droidrun/mobile-jev": {
     "fullName": "droidrun/mobile-jev",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1249,7 +1291,7 @@
   "typesafe-ai/typesafe-sdk-python": {
     "fullName": "typesafe-ai/typesafe-sdk-python",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1281,7 +1323,7 @@
   "kitze/unclutter": {
     "fullName": "kitze/unclutter",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1339,7 +1381,7 @@
   "jkudish/jev-mcp": {
     "fullName": "jkudish/jev-mcp",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1488,7 +1530,7 @@
   "standardagents/jevpilot": {
     "fullName": "standardagents/jevpilot",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1507,7 +1549,7 @@
   "jkudish/jev-browser": {
     "fullName": "jkudish/jev-browser",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1533,7 +1575,7 @@
   "realzachi/typesafe-adblock": {
     "fullName": "realZachi/typesafe-adblock",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1578,7 +1620,7 @@
   "y0usaf/pi-jev": {
     "fullName": "y0usaf/pi-jev",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1649,7 +1691,7 @@
   "trungdq88/youtube-sponsor-detection": {
     "fullName": "trungdq88/youtube-sponsor-detection",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1668,7 +1710,7 @@
   "braintrustdata/braintrust-sdk-javascript": {
     "fullName": "braintrustdata/braintrust-sdk-javascript",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1786,7 +1828,7 @@
   "hellogumbo/awesome-jev": {
     "fullName": "hellogumbo/awesome-jev",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1824,7 +1866,7 @@
   "brainstormity/jev-moderation-bot": {
     "fullName": "brainstormity/Jev-Moderation-Bot",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1886,7 +1928,7 @@
   "supercorp-ai/supercov": {
     "fullName": "supercorp-ai/supercov",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1937,7 +1979,7 @@
   "braintrustdata/braintrust-sdk-python": {
     "fullName": "braintrustdata/braintrust-sdk-python",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -1970,7 +2012,7 @@
   "nidhi-singh02/agent-router": {
     "fullName": "nidhi-singh02/agent-router",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -2002,7 +2044,7 @@
   "wy-coliney/jev-browser-use": {
     "fullName": "wy-coliney/jev-browser-use",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -2177,7 +2219,7 @@
   "monteduro/killmyidea": {
     "fullName": "monteduro/killmyidea",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -2196,7 +2238,7 @@
   "jexp/neo4jev": {
     "fullName": "jexp/neo4jev",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -2514,7 +2556,7 @@
   "ying-kai-liao/jev-browser": {
     "fullName": "Ying-Kai-Liao/jev-browser",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -2572,7 +2614,7 @@
   "moritzkremb/jev-voice-browser": {
     "fullName": "moritzkremb/jev-voice-browser",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -2754,7 +2796,7 @@
   "emrickgarrett/onevonejev": {
     "fullName": "emrickgarrett/OneVOneJev",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -2773,7 +2815,7 @@
   "lakeday-org/perch": {
     "fullName": "lakeday-org/perch",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -2948,7 +2990,7 @@
   "theooliveira/pi-jev": {
     "fullName": "TheoOliveira/pi-jev",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -3324,7 +3366,7 @@
   "yzfly/awesome-jev-zh": {
     "fullName": "yzfly/awesome-jev-zh",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -3427,7 +3469,7 @@
   "qiz029/dscode": {
     "fullName": "qiz029/dscode",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -3576,7 +3618,7 @@
   "antoniocoppe/jev-harness": {
     "fullName": "AntonioCoppe/jev-harness",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -3621,7 +3663,7 @@
   "abhixhek/jevcal": {
     "fullName": "abhixhek/jevcal",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -3861,7 +3903,7 @@
   "blutui/spam-bot": {
     "fullName": "blutui/spam-bot",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -3946,7 +3988,7 @@
   "hhhapz/typesafe-go": {
     "fullName": "hhhapz/typesafe-go",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -4200,7 +4242,7 @@
   "daftai2026/awesome-jev": {
     "fullName": "daftAI2026/awesome-jev",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -4264,7 +4306,7 @@
   "qkal/canny": {
     "fullName": "qkal/Canny",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -4972,7 +5014,7 @@
   "keltokhy/jgrep": {
     "fullName": "keltokhy/jgrep",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -5264,7 +5306,7 @@
   "mirainc/python-typesafe": {
     "fullName": "mirainc/python-typesafe",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -5390,7 +5432,7 @@
   "imhaohao/standardphysics": {
     "fullName": "Imhaohao/standardphysics",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -5846,7 +5888,7 @@
   "24601/augustus": {
     "fullName": "24601/Augustus",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -5956,7 +5998,7 @@
   "dpshde/berean": {
     "fullName": "dpshde/berean",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -6620,7 +6662,7 @@
   "ruteri/funkpy": {
     "fullName": "Ruteri/funkpy",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -7077,7 +7119,7 @@
   "danielgshea/jev-as-a-judge": {
     "fullName": "danielgshea/jev-as-a-judge",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -8916,7 +8958,7 @@
   "deepanwadhwa/opendecision": {
     "fullName": "deepanwadhwa/OpenDecision",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -10157,7 +10199,7 @@
   "typesend/typesafe_ai": {
     "fullName": "typesend/typesafe_ai",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -10242,7 +10284,7 @@
   "tholeg/typesafe-chess": {
     "fullName": "TholeG/typesafe-chess",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -10313,7 +10355,7 @@
   "nibir1/typesafe-go": {
     "fullName": "Nibir1/typesafe-go",
     "firstSeen": "2026-09-18",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-10-06",
     "sources": [
       {
         "signal": "endpoint",
@@ -10822,7 +10864,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "http4k/http4k": {
     "fullName": "http4k/http4k",
@@ -10857,7 +10899,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "arize-ai/openinference": {
     "fullName": "Arize-ai/openinference",
@@ -10919,7 +10961,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "firecrawl/firecrawl-docs": {
     "fullName": "firecrawl/firecrawl-docs",
@@ -10968,7 +11010,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "theagentrouter/agent-router": {
     "fullName": "theagentrouter/agent-router",
@@ -10989,7 +11031,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lnyo-cly/ai4j": {
     "fullName": "LnYo-Cly/ai4j",
@@ -11010,7 +11052,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "aihubmix/aihubmix-model-schema": {
     "fullName": "AIhubmix/aihubmix-model-schema",
@@ -11038,7 +11080,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "atharvamhaske/typesafe-sdk-go": {
     "fullName": "atharvamhaske/typesafe-sdk-go",
@@ -11058,7 +11100,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "adnanquazi/jev-dreaming": {
     "fullName": "AdnanQuazi/jev-dreaming",
@@ -11072,7 +11114,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "xiaoconstantine/dspy-go": {
     "fullName": "XiaoConstantine/dspy-go",
@@ -11121,7 +11163,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "techyaditya/jev-browser-sidekick-mcp": {
     "fullName": "TechyAditya/jev-browser-sidekick-mcp",
@@ -11135,7 +11177,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "jarodreyes/jev-knowledge-base": {
     "fullName": "jarodreyes/jev-knowledge-base",
@@ -11149,7 +11191,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "sunyifeng11111/typesafe-minesweeper": {
     "fullName": "sunyifeng11111/typesafe-minesweeper",
@@ -11163,7 +11205,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "handpickedlab/effort-router": {
     "fullName": "handpickedlab/effort-router",
@@ -11177,7 +11219,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "szl-holdings/a11oy": {
     "fullName": "szl-holdings/a11oy",
@@ -11198,7 +11240,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "diovannymartins/agendfined": {
     "fullName": "DiovannyMartins/AgendFined",
@@ -11212,7 +11254,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "swarna04/jev-routing": {
     "fullName": "swarna04/jev-routing",
@@ -11226,7 +11268,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "schalkneethling/jev-3000": {
     "fullName": "schalkneethling/jev-3000",
@@ -11240,7 +11282,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "suffro/decguard": {
     "fullName": "suffro/decguard",
@@ -11254,7 +11296,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "szl-holdings/szl-frontier": {
     "fullName": "szl-holdings/szl-frontier",
@@ -11268,7 +11310,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "juanmaagd/yakusoku": {
     "fullName": "juanmaagd/yakusoku",
@@ -11282,7 +11324,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "zaeem-rafiq/second-look": {
     "fullName": "zaeem-rafiq/second-look",
@@ -11296,7 +11338,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ctnicholas/jev-workflow-builder": {
     "fullName": "CTNicholas/jev-workflow-builder",
@@ -11310,7 +11352,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ctsstc/typesafe-ai-cube-rule": {
     "fullName": "ctsstc/typesafe-ai-cube-rule",
@@ -11324,7 +11366,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "szl-holdings/hatun-mcp": {
     "fullName": "szl-holdings/hatun-mcp",
@@ -11338,7 +11380,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "stacklok/mecatl": {
     "fullName": "stacklok/mecatl",
@@ -11352,7 +11394,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "daisuzz/sample-laya-mlx-http": {
     "fullName": "daisuzz/sample-laya-mlx-http",
@@ -11387,7 +11429,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "szl-holdings/szl-lambda-gate": {
     "fullName": "szl-holdings/szl-lambda-gate",
@@ -11401,7 +11443,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "paulgmiller/careme": {
     "fullName": "paulgmiller/careme",
@@ -11415,7 +11457,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "jmelahman/monorepo": {
     "fullName": "jmelahman/monorepo",
@@ -11436,7 +11478,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "blackmouse572/ecbot": {
     "fullName": "blackmouse572/ecbot",
@@ -11450,7 +11492,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "captain-corgi/typesafe-sdk-go": {
     "fullName": "captain-corgi/typesafe-sdk-go",
@@ -11547,7 +11589,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "unimtx/typesafe-sdk-go": {
     "fullName": "unimtx/typesafe-sdk-go",
@@ -11763,7 +11805,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "openclaw/openclaw": {
     "fullName": "openclaw/openclaw",
@@ -11812,7 +11854,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "virattt/ai-hedge-fund": {
     "fullName": "virattt/ai-hedge-fund",
@@ -11853,7 +11895,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "tauricresearch/tradingagents": {
     "fullName": "TauricResearch/TradingAgents",
@@ -11922,7 +11964,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "sickn33/agentic-awesome-skills": {
     "fullName": "sickn33/agentic-awesome-skills",
@@ -11999,7 +12041,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "koala73/worldmonitor": {
     "fullName": "koala73/worldmonitor",
@@ -12048,7 +12090,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "significant-gravitas/autogpt": {
     "fullName": "Significant-Gravitas/AutoGPT",
@@ -12111,7 +12153,7 @@
         "query": "\"TYPESAFE_API_KEY\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "earendil-works/pi": {
     "fullName": "earendil-works/pi",
@@ -12209,7 +12251,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "nousresearch/hermes-agent": {
     "fullName": "NousResearch/hermes-agent",
@@ -12417,9 +12459,15 @@
         "path": "scripts/jev-resolve.mjs",
         "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/e74b22cd34e0a8b9dd5ded87d1bf0db6ce1a38dd/scripts/jev-resolve.mjs",
         "query": "\"TYPESAFE_API_KEY\""
+      },
+      {
+        "signal": "readme",
+        "weight": 1,
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode",
+        "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "davila7/claude-code-templates": {
     "fullName": "davila7/claude-code-templates",
@@ -12531,7 +12579,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "mlflow/mlflow": {
     "fullName": "mlflow/mlflow",
@@ -12613,9 +12661,16 @@
         "path": "libs/typescript/integrations/typesafe/package.json",
         "url": "https://github.com/mlflow/mlflow/blob/c262905979f8abac81f808a759a97454754dd8e1/libs/typescript/integrations/typesafe/package.json",
         "query": "\"@typesafe-ai/sdk\""
+      },
+      {
+        "signal": "endpoint",
+        "weight": 3,
+        "path": "docs/docs/genai/eval-monitor/scorers/llm-judge/custom-judges/typesafe.mdx",
+        "url": "https://github.com/mlflow/mlflow/blob/59731c7db3aea291a673969d2b45ec1b6e676c84/docs/docs/genai/eval-monitor/scorers/llm-judge/custom-judges/typesafe.mdx",
+        "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "prefecthq/fastmcp": {
     "fullName": "PrefectHQ/fastmcp",
@@ -12678,7 +12733,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "assafelovic/gpt-researcher": {
     "fullName": "assafelovic/gpt-researcher",
@@ -12761,7 +12816,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "bytedance/deer-flow": {
     "fullName": "bytedance/deer-flow",
@@ -12908,7 +12963,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "pipecat-ai/pipecat": {
     "fullName": "pipecat-ai/pipecat",
@@ -12985,7 +13040,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "vectorize-io/hindsight": {
     "fullName": "vectorize-io/hindsight",
@@ -13055,7 +13110,7 @@
         "query": "\"TYPESAFE_API_KEY\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "semantica-agi/semantica": {
     "fullName": "semantica-agi/semantica",
@@ -13076,7 +13131,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "trycua/cua": {
     "fullName": "trycua/cua",
@@ -13125,7 +13180,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "stanfordnlp/dspy": {
     "fullName": "stanfordnlp/dspy",
@@ -13174,7 +13229,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "confident-ai/deepeval": {
     "fullName": "confident-ai/deepeval",
@@ -13265,7 +13320,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "kunchenguid/no-mistakes": {
     "fullName": "kunchenguid/no-mistakes",
@@ -13300,7 +13355,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "agentscope-ai/agentscope-java": {
     "fullName": "agentscope-ai/agentscope-java",
@@ -13361,7 +13416,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "yibie/awesome-jev": {
     "fullName": "yibie/awesome-jev",
@@ -13380,7 +13435,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "theoleecj/semif-openjev": {
     "fullName": "TheoLeeCJ/SemIf-OpenJev",
@@ -13393,7 +13448,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "jev-chat/jev-chat-jarvis": {
     "fullName": "jev-chat/jev-chat-jarvis",
@@ -13419,7 +13474,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "abdelstark/awesome-typesafe-jev": {
     "fullName": "AbdelStark/awesome-typesafe-jev",
@@ -13438,7 +13493,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "jaredpalmer/kev": {
     "fullName": "jaredpalmer/kev",
@@ -13464,7 +13519,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "anotiawang/awesome-jev": {
     "fullName": "AnotiaWang/awesome-jev",
@@ -13551,7 +13606,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "cobanov/awesome-jev": {
     "fullName": "cobanov/awesome-jev",
@@ -13570,7 +13625,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "caliber-ai-org/ai-setup": {
     "fullName": "caliber-ai-org/ai-setup",
@@ -13590,7 +13645,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lidge-jun/opencodex": {
     "fullName": "lidge-jun/opencodex",
@@ -13652,7 +13707,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "superagents-lab/jev-search": {
     "fullName": "superagents-lab/jev-search",
@@ -13665,7 +13720,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "fatwang2/awesome-jev": {
     "fullName": "fatwang2/awesome-jev",
@@ -13684,7 +13739,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "genspark-ai/genoffice": {
     "fullName": "genspark-ai/genoffice",
@@ -13704,7 +13759,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "anishfn/shapeshift": {
     "fullName": "anishfn/shapeshift",
@@ -13717,7 +13772,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "logicrw/awesome-jev-projects": {
     "fullName": "logicrw/awesome-jev-projects",
@@ -13918,7 +13973,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "oficcejo/aiagents-stock": {
     "fullName": "oficcejo/aiagents-stock",
@@ -13931,7 +13986,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "devin-axis/jev-dsh-decision": {
     "fullName": "Devin-AXIS/jev-dsh-decision",
@@ -13950,7 +14005,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "llphant/llphant": {
     "fullName": "LLPhant/LLPhant",
@@ -13970,7 +14025,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "walidboulanouar/awesome-jev-use-cases": {
     "fullName": "walidboulanouar/awesome-jev-use-cases",
@@ -13989,7 +14044,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "v-modal/awesome-jev-tools": {
     "fullName": "v-modal/awesome-jev-tools",
@@ -14008,7 +14063,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "oqura-ai/deepdoc": {
     "fullName": "Oqura-ai/deepdoc",
@@ -14027,7 +14082,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "yaoapp/yao": {
     "fullName": "YaoApp/yao",
@@ -14053,7 +14108,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "sac-y/jev-cu": {
     "fullName": "Sac-Y/Jev-cu",
@@ -14066,7 +14121,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "valentynkit/awesome-jev-typesafe": {
     "fullName": "valentynkit/awesome-jev-typesafe",
@@ -14085,7 +14140,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "githubnext/localjev": {
     "fullName": "githubnext/localjev",
@@ -14098,7 +14153,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "kraayenjon/awesome-jev": {
     "fullName": "kraayenjon/awesome-jev",
@@ -14117,7 +14172,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "2fastlabs/agent-squad": {
     "fullName": "2FastLabs/agent-squad",
@@ -14144,7 +14199,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "jev-chat/jev-chat-windows": {
     "fullName": "jev-chat/jev-chat-windows",
@@ -14163,7 +14218,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "kyotofin/tax-doc-classifier": {
     "fullName": "kyotofin/tax-doc-classifier",
@@ -14176,7 +14231,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "kerpopule/hermes-jev-skills": {
     "fullName": "kerpopule/hermes-jev-skills",
@@ -14189,7 +14244,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "nandhakishorm/laya": {
     "fullName": "NandhaKishorM/laya",
@@ -14215,7 +14270,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "openbyteinc/quantdinger": {
     "fullName": "OpenByteInc/QuantDinger",
@@ -14234,7 +14289,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "aowang-ai/jev-trade": {
     "fullName": "aowang-ai/jev-trade",
@@ -14253,7 +14308,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "itsmostafa/system-one-connector": {
     "fullName": "itsmostafa/system-one-connector",
@@ -14266,7 +14321,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "omnijev/awesome-jev-gallery": {
     "fullName": "OmniJev/awesome-jev-gallery",
@@ -14285,7 +14340,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "vinilana/jev-gateway": {
     "fullName": "vinilana/jev-gateway",
@@ -14298,7 +14353,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "notque/vexjoy-agent": {
     "fullName": "notque/vexjoy-agent",
@@ -14311,7 +14366,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "vinnylarouge/jevlike": {
     "fullName": "vinnylarouge/jevlike",
@@ -14324,7 +14379,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ipenywis/laya-ultrafast": {
     "fullName": "ipenywis/laya-ultrafast",
@@ -14337,7 +14392,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "wuyoscar/jev-skill": {
     "fullName": "wuyoscar/jev-skill",
@@ -14350,7 +14405,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "0xnatoshi/jev-codex-router": {
     "fullName": "0xNatoshi/jev-codex-router",
@@ -14369,7 +14424,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "kydlikebtc/awesome-jev": {
     "fullName": "kydlikebtc/awesome-jev",
@@ -14388,7 +14443,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "agricidaniel/jev-seo": {
     "fullName": "AgriciDaniel/jev-seo",
@@ -14401,7 +14456,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "brainstormity/jev-x-sentiment-analysis": {
     "fullName": "brainstormity/Jev-X-Sentiment-Analysis",
@@ -14414,7 +14469,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "appitstudio/awesome-jev": {
     "fullName": "AppitStudio/awesome-jev",
@@ -14433,7 +14488,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "alisaitteke/photoshop-mcp": {
     "fullName": "alisaitteke/photoshop-mcp",
@@ -14446,7 +14501,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "sutro-sh/jev-align": {
     "fullName": "sutro-sh/jev-align",
@@ -14465,7 +14520,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "deepopen-com/deepopen": {
     "fullName": "deepopen-com/deepopen",
@@ -14478,7 +14533,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "olsenbrands/fable-foreman": {
     "fullName": "olsenbrands/fable-foreman",
@@ -14491,7 +14546,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "amal-david/awesome-jev": {
     "fullName": "Amal-David/awesome-jev",
@@ -14510,7 +14565,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "dzhng/jevgrep": {
     "fullName": "dzhng/jevgrep",
@@ -14529,7 +14584,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "raudaschl/rag-fusion": {
     "fullName": "Raudaschl/rag-fusion",
@@ -14542,7 +14597,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "jev-chat/jev-chat-jarvis-mac": {
     "fullName": "jev-chat/jev-chat-jarvis-mac",
@@ -14568,7 +14623,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ferrycorleone/crush-monitor": {
     "fullName": "FerryCorleone/crush-monitor",
@@ -14594,7 +14649,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "shhivv/third-hand": {
     "fullName": "shhivv/third-hand",
@@ -14620,7 +14675,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "mohsen1/llm-debugger-vscode-extension": {
     "fullName": "mohsen1/llm-debugger-vscode-extension",
@@ -14633,7 +14688,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "siliconlabai/openjev": {
     "fullName": "SiliconLabAI/OpenJev",
@@ -14652,7 +14707,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "logan-markewich/jeff": {
     "fullName": "logan-markewich/jeff",
@@ -14671,7 +14726,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "bespokelabsai/nimble": {
     "fullName": "bespokelabsai/nimble",
@@ -14684,7 +14739,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "rmalde/minecraft-agent": {
     "fullName": "rmalde/minecraft-agent",
@@ -14710,7 +14765,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "narumiruna/pi-extensions": {
     "fullName": "narumiruna/pi-extensions",
@@ -14723,7 +14778,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "mrmps/classifier-dev": {
     "fullName": "mrmps/classifier-dev",
@@ -14768,7 +14823,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "wdobry/laya-playground": {
     "fullName": "wdobry/laya-playground",
@@ -14781,7 +14836,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-01"
+    "lastSeen": "2026-10-06"
   },
   "sreehari05055/thesys-core": {
     "fullName": "Sreehari05055/thesys-core",
@@ -14820,7 +14875,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "zilliztech/memsearch": {
     "fullName": "zilliztech/memsearch",
@@ -14833,7 +14888,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "szczyglis-dev/py-gpt": {
     "fullName": "szczyglis-dev/py-gpt",
@@ -14846,7 +14901,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "asymptote-labs/agent-beacon": {
     "fullName": "Asymptote-Labs/agent-beacon",
@@ -14859,7 +14914,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "agentconnect-md/agentconnect": {
     "fullName": "agentconnect-md/agentconnect",
@@ -14872,7 +14927,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "hardness1020/learn-agent-architecture": {
     "fullName": "hardness1020/learn-agent-architecture",
@@ -14885,7 +14940,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "reticlehq/reticle": {
     "fullName": "reticlehq/reticle",
@@ -14898,7 +14953,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "nokia-applied-research/anyjev": {
     "fullName": "nokia-applied-research/AnyJev",
@@ -14911,7 +14966,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "typellm/typellm": {
     "fullName": "TypeLLM/TypeLLM",
@@ -14924,7 +14979,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ollaya-dev/ollaya": {
     "fullName": "ollaya-dev/ollaya",
@@ -14937,7 +14992,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "wfzyx/von": {
     "fullName": "wfzyx/von",
@@ -14963,7 +15018,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "samuelfaj/distill": {
     "fullName": "samuelfaj/distill",
@@ -14976,7 +15031,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "milind-soni/tiptour-macos": {
     "fullName": "milind-soni/tiptour-macos",
@@ -14989,7 +15044,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "pulseaiclub/phi": {
     "fullName": "pulseaiclub/phi",
@@ -15002,7 +15057,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "alex314618-create/jevrev": {
     "fullName": "Alex314618-create/JevRev",
@@ -15015,7 +15070,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lucasjinreal/crane": {
     "fullName": "lucasjinreal/Crane",
@@ -15028,7 +15083,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "yinsongxu/llm2jev": {
     "fullName": "Yinsongxu/LLM2Jev",
@@ -15047,7 +15102,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "tinystruct/tinystruct": {
     "fullName": "tinystruct/tinystruct",
@@ -15060,7 +15115,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ethanalgox/aistock": {
     "fullName": "EthanAlgoX/AIStock",
@@ -15073,7 +15128,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ekzhang/openjev-sglang": {
     "fullName": "ekzhang/openjev-sglang",
@@ -15086,7 +15141,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "heman10x-ngu/openjev-verdict-2.0": {
     "fullName": "Heman10x-NGU/openJev-verdict-2.0",
@@ -15099,7 +15154,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "rokbenko/quackd": {
     "fullName": "rokbenko/quackd",
@@ -15125,7 +15180,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "glowbom/glowbom-oss": {
     "fullName": "glowbom/glowbom-oss",
@@ -15138,7 +15193,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "juspay/neurolink": {
     "fullName": "juspay/neurolink",
@@ -15157,7 +15212,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "thinkflowlab/system1-agents": {
     "fullName": "ThinkFlowLab/system1-agents",
@@ -15170,7 +15225,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "dom-actions/doma": {
     "fullName": "dom-actions/doma",
@@ -15183,7 +15238,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "promethe-us/awesome-jev": {
     "fullName": "Promethe-us/awesome-jev",
@@ -15202,7 +15257,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "dicklesworthstone/skillranker": {
     "fullName": "Dicklesworthstone/skillranker",
@@ -15215,7 +15270,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "allebee/jevk5": {
     "fullName": "allebee/jevk5",
@@ -15228,7 +15283,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "sdras/jev-webmcp-extension": {
     "fullName": "sdras/jev-webmcp-extension",
@@ -15247,7 +15302,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "cookiespiggy/agentic-rl": {
     "fullName": "cookiespiggy/agentic-rl",
@@ -15260,7 +15315,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "libingzheren/jev-mem": {
     "fullName": "libingzheren/Jev-Mem",
@@ -15273,7 +15328,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "socai-io/jev-social": {
     "fullName": "socai-io/jev-social",
@@ -15286,7 +15341,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "heman10x-ngu/verdict-open-jev": {
     "fullName": "Heman10x-NGU/Verdict-open-jev",
@@ -15299,7 +15354,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "mizchi/jev-lint": {
     "fullName": "mizchi/jev-lint",
@@ -15312,7 +15367,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "savka777/jev-use": {
     "fullName": "savka777/jev-use",
@@ -15325,7 +15380,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "openqa-cn/jev-browser": {
     "fullName": "openqa-cn/jev-browser",
@@ -15338,7 +15393,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "timrogers/formanator": {
     "fullName": "timrogers/formanator",
@@ -15351,7 +15406,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "chetaslua/jevmeter": {
     "fullName": "ChetasLua/jevmeter",
@@ -15364,7 +15419,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "aaddrick/building-with-typesafe-jev": {
     "fullName": "aaddrick/building-with-typesafe-jev",
@@ -15383,7 +15438,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "fabricioctelles/skills": {
     "fullName": "fabricioctelles/skills",
@@ -15410,7 +15465,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "openlayer-ai/jevals": {
     "fullName": "openlayer-ai/jevals",
@@ -15423,7 +15478,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ghalebdweikat/winnow": {
     "fullName": "GhalebDweikat/winnow",
@@ -15436,7 +15491,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "avinash-jetwani/jevmem": {
     "fullName": "Avinash-jetwani/jevmem",
@@ -15449,7 +15504,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "akashpriyadarshii/jev-curate": {
     "fullName": "AkashPriyadarshii/jev-curate",
@@ -15468,7 +15523,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "nassim-arifette/jevgrep": {
     "fullName": "nassim-arifette/jevgrep",
@@ -15487,7 +15542,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "fazlerocks/jevmail": {
     "fullName": "fazlerocks/jevmail",
@@ -15500,7 +15555,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "bodila51/grok-bot-jev": {
     "fullName": "Bodila51/grok-bot-jev",
@@ -15519,7 +15574,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "akashpriyadarshii/jev-seo": {
     "fullName": "AkashPriyadarshii/jev-seo",
@@ -15545,7 +15600,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "1panel-dev/laya-server": {
     "fullName": "1Panel-dev/laya-server",
@@ -15564,7 +15619,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "hyperspaceai/jevcache": {
     "fullName": "hyperspaceai/jevcache",
@@ -15661,7 +15716,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "intikhab49/open-jev-typed-decision-engine": {
     "fullName": "intikhab49/open-jev-typed-decision-engine",
@@ -15674,7 +15729,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "bodepudimuneendra-netizen/laya-jev-graphrag": {
     "fullName": "bodepudimuneendra-netizen/laya-jev-GraphRAG",
@@ -15687,7 +15742,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "aurorainfra/grev": {
     "fullName": "aurorainfra/grev",
@@ -15700,7 +15755,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "pinecone-io/cultivar": {
     "fullName": "pinecone-io/cultivar",
@@ -15713,7 +15768,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "kikeven/zerikai_memory": {
     "fullName": "KikeVen/zerikai_memory",
@@ -15726,7 +15781,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "akashpriyadarshii/jev-superpowers": {
     "fullName": "AkashPriyadarshii/jev-superpowers",
@@ -15745,7 +15800,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "luantak/is-malicious": {
     "fullName": "luantak/is-malicious",
@@ -15758,7 +15813,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lukstei/slop-grader": {
     "fullName": "lukstei/slop-grader",
@@ -15771,7 +15826,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "shaharia-lab/jev-cli": {
     "fullName": "shaharia-lab/jev-cli",
@@ -15784,7 +15839,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "shitianfang/jev-use": {
     "fullName": "shitianfang/jev-use",
@@ -15797,7 +15852,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "krzyzanowskim/typesafe": {
     "fullName": "krzyzanowskim/TypeSafe",
@@ -15810,7 +15865,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "philipbrembeck/pi-advisor": {
     "fullName": "philipbrembeck/pi-advisor",
@@ -15823,7 +15878,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "myc0576/smartmoney-cub": {
     "fullName": "myc0576/SmartMoney-Cub",
@@ -15836,7 +15891,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "buberlo/dsh-jev": {
     "fullName": "buberlo/dsh-jev",
@@ -15849,7 +15904,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "typesafeai/jev-harness": {
     "fullName": "TypeSafeAI/jev-harness",
@@ -15862,7 +15917,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "agent-chaperone/agent-chaperone": {
     "fullName": "agent-chaperone/agent-chaperone",
@@ -15875,7 +15930,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ilyamk/jev-gmail-ai-spam-filter-and-labeling": {
     "fullName": "ilyamk/jev-gmail-ai-spam-filter-and-labeling",
@@ -15888,7 +15943,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "asktheway/dsh-jev-interceptor": {
     "fullName": "AskTheWay/dsh-jev-interceptor",
@@ -15901,7 +15956,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "panachy/jevvy": {
     "fullName": "PanAchy/jevvy",
@@ -15914,7 +15969,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ktaletsk/jevframe": {
     "fullName": "ktaletsk/jevframe",
@@ -15927,7 +15982,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ray-hughes/jevalyn": {
     "fullName": "Ray-Hughes/jevalyn",
@@ -15940,7 +15995,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "yushen100/wechat-jev-assistant": {
     "fullName": "yushen100/wechat-jev-assistant",
@@ -15953,7 +16008,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "anandi1989/awesome-jev-usecases": {
     "fullName": "anandi1989/awesome-jev-usecases",
@@ -15972,7 +16027,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "romaluev/jev-ego": {
     "fullName": "romaluev/jev-ego",
@@ -15985,7 +16040,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "utk2103/jev-studio": {
     "fullName": "utk2103/jev-studio",
@@ -15998,7 +16053,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "stefw/lkclean": {
     "fullName": "stefw/lkclean",
@@ -16011,7 +16066,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "doeixd/discern": {
     "fullName": "doeixd/discern",
@@ -16024,7 +16079,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "yzfly/edgejev": {
     "fullName": "yzfly/edgejev",
@@ -16037,7 +16092,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "virolea/lintus": {
     "fullName": "virolea/lintus",
@@ -16050,7 +16105,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "filedcom/playjev": {
     "fullName": "filedcom/playjev",
@@ -16063,7 +16118,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "agencyenterprise/jev-recipes": {
     "fullName": "agencyenterprise/jev-recipes",
@@ -16076,7 +16131,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "nozomi-koborinai/jev-spec": {
     "fullName": "nozomi-koborinai/jev-spec",
@@ -16089,7 +16144,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "pambrose/jev4k": {
     "fullName": "pambrose/jev4k",
@@ -16102,7 +16157,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "vercel-labs/jev-ai-sdk-form-router": {
     "fullName": "vercel-labs/jev-ai-sdk-form-router",
@@ -16115,7 +16170,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lucasmartins-ai/lcc": {
     "fullName": "lucasmartins-ai/lcc",
@@ -16128,7 +16183,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "immamdouhaboammar/fable-jev": {
     "fullName": "imMamdouhaboammar/fable-jev",
@@ -16141,7 +16196,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "emenowicz/jev-sap-commerce": {
     "fullName": "Emenowicz/jev-sap-commerce",
@@ -16154,7 +16209,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "onmyway133/awesome-jev": {
     "fullName": "onmyway133/awesome-jev",
@@ -16167,7 +16222,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "luobosibing2/deepseek-harness-jev": {
     "fullName": "luobosibing2/deepseek-harness-jev",
@@ -16193,7 +16248,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "minilv/jev-auto-router": {
     "fullName": "miniLV/Jev-Auto-Router",
@@ -16206,7 +16261,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "devbackend/jevgo": {
     "fullName": "devbackend/jevgo",
@@ -16219,7 +16274,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "nsstudent/jevswiftsdk": {
     "fullName": "NSStudent/JevSwiftSDK",
@@ -16232,7 +16287,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "backant-io/jevelry": {
     "fullName": "backant-io/jevelry",
@@ -16245,7 +16300,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "shivampansuriya/jev-skill-gate": {
     "fullName": "ShivamPansuriya/jev-skill-gate",
@@ -16258,7 +16313,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "karanb192/jev-architect": {
     "fullName": "karanb192/jev-architect",
@@ -16271,7 +16326,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "akash-kamat/system-one-gemma": {
     "fullName": "akash-kamat/system-one-gemma",
@@ -16284,7 +16339,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "itisshikhar/gg-friggin-ez": {
     "fullName": "ItisShikhar/gg-friggin-ez",
@@ -16297,7 +16352,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ufec/jev-block-android-ad": {
     "fullName": "ufec/jev-block-android-ad",
@@ -16310,7 +16365,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "immamdouhaboammar/get-fable": {
     "fullName": "imMamdouhaboammar/get-fable",
@@ -16323,7 +16378,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "luigivis/jev-sdk-java": {
     "fullName": "luigivis/jev-sdk-java",
@@ -16336,7 +16391,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-09-30"
+    "lastSeen": "2026-10-06"
   },
   "paramjeetn/jev-cookbook": {
     "fullName": "paramjeetn/jev-cookbook",
@@ -16349,7 +16404,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "parth1811/jevflow": {
     "fullName": "Parth1811/JevFlow",
@@ -16362,7 +16417,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "shuhansun/jev-oas-sentinel": {
     "fullName": "ShuhanSun/jev-oas-sentinel",
@@ -16401,7 +16456,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ali-master/usejev": {
     "fullName": "ali-master/usejev",
@@ -16414,7 +16469,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "charlyhno-eng/jev-document-classification": {
     "fullName": "Charlyhno-eng/jev-document-classification",
@@ -16440,7 +16495,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "gudcks0305/jev-java": {
     "fullName": "gudcks0305/jev-java",
@@ -16453,7 +16508,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "chenrui333/jev-docs": {
     "fullName": "chenrui333/jev-docs",
@@ -16492,7 +16547,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "li-evan/awesome-jev": {
     "fullName": "Li-Evan/awesome-jev",
@@ -16511,7 +16566,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "sur-cai/macos-computer-use-kit": {
     "fullName": "Sur-Cai/macos-computer-use-kit",
@@ -16537,7 +16592,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "kinde-starter-kits/jev-agent-authorization": {
     "fullName": "kinde-starter-kits/jev-agent-authorization",
@@ -16589,7 +16644,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "angel291592/intent-router": {
     "fullName": "angel291592/Intent-Router",
@@ -16602,7 +16657,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "john-rocky/coreai-kit": {
     "fullName": "john-rocky/coreai-kit",
@@ -16615,7 +16670,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "iamaamir/system-one": {
     "fullName": "iamaamir/system-one",
@@ -16634,7 +16689,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "perrylink/jevcore": {
     "fullName": "PerryLink/jevcore",
@@ -16647,7 +16702,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "wh000wh000/awesome-jev-live": {
     "fullName": "wh000wh000/awesome-jev-live",
@@ -16666,7 +16721,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ikermoel/open-alternative-jev": {
     "fullName": "ikermoel/open-alternative-jev",
@@ -16679,7 +16734,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "omnijev/playjev": {
     "fullName": "OmniJev/PlayJev",
@@ -16692,7 +16747,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "bladedevoff/stuntd": {
     "fullName": "bladedevoff/stuntd",
@@ -16705,7 +16760,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "everyinfra/jev-radar": {
     "fullName": "everyinfra/jev-radar",
@@ -16718,7 +16773,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "psiace/dohnuts": {
     "fullName": "PsiACE/dohnuts",
@@ -16731,7 +16786,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "francoischastel/jev-code": {
     "fullName": "FrancoisChastel/jev-code",
@@ -16742,9 +16797,15 @@
         "weight": 1,
         "url": "https://github.com/FrancoisChastel/jev-code",
         "query": "topic:system-one"
+      },
+      {
+        "signal": "readme",
+        "weight": 1,
+        "url": "https://github.com/FrancoisChastel/jev-code",
+        "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ankit-aglawe/tinyjev": {
     "fullName": "ankit-aglawe/tinyjev",
@@ -16757,7 +16818,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "abhishek085/open-spark-jev": {
     "fullName": "abhishek085/open-spark-jev",
@@ -16770,7 +16831,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "eliot5566/jev-paper-radar": {
     "fullName": "Eliot5566/JEV-Paper-Radar",
@@ -16783,7 +16844,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "9pings/notjev": {
     "fullName": "9pings/notjev",
@@ -16796,7 +16857,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "chengyongru/fastjev": {
     "fullName": "chengyongru/fastjev",
@@ -16809,7 +16870,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "zjunlp/jevloop": {
     "fullName": "zjunlp/JevLoop",
@@ -16822,7 +16883,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "qew7/jev-feels": {
     "fullName": "Qew7/jev-feels",
@@ -16835,7 +16896,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "arjun988/kev": {
     "fullName": "arjun988/Kev",
@@ -16848,7 +16909,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "thusinh1969/brighto_router": {
     "fullName": "thusinh1969/BrighTO_Router",
@@ -16861,7 +16922,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ckaraca/awesome-jev": {
     "fullName": "ckaraca/awesome-jev",
@@ -16880,7 +16941,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "shanghua-gao/rsi-jev": {
     "fullName": "Shanghua-Gao/RSI-Jev",
@@ -16893,7 +16954,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ruban-24/switchboard": {
     "fullName": "ruban-24/switchboard",
@@ -16906,7 +16967,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "harshithsunku/learn-jev-end-to-end": {
     "fullName": "harshithsunku/learn-jev-end-to-end",
@@ -16919,7 +16980,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "komorra/eugeniusz": {
     "fullName": "komorra/Eugeniusz",
@@ -16932,7 +16993,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "premo-cloud/typesafe-sdk-java": {
     "fullName": "Premo-Cloud/typesafe-sdk-java",
@@ -16945,7 +17006,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "rupeshpoojary9/poorjev": {
     "fullName": "rupeshpoojary9/poorjev",
@@ -16958,7 +17019,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "erkamyaman/jev-enforce": {
     "fullName": "erkamyaman/jev-enforce",
@@ -16971,7 +17032,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "rupeshpoojary9/awesome-open-system-one": {
     "fullName": "rupeshpoojary9/awesome-open-system-one",
@@ -16984,7 +17045,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "zhangxaochen/dsh-jev": {
     "fullName": "zhangxaochen/dsh-jev",
@@ -16997,7 +17058,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "manjunathshiva/opendecider": {
     "fullName": "manjunathshiva/opendecider",
@@ -17010,7 +17071,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "nshkrdotcom/typesafe_sdk": {
     "fullName": "nshkrdotcom/typesafe_sdk",
@@ -17036,7 +17097,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "yifan-lan/awesome-jev-robustness": {
     "fullName": "Yifan-Lan/awesome-jev-robustness",
@@ -17062,7 +17123,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "arpit-khandelwal/jev-linkedin-slop-filter": {
     "fullName": "Arpit-Khandelwal/jev-linkedin-slop-filter",
@@ -17075,7 +17136,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "omnijev/onejev": {
     "fullName": "OmniJev/OneJev",
@@ -17094,7 +17155,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "cobusgreyling/jev": {
     "fullName": "cobusgreyling/Jev",
@@ -17113,7 +17174,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "mblode/taste-lint": {
     "fullName": "mblode/taste-lint",
@@ -17126,7 +17187,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "brida-ai/sdk": {
     "fullName": "brida-ai/sdk",
@@ -17178,7 +17239,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "embodied-ai-system/qwen3.5-oneforward": {
     "fullName": "Embodied-AI-System/Qwen3.5-OneForward",
@@ -17230,7 +17291,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "parkavenue9639/jevloop": {
     "fullName": "parkavenue9639/jevloop",
@@ -17243,7 +17304,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "obetomuniz/auto-mode-for-paseo": {
     "fullName": "obetomuniz/auto-mode-for-paseo",
@@ -17308,7 +17369,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "joasasantos/neurosploit": {
     "fullName": "JoasASantos/NeuroSploit",
@@ -17321,7 +17382,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "iapp-technology/openthai-systemone": {
     "fullName": "iapp-technology/openthai-systemone",
@@ -17334,7 +17395,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "harnessrouter/systemoneharness": {
     "fullName": "HarnessRouter/SystemOneHarness",
@@ -17347,7 +17408,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "beatapi/awesome-jev": {
     "fullName": "BeatAPI/awesome-jev",
@@ -17360,7 +17421,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "calebl/ynab-mcp-server": {
     "fullName": "calebl/ynab-mcp-server",
@@ -17373,7 +17434,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "dbreunig/building-with-jev-skill": {
     "fullName": "dbreunig/building-with-jev-skill",
@@ -17386,7 +17447,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "razorback16/openjev": {
     "fullName": "razorback16/openjev",
@@ -17399,7 +17460,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "spring-ai-community/spring-ai-typesafe": {
     "fullName": "spring-ai-community/spring-ai-typesafe",
@@ -17412,7 +17473,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "comet-ml/opik": {
     "fullName": "comet-ml/opik",
@@ -17432,7 +17493,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "receptron/laya": {
     "fullName": "receptron/laya",
@@ -17445,7 +17506,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "contrastive-lm/clm": {
     "fullName": "Contrastive-LM/CLM",
@@ -17458,7 +17519,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "antseed/antseed": {
     "fullName": "Antseed/antseed",
@@ -17471,7 +17532,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "mapika/decider": {
     "fullName": "Mapika/decider",
@@ -17497,7 +17558,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "rizzo-ai-academy/rizzo-flow": {
     "fullName": "Rizzo-AI-Academy/rizzo-flow",
@@ -17510,7 +17571,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "pouriarouzrokh/lattereview": {
     "fullName": "PouriaRouzrokh/LatteReview",
@@ -17523,7 +17584,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "hqman/jevscout": {
     "fullName": "hqman/JevScout",
@@ -17536,7 +17597,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "daseinlabs/open-jev": {
     "fullName": "daseinlabs/open-jev",
@@ -17549,7 +17610,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "enterpilot/gomodel": {
     "fullName": "ENTERPILOT/GoModel",
@@ -17562,7 +17623,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "decapodlabs/decapod": {
     "fullName": "DecapodLabs/decapod",
@@ -17601,7 +17662,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "hunkim/solar-mini4-jev": {
     "fullName": "hunkim/solar-mini4-jev",
@@ -17834,7 +17895,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "simstudioai/sim": {
     "fullName": "simstudioai/sim",
@@ -17848,7 +17909,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "1jehuang/jcode": {
     "fullName": "1jehuang/jcode",
@@ -17876,7 +17937,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "forem/forem": {
     "fullName": "forem/forem",
@@ -17925,7 +17986,7 @@
         "query": "\"TYPESAFE_API_KEY\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "elie222/inbox-zero": {
     "fullName": "elie222/inbox-zero",
@@ -17939,7 +18000,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lioensky/vcptoolbox": {
     "fullName": "lioensky/VCPToolBox",
@@ -17953,7 +18014,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "greptimeteam/greptimedb": {
     "fullName": "GreptimeTeam/greptimedb",
@@ -17974,7 +18035,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "crmne/ruby_llm": {
     "fullName": "crmne/ruby_llm",
@@ -18002,7 +18063,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "thinkinaixyz/deepchat": {
     "fullName": "ThinkInAIXYZ/deepchat",
@@ -18051,7 +18112,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "we-promise/sure": {
     "fullName": "we-promise/sure",
@@ -18072,7 +18133,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "zilliztech/gptcache": {
     "fullName": "zilliztech/GPTCache",
@@ -18093,7 +18154,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "opengeos/geolibre": {
     "fullName": "opengeos/GeoLibre",
@@ -18114,7 +18175,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "maximhq/bifrost": {
     "fullName": "maximhq/bifrost",
@@ -18135,7 +18196,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "aipoch/open-science": {
     "fullName": "aipoch/open-science",
@@ -18149,7 +18210,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "zilliztech/deep-searcher": {
     "fullName": "zilliztech/deep-searcher",
@@ -18163,7 +18224,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "rohitg00/pro-workflow": {
     "fullName": "rohitg00/pro-workflow",
@@ -18177,7 +18238,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "cayu-dev/cayu": {
     "fullName": "cayu-dev/cayu",
@@ -18191,7 +18252,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "loopx-project/loopx": {
     "fullName": "loopx-project/loopx",
@@ -18205,7 +18266,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "kirodotdev/kirocrew": {
     "fullName": "kirodotdev/KiroCrew",
@@ -18233,7 +18294,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "twikoojs/twikoo": {
     "fullName": "twikoojs/twikoo",
@@ -18254,7 +18315,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "armur-ai/pentest-swarm-ai": {
     "fullName": "Armur-Ai/Pentest-Swarm-AI",
@@ -18303,7 +18364,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "aaif-goose/goose": {
     "fullName": "aaif-goose/goose",
@@ -18317,7 +18378,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "justvugg/colibri": {
     "fullName": "JustVugg/colibri",
@@ -18338,7 +18399,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "vllm-project/vllm": {
     "fullName": "vllm-project/vllm",
@@ -18352,7 +18413,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "apache/airflow": {
     "fullName": "apache/airflow",
@@ -18371,9 +18432,16 @@
         "path": "providers/common/ai/docs/retry_policies.rst",
         "url": "https://github.com/apache/airflow/blob/0768924a0cd97d28ea088ac0f7efe019c6bbce28/providers/common/ai/docs/retry_policies.rst",
         "query": "\"jev-latest\""
+      },
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": "providers/common/ai/docs/decision_models.rst",
+        "url": "https://github.com/apache/airflow/blob/6e5f3136b9bc66524d17f813684b87e6b5a092cd/providers/common/ai/docs/decision_models.rst",
+        "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "chatwoot/chatwoot": {
     "fullName": "chatwoot/chatwoot",
@@ -18401,7 +18469,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "twentyhq/twenty": {
     "fullName": "twentyhq/twenty",
@@ -18415,7 +18483,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "zeroclaw-labs/zeroclaw": {
     "fullName": "zeroclaw-labs/zeroclaw",
@@ -18429,7 +18497,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "agentscope-ai/agentscope": {
     "fullName": "agentscope-ai/agentscope",
@@ -18443,7 +18511,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "can1357/oh-my-pi": {
     "fullName": "can1357/oh-my-pi",
@@ -18499,7 +18567,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "mastra-ai/mastra": {
     "fullName": "mastra-ai/mastra",
@@ -18513,7 +18581,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "volcengine/openviking": {
     "fullName": "volcengine/OpenViking",
@@ -18548,7 +18616,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "human-agent-society/reef": {
     "fullName": "Human-Agent-Society/reef",
@@ -18618,7 +18686,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ekkolearnai/ekko-studio": {
     "fullName": "EKKOLearnAI/ekko-studio",
@@ -18716,7 +18784,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "getsentry/sentry-javascript": {
     "fullName": "getsentry/sentry-javascript",
@@ -18751,7 +18819,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "kilo-org/kilocode": {
     "fullName": "Kilo-Org/kilocode",
@@ -18765,7 +18833,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "arize-ai/phoenix": {
     "fullName": "Arize-ai/phoenix",
@@ -18779,7 +18847,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "marcellourbani/vscode_abap_remote_fs": {
     "fullName": "marcellourbani/vscode_abap_remote_fs",
@@ -18807,7 +18875,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "copilotkit/copilotkit": {
     "fullName": "CopilotKit/CopilotKit",
@@ -18821,7 +18889,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "alpic-ai/skybridge": {
     "fullName": "alpic-ai/skybridge",
@@ -18842,7 +18910,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "marvikomo/code-lens-ai": {
     "fullName": "marvikomo/code-lens-ai",
@@ -18856,7 +18924,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "astaxie/tokenhub": {
     "fullName": "astaxie/TokenHub",
@@ -18891,7 +18959,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "undefined-ui/second-brain-os": {
     "fullName": "undefined-ui/second-brain-os",
@@ -18919,7 +18987,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "maximeheckel/blog.maximeheckel.com": {
     "fullName": "MaximeHeckel/blog.maximeheckel.com",
@@ -18933,7 +19001,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "melgarafael/deskcommcrm": {
     "fullName": "melgarafael/DeskcommCRM",
@@ -18947,7 +19015,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "blockscout/frontend": {
     "fullName": "blockscout/frontend",
@@ -18961,7 +19029,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "nicobailon/pi-interactive-shell": {
     "fullName": "nicobailon/pi-interactive-shell",
@@ -18975,7 +19043,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "builderio/agent-native": {
     "fullName": "BuilderIO/agent-native",
@@ -18996,7 +19064,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "codeaholicguy/ai-devkit": {
     "fullName": "codeaholicguy/ai-devkit",
@@ -19038,7 +19106,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "nicobailon/pi-mcp-adapter": {
     "fullName": "nicobailon/pi-mcp-adapter",
@@ -19059,7 +19127,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lightdash/lightdash": {
     "fullName": "lightdash/lightdash",
@@ -19073,7 +19141,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "openagentsinc/openagents": {
     "fullName": "OpenAgentsInc/openagents",
@@ -19087,7 +19155,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "imchong/robotics_notebooks": {
     "fullName": "ImChong/Robotics_Notebooks",
@@ -19108,7 +19176,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "imikerussell/beebots": {
     "fullName": "imikerussell/beebots",
@@ -19129,7 +19197,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "langchain-ai/docs": {
     "fullName": "langchain-ai/docs",
@@ -19157,7 +19225,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "dvjn/aegis": {
     "fullName": "dvjn/aegis",
@@ -19171,7 +19239,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "bakiabaci/awesome-jev": {
     "fullName": "bakiabaci/awesome-jev",
@@ -19199,7 +19267,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "alongl/openjev": {
     "fullName": "alongL/openJev",
@@ -19220,7 +19288,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "busy-office/kev-agent-kit": {
     "fullName": "Busy-Office/kev-agent-kit",
@@ -19234,7 +19302,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "tano2026/ai-vibe-toolkit": {
     "fullName": "tano2026/AI-Vibe-Toolkit",
@@ -19248,7 +19316,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ayushchauhan9389/kev": {
     "fullName": "AyushChauhan9389/kev",
@@ -19262,7 +19330,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "boundring/hngh": {
     "fullName": "boundring/hngh",
@@ -19332,7 +19400,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "igorcosta/wekaone": {
     "fullName": "igorcosta/wekaone",
@@ -19346,7 +19414,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "steph4n-gh/system1": {
     "fullName": "steph4n-gh/system1",
@@ -19374,7 +19442,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "therodfather/seridian": {
     "fullName": "therodfather/seridian",
@@ -19388,7 +19456,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "distracted-e421/open-source-inteligence": {
     "fullName": "Distracted-E421/open-source-inteligence",
@@ -19409,7 +19477,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "tangleddaunt/lazy_agents": {
     "fullName": "TangledDaunT/Lazy_agents",
@@ -19423,7 +19491,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "pa-arth/fine-tuned-computer-use-jev-like-model": {
     "fullName": "pa-arth/fine-tuned-computer-use-jev-like-model",
@@ -19444,7 +19512,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "egavrin/deal-studio-ohos": {
     "fullName": "egavrin/deal-studio-ohos",
@@ -19458,7 +19526,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "trainingonlinecourses/jev-ai": {
     "fullName": "trainingonlinecourses/JEV-AI",
@@ -19472,7 +19540,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "pujux/hass-hunch": {
     "fullName": "pujux/hass-hunch",
@@ -19486,7 +19554,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "abrar225/abrar-akhunji": {
     "fullName": "abrar225/Abrar-Akhunji",
@@ -19500,7 +19568,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ubuntuokos/final-architecture-v3.0": {
     "fullName": "ubuntuokos/Final-Architecture-v3.0",
@@ -19514,7 +19582,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "codeenk/sev": {
     "fullName": "Codeenk/sev",
@@ -19528,7 +19596,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "mblode/icons": {
     "fullName": "mblode/icons",
@@ -19542,7 +19610,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "santtiago49/system-design-trainer": {
     "fullName": "santtiago49/system-design-trainer",
@@ -19556,7 +19624,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "marynfs/pacman-ai-race": {
     "fullName": "MaryNfs/pacman-ai-race",
@@ -19577,7 +19645,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "artemnovitckii/creator-lab": {
     "fullName": "artemnovitckii/creator-lab",
@@ -19590,7 +19658,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "opengithubs/github-weekly-rank": {
     "fullName": "OpenGithubs/github-weekly-rank",
@@ -19616,7 +19684,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "geeklinkdev/jev-subtitle-translator": {
     "fullName": "GeekLinkDev/jev-subtitle-translator",
@@ -19629,7 +19697,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "jessie-qingyu/jev-in-the-wild": {
     "fullName": "Jessie-QingYu/jev-in-the-wild",
@@ -19642,7 +19710,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ckorhonen/jev-lint": {
     "fullName": "ckorhonen/jev-lint",
@@ -19655,7 +19723,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "jwuthri/selfjev": {
     "fullName": "Jwuthri/SelfJev",
@@ -19668,7 +19736,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "hotovo/aider-desk": {
     "fullName": "hotovo/aider-desk",
@@ -19682,7 +19750,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "copilotkit/openmuse": {
     "fullName": "CopilotKit/openmuse",
@@ -19703,7 +19771,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "getsentry/sentry-docs": {
     "fullName": "getsentry/sentry-docs",
@@ -19717,7 +19785,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "alberthnahas/ghg": {
     "fullName": "alberthnahas/GHG",
@@ -19731,7 +19799,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "http4k/agent-skills": {
     "fullName": "http4k/agent-skills",
@@ -19745,7 +19813,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "http4k/http4k.github.io": {
     "fullName": "http4k/http4k.github.io",
@@ -19780,7 +19848,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "adityamparikh/jev-support-desk": {
     "fullName": "adityamparikh/jev-support-desk",
@@ -19801,7 +19869,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "http4k/www": {
     "fullName": "http4k/www",
@@ -19822,7 +19890,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "sausheong/invadersapp": {
     "fullName": "sausheong/invadersapp",
@@ -19835,7 +19903,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "fstandhartinger/jevbench": {
     "fullName": "fstandhartinger/jevbench",
@@ -19848,7 +19916,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "caiovicentino/jev-risk-check-provider": {
     "fullName": "caiovicentino/jev-risk-check-provider",
@@ -19861,7 +19929,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "charlesfeng0314/jev_sees": {
     "fullName": "CharlesFeng0314/JEV_sees",
@@ -19880,7 +19948,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "hitsz-tmg/jevembed": {
     "fullName": "HITsz-TMG/JevEmbed",
@@ -19893,7 +19961,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "skydiving94/klint": {
     "fullName": "skydiving94/klint",
@@ -19906,7 +19974,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lgy1027/jevshield": {
     "fullName": "lgy1027/jevshield",
@@ -19974,7 +20042,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "sligter/landppt": {
     "fullName": "sligter/LandPPT",
@@ -19988,7 +20056,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "chunxiaoxx/nautilus-compass": {
     "fullName": "chunxiaoxx/nautilus-compass",
@@ -20002,7 +20070,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "firecrawl/firecrawl": {
     "fullName": "firecrawl/firecrawl",
@@ -20079,7 +20147,7 @@
         "query": "\"TYPESAFE_API_KEY\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lachlanarford/cbba-inbox": {
     "fullName": "lachlanarford/cbba-inbox",
@@ -20093,7 +20161,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ryanolson/roundhouse": {
     "fullName": "ryanolson/roundhouse",
@@ -20107,7 +20175,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "dimensionalos/dimos": {
     "fullName": "dimensionalOS/dimos",
@@ -20134,7 +20202,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "tianyucodings/jevharness": {
     "fullName": "TianyuCodings/JevHarness",
@@ -20147,7 +20215,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ruyianry/jevgym": {
     "fullName": "ruyianry/JevGym",
@@ -20160,7 +20228,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "fazlerocks/jev-adblock": {
     "fullName": "fazlerocks/jev-adblock",
@@ -20173,7 +20241,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "eulogik/nirnay": {
     "fullName": "eulogik/nirnay",
@@ -20186,7 +20254,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "24601/rh-guard": {
     "fullName": "24601/rh-guard",
@@ -20324,7 +20392,7 @@
         "query": "\"TYPESAFE_API_KEY\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "shenseanchen/waku-agent": {
     "fullName": "ShenSeanChen/waku-agent",
@@ -20338,7 +20406,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "getsentry/sentry": {
     "fullName": "getsentry/sentry",
@@ -20352,7 +20420,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "wei-shaw/sub2api": {
     "fullName": "Wei-Shaw/sub2api",
@@ -20379,7 +20447,7 @@
         "query": "jev typesafe in:name,description,readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "irzix/nestjs-agentic": {
     "fullName": "irzix/nestjs-agentic",
@@ -20400,7 +20468,7 @@
         "query": "\"@typesafe-ai/sdk\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "anotiawang/awesome-decision-models": {
     "fullName": "AnotiaWang/awesome-decision-models",
@@ -20433,7 +20501,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "spdaly/brain": {
     "fullName": "spdaly/brain",
@@ -20447,7 +20515,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "keta1930/what-the-jev": {
     "fullName": "keta1930/what-the-jev",
@@ -20460,7 +20528,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "justinedevs/meta-architect": {
     "fullName": "JustineDevs/meta-architect",
@@ -20486,7 +20554,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "budecosystem/bud-decision-engine": {
     "fullName": "BudEcosystem/Bud-Decision-Engine",
@@ -20512,7 +20580,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "mansicer/jev-plays": {
     "fullName": "mansicer/jev-plays",
@@ -20553,7 +20621,7 @@
         "query": "\"TYPESAFE_API_KEY\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "ike1112/focusguard": {
     "fullName": "ike1112/focusguard",
@@ -20567,7 +20635,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "xuzhougeng/wisp-science": {
     "fullName": "xuzhougeng/wisp-science",
@@ -20594,7 +20662,7 @@
         "query": "topic:typesafe-ai"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "revocgg/typesafe-jev-bridge": {
     "fullName": "RevocGG/typesafe-jev-bridge",
@@ -20607,7 +20675,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "datawhalechina/jev-cookbook": {
     "fullName": "datawhalechina/jev-cookbook",
@@ -20620,7 +20688,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "majiayu000/claude-skill-registry": {
     "fullName": "majiayu000/claude-skill-registry",
@@ -20676,7 +20744,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "malevrigns/agent-jev": {
     "fullName": "malevrigns/agent-jev",
@@ -20689,7 +20757,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "botassembly/thinkthen": {
     "fullName": "botassembly/thinkthen",
@@ -20702,7 +20770,7 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "teddylee777/fastcampus-jev": {
     "fullName": "teddylee777/fastcampus-jev",
@@ -20715,7 +20783,7 @@
         "query": "\"system one\" typesafe in:readme"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "the-vibe-company/quivr": {
     "fullName": "The-Vibe-Company/quivr",
@@ -20757,7 +20825,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "codewhale-hq/codewhale": {
     "fullName": "codewhale-hq/Codewhale",
@@ -20792,7 +20860,7 @@
         "query": "\"jev-latest\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "devin-axis/ipollowork": {
     "fullName": "Devin-AXIS/iPolloWork",
@@ -20813,7 +20881,7 @@
         "query": "\"api.typesafe.ai/v1/systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "majiayu000/claude-skill-registry-data": {
     "fullName": "majiayu000/claude-skill-registry-data",
@@ -20827,7 +20895,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "lanshi17/apc": {
     "fullName": "lanshi17/APC",
@@ -20841,7 +20909,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "adem-rguez/chimera": {
     "fullName": "adem-rguez/Chimera",
@@ -20855,7 +20923,7 @@
         "query": "\"from typesafe import\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "stackql-registry/stackql-provider-typesafe": {
     "fullName": "stackql-registry/stackql-provider-typesafe",
@@ -20911,7 +20979,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "stackql/stackql.io": {
     "fullName": "stackql/stackql.io",
@@ -20925,7 +20993,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "gitcoder052023/openagent": {
     "fullName": "GitCoder052023/OpenAgent",
@@ -20946,7 +21014,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "stackql/stackql-provider-registry": {
     "fullName": "stackql/stackql-provider-registry",
@@ -20960,7 +21028,7 @@
         "query": "\"typesafe.systemone\""
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "sheltercosmo/jev4pg": {
     "fullName": "Sheltercosmo/jev4pg",
@@ -20973,7 +21041,7 @@
         "query": "topic:jev"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
   },
   "samratduttaofficial/watersheep": {
     "fullName": "SamratDuttaOfficial/WaterSheep",
@@ -20986,6 +21054,211 @@
         "query": "topic:system-one"
       }
     ],
-    "lastSeen": "2026-10-05"
+    "lastSeen": "2026-10-06"
+  },
+  "assistant-ui/assistant-ui": {
+    "fullName": "assistant-ui/assistant-ui",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "endpoint",
+        "weight": 3,
+        "path": "apps/docs/lib/search/route-search.ts",
+        "url": "https://github.com/assistant-ui/assistant-ui/blob/9354adc9555c51aa199074c8793f8e7c6a44a246/apps/docs/lib/search/route-search.ts",
+        "query": "\"api.typesafe.ai/v1/systemone\""
+      },
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": "apps/docs/lib/search/README.md",
+        "url": "https://github.com/assistant-ui/assistant-ui/blob/9354adc9555c51aa199074c8793f8e7c6a44a246/apps/docs/lib/search/README.md",
+        "query": "\"jev-latest\""
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "modu-ai/moai-adk": {
+    "fullName": "modu-ai/moai-adk",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "endpoint",
+        "weight": 3,
+        "path": "scripts/jev/ask.sh",
+        "url": "https://github.com/modu-ai/moai-adk/blob/5b4feee174f66dd5cc49bb7d17d77e74dc7fedfd/scripts/jev/ask.sh",
+        "query": "\"api.typesafe.ai/v1/systemone\""
+      },
+      {
+        "signal": "endpoint",
+        "weight": 3,
+        "path": "scripts/jev/lib.sh",
+        "url": "https://github.com/modu-ai/moai-adk/blob/5b4feee174f66dd5cc49bb7d17d77e74dc7fedfd/scripts/jev/lib.sh",
+        "query": "\"api.typesafe.ai/v1/systemone\""
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "vllm-project/aibrix": {
+    "fullName": "vllm-project/aibrix",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": "samples/jev/README.md",
+        "url": "https://github.com/vllm-project/aibrix/blob/8e5775cbc1522c01f5bca4c7297aeb12e0ef415f/samples/jev/README.md",
+        "query": "\"jev-latest\""
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "pingdotgg/t3code": {
+    "fullName": "pingdotgg/t3code",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "model-route",
+        "weight": 3,
+        "path": ".repos/effect-smol/packages/ai/typesafe/README.md",
+        "url": "https://github.com/pingdotgg/t3code/blob/9bd1d8009a6b7c50f9dd9458e2bf27d481ff3b43/.repos/effect-smol/packages/ai/typesafe/README.md",
+        "query": "\"jev-latest\""
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "treasoni/study-notes": {
+    "fullName": "Treasoni/Study-Notes",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "sdk-python",
+        "weight": 3,
+        "path": "workspace/jev-decision-model/chapters/_merged.md",
+        "url": "https://github.com/Treasoni/Study-Notes/blob/7ad7328aef26b77f26a470a1f841c454055b2e24/workspace/jev-decision-model/chapters/_merged.md",
+        "query": "\"from typesafe import\""
+      },
+      {
+        "signal": "sdk-python",
+        "weight": 3,
+        "path": "workspace/jev-decision-model/output/final_note.md",
+        "url": "https://github.com/Treasoni/Study-Notes/blob/7ad7328aef26b77f26a470a1f841c454055b2e24/workspace/jev-decision-model/output/final_note.md",
+        "query": "\"from typesafe import\""
+      },
+      {
+        "signal": "sdk-python",
+        "weight": 3,
+        "path": "workspace/jev-decision-model/chapters/03_三原语与最小调用.md",
+        "url": "https://github.com/Treasoni/Study-Notes/blob/7ad7328aef26b77f26a470a1f841c454055b2e24/workspace/jev-decision-model/chapters/03_三原语与最小调用.md",
+        "query": "\"from typesafe import\""
+      },
+      {
+        "signal": "sdk-python",
+        "weight": 3,
+        "path": "AI学习/03-技术专题/Jev 决策模型/Jev 03 三原语与最小调用.md",
+        "url": "https://github.com/Treasoni/Study-Notes/blob/7ad7328aef26b77f26a470a1f841c454055b2e24/AI学习/03-技术专题/Jev 决策模型/Jev 03 三原语与最小调用.md",
+        "query": "\"from typesafe import\""
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "lwm-luminx/garage-rag": {
+    "fullName": "lwm-luminx/garage-rag",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "sdk-python",
+        "weight": 3,
+        "path": "garage_python/tests/corpora/second-brain-os/docs/track-jev/getting-started.md",
+        "url": "https://github.com/lwm-luminx/garage-rag/blob/872ea4bf0a7ca77178b16898b4dbe1b48da6a816/garage_python/tests/corpora/second-brain-os/docs/track-jev/getting-started.md",
+        "query": "\"from typesafe import\""
+      },
+      {
+        "signal": "sdk-python",
+        "weight": 3,
+        "path": "garage_python/tests/corpora/second-brain-os/docs/track-jev/build-swap-in-jev.md",
+        "url": "https://github.com/lwm-luminx/garage-rag/blob/872ea4bf0a7ca77178b16898b4dbe1b48da6a816/garage_python/tests/corpora/second-brain-os/docs/track-jev/build-swap-in-jev.md",
+        "query": "\"from typesafe import\""
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "michaelkinsy/pigpen": {
+    "fullName": "MichaelKinsy/pigpen",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "sdk-call",
+        "weight": 3,
+        "path": "components/pi-typesafe-api/README.md",
+        "url": "https://github.com/MichaelKinsy/pigpen/blob/86a2cff9360ffbbb636fb2410abdbce45f469161/components/pi-typesafe-api/README.md",
+        "query": "\"typesafe.systemone\""
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "qybaihe/mu": {
+    "fullName": "qybaihe/mu",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "topic",
+        "weight": 1,
+        "url": "https://github.com/qybaihe/mu",
+        "query": "topic:jev"
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "budecosystem/bud-decision-studio": {
+    "fullName": "BudEcosystem/Bud-Decision-Studio",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "topic",
+        "weight": 1,
+        "url": "https://github.com/BudEcosystem/Bud-Decision-Studio",
+        "query": "topic:jev"
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "abhishekswe/agent-fastpath": {
+    "fullName": "abhishekswe/agent-fastpath",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "topic",
+        "weight": 1,
+        "url": "https://github.com/abhishekswe/agent-fastpath",
+        "query": "topic:typesafe-ai"
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "alanhuangyoo/openjev": {
+    "fullName": "alanhuangyoo/OpenJev",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "topic",
+        "weight": 1,
+        "url": "https://github.com/alanhuangyoo/OpenJev",
+        "query": "topic:system-one"
+      }
+    ],
+    "lastSeen": "2026-10-06"
+  },
+  "brendanh18/jev_fsd": {
+    "fullName": "BrendanH18/jev_fsd",
+    "firstSeen": "2026-10-06",
+    "sources": [
+      {
+        "signal": "topic",
+        "weight": 1,
+        "url": "https://github.com/BrendanH18/jev_fsd",
+        "query": "topic:system-one"
+      }
+    ],
+    "lastSeen": "2026-10-06"
   }
 }

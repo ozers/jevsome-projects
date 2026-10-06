@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T11:42:42.689Z",
+  "generatedAt": "2026-10-06T11:31:19.663Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -32,6 +32,10 @@
     },
     {
       "repo": "abhishek085/open-spark-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "abhishekswe/agent-fastpath",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -88,6 +92,10 @@
     },
     {
       "repo": "AkashPriyadarshii/jev-superpowers",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "alanhuangyoo/OpenJev",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -183,6 +191,10 @@
       "reason": "only a api-key mention (gpt_researcher/config/variables/default.py), no call in code"
     },
     {
+      "repo": "assistant-ui/assistant-ui",
+      "reason": "only a model-route mention (apps/docs/lib/search/README.md), no call in code"
+    },
+    {
       "repo": "astaxie/TokenHub",
       "reason": "only a api-call mention (docs/zh-CN/typesafe.md), no call in code"
     },
@@ -264,6 +276,10 @@
     },
     {
       "repo": "BudEcosystem/Bud-Decision-Engine",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "BudEcosystem/Bud-Decision-Studio",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -891,6 +907,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "lwm-luminx/garage-rag",
+      "reason": "only a sdk-import mention (garage_python/tests/corpora/second-brain-os/docs/track-jev/build-swap-in-jev.md), no call in code"
+    },
+    {
       "repo": "majiayu000/claude-skill-registry",
       "reason": "only a model-route mention (skills/ai-llm/jev/SKILL.md), no call in code"
     },
@@ -933,6 +953,10 @@
     {
       "repo": "melgarafael/DeskcommCRM",
       "reason": "only a sdk-call mention (docs/research/2026-09-19-jev-system-one-no-deskcomm.md), no call in code"
+    },
+    {
+      "repo": "MichaelKinsy/pigpen",
+      "reason": "only a sdk-call mention (components/pi-typesafe-api/README.md), no call in code"
     },
     {
       "repo": "milind-soni/tiptour-macos",
@@ -1091,6 +1115,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "pingdotgg/t3code",
+      "reason": "only a model-route mention (.repos/effect-smol/packages/ai/typesafe/README.md), no call in code"
+    },
+    {
       "repo": "pipecat-ai/pipecat",
       "reason": "only a api-key mention (evals/judges.py), no call in code"
     },
@@ -1128,6 +1156,10 @@
     },
     {
       "repo": "Qew7/jev-feels",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "qybaihe/mu",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1383,6 +1415,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "Treasoni/Study-Notes",
+      "reason": "only a api-call mention (AI学习/03-技术专题/Jev 决策模型/Jev 03 三原语与最小调用.md), no call in code"
+    },
+    {
       "repo": "trycua/cua",
       "reason": "only a api-key mention (libs/cua-driver/examples/jev-use/python/driver_env.py), no call in code"
     },
@@ -1449,6 +1485,10 @@
     {
       "repo": "virolea/lintus",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "vllm-project/aibrix",
+      "reason": "only a api-call mention (samples/jev/README.md), no call in code"
     },
     {
       "repo": "vllm-project/vllm",

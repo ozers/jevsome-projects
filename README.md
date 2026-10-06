@@ -2,7 +2,7 @@
 
 > Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it. Browse: [jevsome.ozersubasi.com](https://jevsome.ozersubasi.com)
 
-**72 verified projects · 799 more in the JSON · 1,261 search hits examined · refreshed 2026-10-05**
+**73 verified projects · 800 more in the JSON · 1,273 search hits examined · refreshed 2026-10-06**
 
 Deliberately short. Jev is days old and the ecosystem is mostly two-day-old experiments; this list starts with what can be shown to be real and grows from there. The bar is the same for every entry, and it is written down.
 
@@ -16,7 +16,7 @@ Deliberately short. Jev is days old and the ecosystem is mostly two-day-old expe
 6. **Five stars.** Someone besides the author cared. A presentation floor, not a correctness one; it is one number in [`pipeline/lib/quality.mjs`](pipeline/lib/quality.mjs) and will come down as the list matures.
 7. **Health.** Stars, licence, last commit and demo links are re-checked daily.
 
-Search casts a wide net — "typesafe" matches a lot of repositories that have nothing to do with Jev. Every hit that is not on the list is recorded in [`data/not-listed.json`](data/not-listed.json): 385 where no line of code calling Jev was found, 5 where it was found but the repository is not a project built on Jev. Argue with any of it.
+Search casts a wide net — "typesafe" matches a lot of repositories that have nothing to do with Jev. Every hit that is not on the list is recorded in [`data/not-listed.json`](data/not-listed.json): 395 where no line of code calling Jev was found, 5 where it was found but the repository is not a project built on Jev. Argue with any of it.
 
 Generated from [`data/index.json`](data/index.json); do not edit by hand. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -31,7 +31,7 @@ Generated from [`data/index.json`](data/index.json); do not edit by hand. See [C
 - [Applications](#applications) (14)
 - [Games & simulation](#games-simulation) (8)
 - [Demos & playgrounds](#demos-playgrounds) (5)
-- [Benchmarks & research](#benchmarks-research) (3)
+- [Benchmarks & research](#benchmarks-research) (4)
 
 ## SDKs & clients
 
@@ -189,6 +189,7 @@ _38 more in this section passed the proof check but not the rest of the bar — 
 | --- | --- | --- | --- | --- | --- | --- |
 | [jev-eval-agent](https://github.com/vinilana/jev-eval-agent) | A personal-assistant agent built with eve (Vercel), with 100 mocked tools, served through OpenRouter. The repository exists to answer one question: how many steps does the agent need to finish the same task when the LLM picks the tool itsel | HTML | — | 76 | [agent/lib/jev-router.ts:1](https://github.com/vinilana/jev-eval-agent/blob/037de1120c84b4b63cdf748e2acf258ff66d7731/agent/lib/jev-router.ts#L1) | 🟢 |
 | [cultivar](https://github.com/pinecone-io/cultivar) | Use cultivar to test your Agent Skills and Docs by running them in sandboxes, and across different agents. | Python | MIT | 41 | [pyproject.toml:32](https://github.com/pinecone-io/cultivar/blob/main/pyproject.toml#L32) | 🟢 |
+| [jev_fsd](https://github.com/BrendanH18/jev_fsd) | A driving simulator on real OpenStreetMap streets where TypeSafe's Jev model drives the car, with a decision inspector and a benchmark. | JavaScript | MIT | 6 | [pyproject.toml:10](https://github.com/BrendanH18/jev_fsd/blob/main/pyproject.toml#L10) | 🟢 |
 | [jev-benchmarks](https://github.com/AbdelStark/jev-benchmarks) | Probability-aware evaluation for typed decision models: calibration, selective risk, latency, and reproducible benchmarks. | Python | Apache-2.0 | 6 | [tests/test_adapters.py:47](https://github.com/AbdelStark/jev-benchmarks/blob/0d610cc53e79bcbec691312b0c4adb4a0e371642/tests/test_adapters.py#L47) | 🟢 |
 
 _40 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
