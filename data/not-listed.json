@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T11:31:19.663Z",
+  "generatedAt": "2026-10-07T11:43:32.218Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -228,6 +228,10 @@
     },
     {
       "repo": "bespokelabsai/nimble",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "BillionsBobby/JevRouter",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1020,6 +1024,10 @@
     },
     {
       "repo": "NSStudent/JevSwiftSDK",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "nvkudva/ollajev",
       "reason": "no line of code found that calls Jev"
     },
     {
