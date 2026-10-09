@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T11:24:37.268Z",
+  "generatedAt": "2026-10-09T11:34:57.285Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -511,6 +511,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "experientiallabs/experiential",
+      "reason": "only a api-call mention (docs/reference/providers.md), no call in code"
+    },
+    {
       "repo": "fabricioctelles/skills",
       "reason": "no line of code found that calls Jev"
     },
@@ -593,6 +597,10 @@
     {
       "repo": "gudcks0305/jev-java",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "handsontable/handsontable",
+      "reason": "only a api-call mention (docs/content/recipes/real-time/ai-columns-jev/javascript/worker.js), no call in code"
     },
     {
       "repo": "hardness1020/learn-agent-architecture",
@@ -1303,6 +1311,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "shitianfang/wakegate",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "ShivamPansuriya/jev-skill-gate",
       "reason": "no line of code found that calls Jev"
     },
@@ -1483,6 +1495,10 @@
       "reason": "only a sdk-import mention (docs/track-jev/build-swap-in-jev.md), no call in code"
     },
     {
+      "repo": "unicodeveloper/jevocks",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "utk2103/jev-studio",
       "reason": "no line of code found that calls Jev"
     },
@@ -1492,6 +1508,10 @@
     },
     {
       "repo": "valentynkit/awesome-jev-typesafe",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "VectifyAI/jev-doc-search",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1611,11 +1631,19 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "zilliztech/vector-graph-rag",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "zjunlp/JevLoop",
       "reason": "no line of code found that calls Jev"
     }
   ],
   "excluded": [
+    {
+      "repo": "FuturixAI-and-Quantum-Works/carve-jev",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
+    },
     {
       "repo": "jaredpalmer/kev",
       "reason": "reimplementation of the Jev interface on another model; does not call Jev"
