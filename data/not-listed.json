@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T11:34:57.285Z",
+  "generatedAt": "2026-10-10T10:38:38.181Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -391,6 +391,10 @@
       "reason": "only a sdk-import mention (showcase/shell-docs/src/content/docs/cookbook/jev-generative-ui.mdx), no call in code"
     },
     {
+      "repo": "CopilotKit/OpenIntelligentUI",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "ctsstc/typesafe-ai-cube-rule",
       "reason": "no line of code found that calls Jev"
     },
@@ -752,6 +756,14 @@
     },
     {
       "repo": "jev-chat/jev-chat-windows",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "Jev-Engineering/cookbook",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "jevaidev/jev-ai-radar",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1421,6 +1433,10 @@
     {
       "repo": "teddylee777/fastcampus-jev",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "tester-army/e2e",
+      "reason": "only a sdk-import mention (packages/decision/README.md), no call in code"
     },
     {
       "repo": "theagentrouter/agent-router",
