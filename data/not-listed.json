@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T10:38:38.181Z",
+  "generatedAt": "2026-10-11T10:51:53.632Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -1247,6 +1247,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "romeromarcelo/jev-retrieval",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "rowboatlabs/rowboat",
       "reason": "only a model-route mention (apps/harbor/Dockerfile), no call in code"
     },
@@ -1533,6 +1537,10 @@
     {
       "repo": "vercel-labs/jev-ai-sdk-form-router",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "vigneshshanmugam/csgojev",
+      "reason": "only a sdk-call mention (packages/jev/README.md), no call in code"
     },
     {
       "repo": "vinilana/jev-gateway",
