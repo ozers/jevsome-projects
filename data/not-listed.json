@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T10:51:53.632Z",
+  "generatedAt": "2026-10-12T12:16:50.560Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -767,6 +767,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "jmagly/aiwg",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "JoasASantos/NeuroSploit",
       "reason": "no line of code found that calls Jev"
     },
@@ -1203,6 +1207,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "qualixar/jev-decision-layer",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "qybaihe/mu",
       "reason": "no line of code found that calls Jev"
     },
@@ -1301,6 +1309,10 @@
     {
       "repo": "semantica-agi/semantica",
       "reason": "only a model-route mention (docs/reference/llms.md), no call in code"
+    },
+    {
+      "repo": "sgyaqing/verdict",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "shaharia-lab/jev-cli",
@@ -1483,6 +1495,10 @@
       "reason": "only a api-key mention (libs/cua-driver/examples/jev-use/python/driver_env.py), no call in code"
     },
     {
+      "repo": "ttlequals0/MinusPod",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "twikoojs/twikoo",
       "reason": "only a api-call mention (docs/en/faq.md), no call in code"
     },
@@ -1581,6 +1597,10 @@
     {
       "repo": "Wei-Shaw/sub2api",
       "reason": "only a api-call mention (README_CN.md), no call in code"
+    },
+    {
+      "repo": "wexare-ai/browser-laya",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "wfzyx/von",
