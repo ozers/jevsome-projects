@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T12:16:50.560Z",
+  "generatedAt": "2026-10-13T11:49:06.935Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -144,6 +144,10 @@
     },
     {
       "repo": "AnotiaWang/awesome-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "anteloc/ldraw-nova",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -659,6 +663,10 @@
       "reason": "only a sdk-call mention (src/website/content/ecosystem/ai/reference/typesafe/example.kt), no call in code"
     },
     {
+      "repo": "huggingface/transformers",
+      "reason": "only a api-call mention (docs/source/en/serve-cli/serving.md), no call in code"
+    },
+    {
       "repo": "Human-Agent-Society/reef",
       "reason": "only a model-route mention (reef/recipe/reefine/agent_rules.md), no call in code"
     },
@@ -700,6 +708,10 @@
     },
     {
       "repo": "imMamdouhaboammar/get-fable",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "initial-d/ml-quant-trading",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -829,6 +841,14 @@
     {
       "repo": "kirodotdev/KiroCrew",
       "reason": "only a api-call mention (src/kiro_crew/docs/decisions.md), no call in code"
+    },
+    {
+      "repo": "klauswg/jev-guard",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "klauswg/jev-suite",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "koala73/worldmonitor",
@@ -1072,6 +1092,10 @@
     },
     {
       "repo": "obetomuniz/auto-mode-for-paseo",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "obie/ruby_decision_model",
       "reason": "no line of code found that calls Jev"
     },
     {
