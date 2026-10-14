@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T11:49:06.935Z",
+  "generatedAt": "2026-10-14T09:45:40.615Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -687,6 +687,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "iflytek/astron-rpa",
+      "reason": "only a model-route mention (docs/JEV_SEMANTIC_CHOICE.md), no call in code"
+    },
+    {
       "repo": "igorcosta/wekaone",
       "reason": "only a api-call mention (docs/model-cards/weka-0.6b.md), no call in code"
     },
@@ -1184,6 +1188,10 @@
     },
     {
       "repo": "PerryLink/jevcore",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "peterfriese/system-one-foundation-models",
       "reason": "no line of code found that calls Jev"
     },
     {
