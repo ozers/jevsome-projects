@@ -2,7 +2,7 @@
 
 > Open-source projects that **provably call** Jev, TypeSafe AI's System One model. Every entry links to the line of code that proves it. Browse: [jevsome.ozersubasi.com](https://jevsome.ozersubasi.com)
 
-**79 verified projects · 825 more in the JSON · 1,477 search hits examined · refreshed 2026-10-15**
+**79 verified projects · 827 more in the JSON · 1,486 search hits examined · refreshed 2026-10-16**
 
 Deliberately short. Jev is days old and the ecosystem is mostly two-day-old experiments; this list starts with what can be shown to be real and grows from there. The bar is the same for every entry, and it is written down.
 
@@ -16,7 +16,7 @@ Deliberately short. Jev is days old and the ecosystem is mostly two-day-old expe
 6. **Five stars.** Someone besides the author cared. A presentation floor, not a correctness one; it is one number in [`pipeline/lib/quality.mjs`](pipeline/lib/quality.mjs) and will come down as the list matures.
 7. **Health.** Stars, licence, last commit and demo links are re-checked daily.
 
-Search casts a wide net — "typesafe" matches a lot of repositories that have nothing to do with Jev. Every hit that is not on the list is recorded in [`data/not-listed.json`](data/not-listed.json): 567 where no line of code calling Jev was found, 6 where it was found but the repository is not a project built on Jev. Argue with any of it.
+Search casts a wide net — "typesafe" matches a lot of repositories that have nothing to do with Jev. Every hit that is not on the list is recorded in [`data/not-listed.json`](data/not-listed.json): 574 where no line of code calling Jev was found, 6 where it was found but the repository is not a project built on Jev. Argue with any of it.
 
 Generated from [`data/index.json`](data/index.json); do not edit by hand. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -41,7 +41,7 @@ Generated from [`data/index.json`](data/index.json); do not edit by hand. See [C
 
 | Project | What it does | Language | License | Stars | Proof | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| [typesafe-sdk-js](https://github.com/typesafe-ai/typesafe-sdk-js) | The official TypeScript/JavaScript library for the TypeSafe API | TypeScript | MIT | 101 | [src/client.ts:41](https://github.com/typesafe-ai/typesafe-sdk-js/blob/66880ccded6cb642dc1809620c2b108c33730214/src/client.ts#L41) | 🟢 |
+| [typesafe-sdk-js](https://github.com/typesafe-ai/typesafe-sdk-js) | The official TypeScript/JavaScript library for the TypeSafe API | TypeScript | MIT | 101 | [src/client.ts:41](https://github.com/typesafe-ai/typesafe-sdk-js/blob/66880ccded6cb642dc1809620c2b108c33730214/src/client.ts#L41) | 🟡 |
 | [system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) | Drop-in TypeSafeClient replacement backed by LLM APIs | Python | MIT | 98 | [tests/cassettes/test_client_with_live_apis/test_live_typesafe_response_matches_reference_shape.json:7](https://github.com/typesafe-ai/system-one-adapter-python/blob/adffc2eab300a4fa3c0e92252d4ffd6ceaa53700/tests/cassettes/test_client_with_live_apis/test_live_typesafe_response_matches_reference_shape.json#L7) | 🟢 |
 | [typesafe-sdk-python](https://github.com/typesafe-ai/typesafe-sdk-python) | The official Python library for the TypeSafe API | Python | MIT | 70 | [tests/test_retry.py:14](https://github.com/typesafe-ai/typesafe-sdk-python/blob/2ce5c65f13646cab6e6f782328194c9d85f3300a/tests/test_retry.py#L14) | 🟢 |
 | [advocaat](https://github.com/pithings/advocaat) | A small, type-safe client for asking AI questions about your data, powered by TypeSafe Jev. | TypeScript | MIT | 61 | [src/api.ts:219](https://github.com/pithings/advocaat/blob/75e35bec47ffbd2af0e002414d3a5ad748246197/src/api.ts#L219) | 🟢 |
@@ -60,7 +60,7 @@ _26 more in this section passed the proof check but not the rest of the bar — 
 
 | Project | What it does | Language | License | Stars | Proof | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| [dspy-typesafeify](https://github.com/typesafeainate/dspy-typesafeify) | Add a decorator for dspy Signatures that automatically uses TypeSafe where relevant | Python | MIT | 58 | [pyproject.toml:49](https://github.com/typesafeainate/dspy-typesafeify/blob/main/pyproject.toml#L49) | 🟢 |
+| [dspy-typesafeify](https://github.com/typesafeainate/dspy-typesafeify) | Add a decorator for dspy Signatures that automatically uses TypeSafe where relevant | Python | MIT | 58 | [pyproject.toml:49](https://github.com/typesafeainate/dspy-typesafeify/blob/main/pyproject.toml#L49) | 🟡 |
 
 _12 more in this section passed the proof check but not the rest of the bar — in [`data/index.json`](data/index.json) as candidates._
 
@@ -157,11 +157,11 @@ _139 more in this section passed the proof check but not the rest of the bar —
 
 | Project | What it does | Language | License | Stars | Proof | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| [typesafe-mario](https://github.com/fhshaik/typesafe-mario) | A TypeSafe/Jev agent that plays Super Mario Bros. from structured emulator state. | Python | — | 252 | [src/typesafe_mario/policy.py:29](https://github.com/fhshaik/typesafe-mario/blob/ca22449ed187118d19326d1f54b01b6636578aa4/src/typesafe_mario/policy.py#L29) | 🟢 |
+| [typesafe-mario](https://github.com/fhshaik/typesafe-mario) | A TypeSafe/Jev agent that plays Super Mario Bros. from structured emulator state. | Python | — | 252 | [src/typesafe_mario/policy.py:29](https://github.com/fhshaik/typesafe-mario/blob/ca22449ed187118d19326d1f54b01b6636578aa4/src/typesafe_mario/policy.py#L29) | 🟡 |
 | [jev-drone](https://github.com/RomanSlack/jev-drone) | Camera-only autonomous drone in MuJoCo with a small judgment model (TypeSafe Jev) in the loop at 2.5Hz | Python | MIT | 56 | [tactics.py:12](https://github.com/RomanSlack/jev-drone/blob/cbeb53ce4f17a06ea490ae43effcdad231143610/tactics.py#L12) | 🟢 |
 | [jevpilot](https://github.com/standardagents/jevpilot) | A playable Three.js driving simulator with Jev-powered autopilot | JavaScript | — | 47 | [server/jev.js:78](https://github.com/standardagents/jevpilot/blob/e1beeb13b9a928fb76f167f86af584f4ce9cf180/server/jev.js#L78) | 🟢 |
 | [typesafe-snake](https://github.com/sorrycc/typesafe-snake) | Snake auto-played by TypeSafe's Jev model: one System One choice per tick, legal moves and facts generated in code | TypeScript | — | 17 | [server/index.ts:2](https://github.com/sorrycc/typesafe-snake/blob/8bf3f7c261ad35ece3345a02d21ba638ddfaf87f/server/index.ts#L2) | 🟢 |
-| [tsai-sc](https://github.com/phyous/tsai-sc) | TypeSafe Jev controls original StarCraft shareware through keyboard and mouse with recorded action probabilities. | Python | MIT | 11 | [tsai_sc/typesafe.py:24](https://github.com/phyous/tsai-sc/blob/6046ecc60156c4a3c04d384b41821a4ff08501b7/tsai_sc/typesafe.py#L24) | 🟢 |
+| [tsai-sc](https://github.com/phyous/tsai-sc) | TypeSafe Jev controls original StarCraft shareware through keyboard and mouse with recorded action probabilities. | Python | MIT | 11 | [tsai_sc/typesafe.py:24](https://github.com/phyous/tsai-sc/blob/6046ecc60156c4a3c04d384b41821a4ff08501b7/tsai_sc/typesafe.py#L24) | 🟡 |
 | [mario-jev](https://github.com/shantanugoel/mario-jev) | A uv-managed Python prototype that plays NES Super Mario Bros. (level 1-1 by default). Jev receives structured RAM observations and answers focused questions about movement, starting a jump, and sustaining a jump, plus timing hops under low | Python | — | 10 | [tests/test_policy.py:5](https://github.com/shantanugoel/mario-jev/blob/14f0c289e48cd99e3b5b91353d0456fb1f32d499/tests/test_policy.py#L5) | 🟢 |
 | [JEV_sees](https://github.com/CharlesFeng0314/JEV_sees) | Eyes are All JEV Needs - real time visual devisions from RGB, video and RGB-D cameras. | Python | MIT | 5 | [pyproject.toml:14](https://github.com/CharlesFeng0314/JEV_sees/blob/main/pyproject.toml#L14) | 🟢 |
 | [OneVOneJev](https://github.com/emrickgarrett/OneVOneJev) | 1v1 Jev quickscope arena — Three.js + TypeSafe System One | TypeScript | — | 5 | [server/src/jev.ts:7](https://github.com/emrickgarrett/OneVOneJev/blob/365b339d04446836352687b3650762106ea37f17/server/src/jev.ts#L7) | 🟢 |

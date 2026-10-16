@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T09:12:48.066Z",
+  "generatedAt": "2026-10-16T09:17:05.900Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -156,6 +156,10 @@
     },
     {
       "repo": "andududu/jeview",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "andyrewlee/awesome-system-one",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -565,6 +569,10 @@
     {
       "repo": "deepopen-com/deepopen",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "deepseek-ai/deepseek-harness",
+      "reason": "only a api-key mention (packages/llm/llm-pi-ai/src/provider-data.generated.ts), no call in code"
     },
     {
       "repo": "devbackend/jevgo",
@@ -1215,6 +1223,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "livekit/agents",
+      "reason": "only a sdk-call mention (livekit-plugins/livekit-plugins-typesafe/README.md), no call in code"
+    },
+    {
       "repo": "lktiep/cortex-hub",
       "reason": "only a api-call mention (README.md), no call in code"
     },
@@ -1643,6 +1655,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "pxgo/my-agents",
+      "reason": "only a model-route mention (.notes/typesafe-jev-api-notes.md), no call in code"
+    },
+    {
       "repo": "Qew7/jev-feels",
       "reason": "no line of code found that calls Jev"
     },
@@ -1824,6 +1840,10 @@
     },
     {
       "repo": "sharziki/semdecide",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "shcherbak-ai/contextgem",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -2151,6 +2171,10 @@
       "reason": "only a api-call mention (examples/features/structured_diffusion/README.md), no call in code"
     },
     {
+      "repo": "VoltAgent/typesafe-jev-ecosystem",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "w3cj/jev-chat",
       "reason": "no line of code found that calls Jev"
     },
@@ -2189,6 +2213,10 @@
     {
       "repo": "wuyoscar/jev-skill",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "xerj-org/xerj",
+      "reason": "only a model-route mention (docs/RERANK.md), no call in code"
     },
     {
       "repo": "xingwudao/OpenJev",
