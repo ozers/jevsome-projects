@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T09:17:05.900Z",
+  "generatedAt": "2026-10-17T08:36:31.742Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -265,6 +265,10 @@
     {
       "repo": "aurorainfra/grev",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "av/naiou",
+      "reason": "only a api-call mention (README.md), no call in code"
     },
     {
       "repo": "AyushChauhan9389/kev",
@@ -637,6 +641,10 @@
     {
       "repo": "dzhng/jevgrep",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "eas4ai/sudus",
+      "reason": "only a model-route mention (README.md), no call in code"
     },
     {
       "repo": "edinetdb/dexter-jp",
@@ -1067,6 +1075,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "jxspam/slop-detector",
+      "reason": "only a api-call mention (IDEA.md), no call in code"
+    },
+    {
       "repo": "karanb192/jev-architect",
       "reason": "no line of code found that calls Jev"
     },
@@ -1315,6 +1327,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "marcreichel/laya-php",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "maruel/genai",
       "reason": "only a api-key mention (AGENTS.md), no call in code"
     },
@@ -1353,6 +1369,10 @@
     {
       "repo": "MichaelKinsy/pigpen",
       "reason": "only a sdk-call mention (components/pi-typesafe-api/README.md), no call in code"
+    },
+    {
+      "repo": "micytao/vllm-playground",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "milind-soni/tiptour-macos",
@@ -1647,6 +1667,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "pst2154/Nemotron_Jev",
+      "reason": "only a model-route mention (README.md), no call in code"
+    },
+    {
       "repo": "pujux/hass-hunch",
       "reason": "only a model-route mention (docs/superpowers/plans/2026-09-21-hunch-integration.md), no call in code"
     },
@@ -1855,6 +1879,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "shiro-0x/hersona",
+      "reason": "only a api-key mention (README.md), no call in code"
+    },
+    {
       "repo": "shitianfang/jev-use",
       "reason": "no line of code found that calls Jev"
     },
@@ -1961,6 +1989,10 @@
     {
       "repo": "sugarforever/tryjev",
       "reason": "only a api-call mention (README.md), no call in code"
+    },
+    {
+      "repo": "sunyasheng/JevGPT",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "superagents-lab/jev-search",
@@ -2143,6 +2175,10 @@
       "reason": "only a api-call mention (skills/ai-gateway/SKILL.md), no call in code"
     },
     {
+      "repo": "vicfei/awesome-jev-prompts",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "vigneshshanmugam/csgojev",
       "reason": "only a sdk-call mention (packages/jev/README.md), no call in code"
     },
@@ -2173,6 +2209,10 @@
     {
       "repo": "VoltAgent/typesafe-jev-ecosystem",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "vynnlee/jev-mail",
+      "reason": "only a api-key mention (AGENTS.md), no call in code"
     },
     {
       "repo": "w3cj/jev-chat",
