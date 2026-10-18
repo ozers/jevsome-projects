@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T08:36:31.742Z",
+  "generatedAt": "2026-10-18T08:53:44.741Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -771,6 +771,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "GauravAhuja7/CareerRadar",
+      "reason": "only a model-route mention (README.md), no call in code"
+    },
+    {
       "repo": "GeekLinkDev/jev-subtitle-translator",
       "reason": "no line of code found that calls Jev"
     },
@@ -805,6 +809,10 @@
     {
       "repo": "goodrahstar/jev-column-race",
       "reason": "only a api-key mention (AGENTS.md), no call in code"
+    },
+    {
+      "repo": "GPT-AGI/OpenJev",
+      "reason": "only a api-call mention (docs/DESIGN.md), no call in code"
     },
     {
       "repo": "gruggiero/typesafe4s",
@@ -1093,6 +1101,10 @@
     {
       "repo": "keta1930/what-the-jev",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "kevinbadi/hyperedit",
+      "reason": "only a api-key mention (CLAUDE.md), no call in code"
     },
     {
       "repo": "kevinbadi/jev-voice",
@@ -1412,6 +1424,10 @@
     },
     {
       "repo": "mohsen1/llm-debugger-vscode-extension",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "momozi1996/momo-code",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1929,6 +1945,10 @@
     {
       "repo": "smallnest/laya-jev-api",
       "reason": "only a api-call mention (README.md), no call in code"
+    },
+    {
+      "repo": "snakajima/bus20",
+      "reason": "only a model-route mention (docs/model-adapters.md), no call in code"
     },
     {
       "repo": "socai-io/jev-social",
