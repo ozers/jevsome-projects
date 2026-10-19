@@ -1,47 +1,32 @@
-// Client-side browsing over the published index. No framework, no build step:
-// the data ships inline and the page stays readable without JavaScript.
-//
-// Two views. With nothing selected, projects are grouped by section, each
-// section opening with its own rule and a dozen entries; "show all" expands
-// one section in place. Any filter — a section chip, a language, a query —
-// collapses to one flat, sorted grid. State lives in the URL hash so a view
-// can be linked.
+// Browsing over the published index. No framework, no build step; the data
+// ships inline and the page reads fine without JavaScript.
+// State lives in the URL hash, so any view can be linked.
 
 const data = window.__JEVSOME__;
-const SECTIONS = data.sections;              // [{ key, label, what, not, count }]
-const PREVIEW = 12;
-
-const state = { q: '', cat: 'all', lang: 'all', sort: 'stars', open: new Set() };
+const SECTIONS = data.sections;
+const LANGS = data.languages;
+const PAGE = 40;
 const $ = (id) => document.getElementById(id);
-const grid = $('grid');
-const count = $('count');
 
-// --- URL state -------------------------------------------------------------
+const state = { q: '', cat: 'all', lang: 'all', sort: 'stars', shown: PAGE };
 
-function readHash() {
-  const p = new URLSearchParams(location.hash.slice(1));
-  state.q = p.get('q') ?? '';
-  state.cat = p.get('cat') ?? 'all';
-  state.lang = p.get('lang') ?? 'all';
-  state.sort = SORTS[p.get('sort')] ? p.get('sort') : 'stars';
-  if (!SECTIONS.some((s) => s.key === state.cat)) state.cat = 'all';
+// ---- highlighting: mark the part of a proof line that makes it a proof ----
+
+const PROOF_TOKEN = /https?:\/\/api\.typesafe\.ai[^"'`\s,)]*|@typesafe-ai\/[\w-]+|\btypesafe[-_]sdk\b|\bTypeSafeClient\b|\bsystem_?[oO]ne\b|~?(?:typesafe[/:])?jev-(?:latest|\d[\w.]*)|\bfrom\s+typesafe\w*|\bTYPESAFE_API_KEY\b/;
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-function writeHash() {
-  const p = new URLSearchParams();
-  if (state.q) p.set('q', state.q);
-  if (state.cat !== 'all') p.set('cat', state.cat);
-  if (state.lang !== 'all') p.set('lang', state.lang);
-  if (state.sort !== 'stars') p.set('sort', state.sort);
-  const next = p.toString() ? `#${p}` : location.pathname + location.search;
-  history.replaceState(null, '', next);
+function marked(text) {
+  const t = String(text ?? '').trim();
+  const m = t.match(PROOF_TOKEN);
+  if (!m) return esc(t);
+  const i = m.index;
+  return esc(t.slice(0, i)) + '<mark>' + esc(m[0]) + '</mark>' + esc(t.slice(i + m[0].length));
 }
 
-// --- filtering -------------------------------------------------------------
-
-const haystack = (e) =>
-  [e.name, e.fullName, e.description, e.language, (e.topics || []).join(' ')]
-    .filter(Boolean).join(' ').toLowerCase();
+// ---- URL state ------------------------------------------------------------
 
 const SORTS = {
   stars: (a, b) => (b.stars ?? -1) - (a.stars ?? -1),
@@ -50,147 +35,176 @@ const SORTS = {
   name: (a, b) => a.name.localeCompare(b.name),
 };
 
-function matches(e) {
-  const q = state.q.trim().toLowerCase();
-  return (state.lang === 'all' || e.language === state.lang)
-    && (!q || haystack(e).includes(q));
+function readHash() {
+  const p = new URLSearchParams(location.hash.slice(1));
+  state.q = p.get('q') ?? '';
+  state.cat = SECTIONS.some((s) => s.key === p.get('cat')) ? p.get('cat') : 'all';
+  state.lang = LANGS.some(([l]) => l === p.get('lang')) ? p.get('lang') : 'all';
+  state.sort = SORTS[p.get('sort')] ? p.get('sort') : 'stars';
+  state.shown = PAGE;
 }
 
-const filtering = () => state.cat !== 'all' || state.lang !== 'all' || state.q.trim() !== '';
-
-// --- rendering -------------------------------------------------------------
-
-function render() {
-  const pool = data.entries.filter(matches).sort(SORTS[state.sort]);
-
-  for (const chip of document.querySelectorAll('.chip')) {
-    const key = chip.dataset.category;
-    chip.setAttribute('aria-pressed', String(key === state.cat));
-    const n = key === 'all' ? pool.length : pool.filter((e) => e.category === key).length;
-    chip.querySelector('.n').textContent = n;
-    chip.disabled = key !== 'all' && n === 0;
-  }
-
-  if (filtering()) {
-    const list = state.cat === 'all' ? pool : pool.filter((e) => e.category === state.cat);
-    const section = SECTIONS.find((s) => s.key === state.cat);
-    count.textContent = `${list.length} of ${data.entries.length} projects`;
-    grid.innerHTML = (section ? scope(section) : '')
-      + (list.length
-        ? `<div class="cards">${list.map(card).join('')}</div>`
-        : '<p class="empty">Nothing matches. Try a broader search or clear a filter.</p>');
-  } else {
-    count.textContent = `${data.entries.length} projects in ${SECTIONS.length} sections`;
-    grid.innerHTML = SECTIONS.map((s) => {
-      const list = pool.filter((e) => e.category === s.key);
-      if (!list.length) return '';
-      const open = state.open.has(s.key);
-      const shown = open ? list : list.slice(0, PREVIEW);
-      const rest = list.length - shown.length;
-      return `<section class="group" id="${s.key}">
-        <header class="group-head">
-          <h2>${esc(s.label)} <span class="n">${list.length}</span></h2>
-          <p>${esc(s.what)}</p>
-        </header>
-        <div class="cards">${shown.map(card).join('')}</div>
-        ${rest > 0 ? `<button class="more" data-open="${s.key}">Show all ${list.length} in ${esc(s.label)}</button>` : ''}
-        ${open && list.length > PREVIEW ? `<button class="more" data-close="${s.key}">Show fewer</button>` : ''}
-      </section>`;
-    }).join('');
-  }
-  writeHash();
+function writeHash() {
+  const p = new URLSearchParams();
+  if (state.q) p.set('q', state.q);
+  if (state.cat !== 'all') p.set('cat', state.cat);
+  if (state.lang !== 'all') p.set('lang', state.lang);
+  if (state.sort !== 'stars') p.set('sort', state.sort);
+  history.replaceState(null, '', p.toString() ? `#${p}` : location.pathname);
 }
 
-function scope(s) {
-  return `<div class="scope"><b>${esc(s.label)}.</b> ${esc(s.what)} <span class="not">Not here: ${esc(s.not)}</span></div>`;
-}
+// ---- filtering ------------------------------------------------------------
+
+const hay = (e) => [e.name, e.owner, e.description, e.language, (e.topics || []).join(' ')].join(' ').toLowerCase();
+const byQuery = (e) => !state.q.trim() || hay(e).includes(state.q.trim().toLowerCase());
+const byLang = (e) => state.lang === 'all' || e.language === state.lang;
+const byCat = (e) => state.cat === 'all' || e.category === state.cat;
+
+// ---- rendering ------------------------------------------------------------
 
 function ago(iso) {
   if (!iso) return '';
-  const days = Math.floor((Date.now() - new Date(iso)) / 86_400_000);
-  if (days < 1) return 'today';
-  if (days < 30) return `${days}d ago`;
-  if (days < 365) return `${Math.floor(days / 30)}mo ago`;
-  return `${Math.floor(days / 365)}y ago`;
+  const d = Math.floor((Date.now() - new Date(iso)) / 86_400_000);
+  if (d < 1) return 'updated today';
+  if (d < 30) return `updated ${d}d ago`;
+  if (d < 365) return `updated ${Math.floor(d / 30)}mo ago`;
+  return `updated ${Math.floor(d / 365)}y ago`;
 }
 
-function card(e) {
-  const p = e.proof;
-  const file = p && p.path ? `${p.path.split('/').pop()}${p.line ? `:${p.line}` : ''}` : (p ? p.kind : '');
-  const proofTitle = p ? `${p.label}${p.path ? ` — ${p.path}` : ''}${p.text ? `\n${p.text}` : ''}` : '';
-  const proofHtml = p && p.url
-    ? `<a class="proof" href="${esc(p.url)}" title="${esc(proofTitle)}"><span class="check">✓</span><span class="file">${esc(file)}</span></a>`
-    : '';
-  const home = e.homepage
-    ? `<a class="site" href="${esc(e.homepage)}">${e.homepageLive === false ? 'site ↗ (down)' : 'site ↗'}</a>`
-    : '';
-  return `<article class="card">
+function row(e) {
+  const p = e.proof || {};
+  const loc = p.path ? `${p.path.split('/').pop()}:${p.line ?? ''}` : p.kind;
+  return `<li class="row">
     <h3><a href="${esc(e.url)}">${esc(e.name)}</a><span class="owner">${esc(e.owner ?? '')}</span></h3>
-    <p>${esc(e.description || 'No description provided.')}</p>
+    ${e.stars != null ? `<span class="stars">★ ${e.stars.toLocaleString('en-US')}</span>` : ''}
+    <p class="desc">${esc(e.description || 'No description.')}</p>
+    ${p.url ? `<a class="proof" href="${esc(p.url)}" title="${esc(`${p.label ?? ''} — ${p.path ?? ''}`)}">
+      <span class="loc">${esc(loc)}</span><code class="src">${marked(p.text)}</code></a>` : ''}
     <div class="meta">
-      ${e.language ? `<button class="tag lang" data-lang="${esc(e.language)}" title="Only ${esc(e.language)}">${esc(e.language)}</button>` : ''}
-      ${e.stars != null ? `<span class="stars">★ ${e.stars.toLocaleString('en-US')}</span>` : ''}
-      <span class="upd ${e.status}" title="last push">${ago(e.pushedAt)}</span>
-      ${e.license ? `<span class="lic">${esc(e.license)}</span>` : ''}
-      ${home}
+      ${e.language ? `<button class="lang" data-lang="${esc(e.language)}" title="Show only ${esc(e.language)}">${esc(e.language)}</button>` : ''}
+      <span class="${e.status === 'active' ? 'fresh' : ''}">${ago(e.pushedAt)}</span>
+      ${e.license ? `<span>${esc(e.license)}</span>` : ''}
+      ${e.homepage ? `<a href="${esc(e.homepage)}">${e.homepageLive === false ? 'Website (unreachable)' : 'Website'}</a>` : ''}
     </div>
-    ${proofHtml}
-  </article>`;
+  </li>`;
 }
 
-function esc(s) {
-  return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+function renderFacets() {
+  const base = data.entries.filter(byQuery);
+  const catPool = base.filter(byLang);
+  const langPool = base.filter(byCat);
+
+  $('cats').innerHTML = [['all', 'All projects', catPool.length], ...SECTIONS.map((s) => [s.key, s.label, catPool.filter((e) => e.category === s.key).length])]
+    .map(([k, label, n]) => `<li><button class="facet" data-cat="${k}" aria-pressed="${k === state.cat}" ${n === 0 && k !== state.cat ? 'disabled' : ''}>${esc(label)}<span class="n">${n}</span></button></li>`).join('');
+  $('langs').innerHTML = [['all', 'Any language', langPool.length], ...LANGS.map(([l]) => [l, l, langPool.filter((e) => e.language === l).length])]
+    .map(([k, label, n]) => `<li><button class="facet" data-lang-facet="${esc(k)}" aria-pressed="${k === state.lang}" ${n === 0 && k !== state.lang ? 'disabled' : ''}>${esc(label)}<span class="n">${n}</span></button></li>`).join('');
+
+  $('cat-select').value = state.cat;
+  $('lang-select').value = state.lang;
 }
 
-// --- wiring ----------------------------------------------------------------
+function render() {
+  renderFacets();
+  const list = data.entries.filter(byQuery).filter(byLang).filter(byCat).sort(SORTS[state.sort]);
+  const section = SECTIONS.find((s) => s.key === state.cat);
+  const filtered = state.cat !== 'all' || state.lang !== 'all' || state.q.trim();
 
-readHash();
-$('q').value = state.q;
-$('sort').value = state.sort;
-$('lang').value = state.lang;
+  $('list-title').textContent = section ? section.label : state.lang !== 'all' ? `${state.lang} projects` : 'All projects';
+  $('count').textContent = `${list.length} ${list.length === 1 ? 'project' : 'projects'}${section && state.lang !== 'all' ? ` in ${state.lang}` : ''}`;
+  $('rule').innerHTML = section ? `${esc(section.what)} <span class="not">Not here: ${esc(section.not)}</span>` : '';
+  $('rule').hidden = !section;
 
-$('q').addEventListener('input', (ev) => { state.q = ev.target.value; render(); });
-$('sort').addEventListener('change', (ev) => { state.sort = ev.target.value; render(); });
-$('lang').addEventListener('change', (ev) => { state.lang = ev.target.value; render(); });
-for (const chip of document.querySelectorAll('.chip')) {
-  chip.addEventListener('click', () => {
-    state.cat = chip.dataset.category === state.cat ? 'all' : chip.dataset.category;
-    render();
-    if (state.cat !== 'all') $('controls').scrollIntoView({ block: 'start' });
-  });
+  const shown = list.slice(0, state.shown);
+  $('rows').innerHTML = shown.map(row).join('');
+  $('rows').hidden = !shown.length;
+  $('empty').hidden = shown.length > 0;
+  $('empty-reset').hidden = !filtered;
+  const rest = list.length - shown.length;
+  $('more').hidden = rest <= 0;
+  $('more').textContent = `Show ${Math.min(rest, PAGE)} more of ${rest}`;
+  writeHash();
 }
-grid.addEventListener('click', (ev) => {
-  const more = ev.target.closest('[data-open]');
-  if (more) { state.open.add(more.dataset.open); render(); return; }
-  const less = ev.target.closest('[data-close]');
-  if (less) { state.open.delete(less.dataset.close); render(); $(less.dataset.close)?.scrollIntoView({ block: 'start' }); return; }
-  const lang = ev.target.closest('[data-lang]');
-  if (lang) { state.lang = lang.dataset.lang; $('lang').value = state.lang; render(); }
+
+// ---- wiring ---------------------------------------------------------------
+
+function sync() { $('q').value = state.q; $('sort').value = state.sort; }
+function set(patch) { Object.assign(state, patch, { shown: PAGE }); render(); }
+function toList() { const y = $('controls').offsetTop; if (scrollY > y) scrollTo({ top: y }); }
+
+readHash(); sync();
+
+$('q').addEventListener('input', (e) => set({ q: e.target.value }));
+$('sort').addEventListener('change', (e) => set({ sort: e.target.value }));
+$('cat-select').addEventListener('change', (e) => set({ cat: e.target.value }));
+$('lang-select').addEventListener('change', (e) => set({ lang: e.target.value }));
+$('cats').addEventListener('click', (e) => { const b = e.target.closest('[data-cat]'); if (b) { set({ cat: b.dataset.cat }); toList(); } });
+$('langs').addEventListener('click', (e) => { const b = e.target.closest('[data-lang-facet]'); if (b) { set({ lang: b.dataset.langFacet }); toList(); } });
+$('rows').addEventListener('click', (e) => { const b = e.target.closest('[data-lang]'); if (b) { set({ lang: b.dataset.lang }); toList(); } });
+$('more').addEventListener('click', () => { state.shown += PAGE; render(); });
+for (const id of ['reset', 'empty-reset']) $(id)?.addEventListener('click', () => { set({ q: '', cat: 'all', lang: 'all' }); sync(); });
+addEventListener('hashchange', () => { readHash(); sync(); render(); });
+addEventListener('keydown', (e) => {
+  if (e.key === '/' && document.activeElement?.tagName !== 'INPUT') { e.preventDefault(); $('q').focus(); }
 });
-$('clear')?.addEventListener('click', () => {
-  Object.assign(state, { q: '', cat: 'all', lang: 'all', sort: 'stars', open: new Set() });
-  $('q').value = ''; $('sort').value = 'stars'; $('lang').value = 'all';
-  render();
-});
-window.addEventListener('hashchange', () => { readHash(); $('q').value = state.q; $('sort').value = state.sort; $('lang').value = state.lang; render(); });
 render();
 
-// --- theme -----------------------------------------------------------------
-// Follows the system until the visitor picks one: Auto -> Light -> Dark.
+// ---- proof panel: one real line at a time ----------------------------------
+
+const reel = data.reel;
+const panel = $('panel-body');
+const dots = $('dots');
+let at = 0;
+let timer = null;
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function paint(i) {
+  const e = reel[i];
+  const p = e.proof;
+  $('panel-repo').textContent = e.fullName;
+  $('panel-repo').href = e.url;
+  $('panel-stars').textContent = e.stars != null ? `★ ${e.stars.toLocaleString('en-US')}` : '';
+  $('panel-file').textContent = p.path;
+  $('panel-line').textContent = p.line;
+  $('panel-src').innerHTML = marked(p.text);
+  $('panel-open').href = p.url;
+  $('panel-kind').textContent = `Counts because it ${p.label ?? 'calls Jev'}.`;
+  $('panel-what').textContent = e.description ?? '';
+  for (const [n, d] of [...dots.children].entries()) d.setAttribute('aria-current', String(n === i));
+}
+
+function go(i, animate = true) {
+  at = (i + reel.length) % reel.length;
+  if (!animate || still) { paint(at); return; }
+  panel.classList.add('swap');
+  setTimeout(() => { paint(at); panel.classList.remove('swap'); }, 220);
+}
+
+function play() { if (!still) timer = setInterval(() => go(at + 1), 4200); }
+function pause() { clearInterval(timer); timer = null; }
+
+dots.innerHTML = reel.map((e, i) => `<button type="button" aria-label="Show ${esc(e.fullName)}"></button>`).join('');
+dots.addEventListener('click', (e) => { const i = [...dots.children].indexOf(e.target); if (i >= 0) { pause(); go(i); } });
+$('panel').addEventListener('mouseenter', pause);
+$('panel').addEventListener('mouseleave', () => { if (!timer) play(); });
+$('panel').addEventListener('focusin', pause);
+go(0, false);
+play();
+
+// ---- theme: system until chosen; Auto -> Light -> Dark ---------------------
+
 const themeBtn = $('theme');
-const LABELS = { light: '☀ Light', dark: '☾ Dark' };
-function paintThemeButton() {
-  const chosen = document.documentElement.dataset.theme;
-  themeBtn.textContent = chosen ? LABELS[chosen] : '◐ Auto';
-  themeBtn.title = chosen ? `Theme: ${chosen}. Click to change.` : 'Theme follows your system. Click to override.';
+function paintTheme() {
+  const t = document.documentElement.dataset.theme;
+  themeBtn.textContent = t === 'light' ? 'Light' : t === 'dark' ? 'Dark' : 'Auto';
+  themeBtn.title = t ? `Theme: ${t}. Click to change.` : 'Theme follows your system. Click to change.';
 }
 themeBtn.addEventListener('click', () => {
-  const chosen = document.documentElement.dataset.theme;
-  const next = !chosen ? 'light' : chosen === 'light' ? 'dark' : null;
+  const t = document.documentElement.dataset.theme;
+  const next = !t ? 'light' : t === 'light' ? 'dark' : null;
   try {
     if (next) { localStorage.setItem('theme', next); document.documentElement.dataset.theme = next; }
     else { localStorage.removeItem('theme'); delete document.documentElement.dataset.theme; }
   } catch {}
-  paintThemeButton();
+  paintTheme();
 });
-paintThemeButton();
+paintTheme();
