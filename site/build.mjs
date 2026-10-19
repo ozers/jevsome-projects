@@ -87,13 +87,17 @@ function page(index, css, js) {
 <body>
 <header class="bar">
   <div class="wrap">
-    <a class="logo" href="${SITE_URL}"><span class="tick">✓</span>jevsome</a>
+    <a class="logo" href="${SITE_URL}"><span class="tick" aria-hidden="true">✓</span>jevsome</a>
     <nav>
-      <a class="hide-sm" href="#how">How it works</a>
-      <a class="hide-sm" href="projects.json">JSON</a>
-      <a href="${REPO_URL}">GitHub</a>
-      <button class="theme" id="theme" type="button">Auto</button>
-      <a class="submit" href="${REPO_URL}/issues/new">Submit<span class="hide-sm"> a project</span></a>
+      <a class="navlink hide-sm" href="#how">How it works</a>
+      <a class="navlink hide-sm" href="projects.json">JSON</a>
+      <a class="navlink" href="${REPO_URL}">GitHub</a>
+      <button class="icon-btn" id="theme" type="button" aria-label="Theme">
+        <svg class="i-auto" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v16" /><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+        <svg class="i-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <a class="btn" href="${REPO_URL}/issues/new">Submit<span class="hide-sm">a project</span></a>
     </nav>
   </div>
 </header>
@@ -120,32 +124,32 @@ function page(index, css, js) {
     </figure>
   </section>
 
-  <div class="controls" id="controls">
-    <div class="wrap">
-      <label class="search">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Search by name, description or topic   ( / )" aria-label="Search projects" autocomplete="off">
-      </label>
-      <select id="cat-select" class="only-narrow" aria-label="Section">${catOptions}</select>
-      <select id="lang-select" class="only-narrow" aria-label="Language">${langOptions}</select>
-      <select id="sort" aria-label="Sort">
-        <option value="stars">Most stars</option>
-        <option value="updated">Recently updated</option>
-        <option value="newest">Newest</option>
-        <option value="name">Name</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="wrap body">
+  <div class="directory"><div class="wrap body">
     <aside class="rail" aria-label="Filters">
       <h2>Sections</h2>
       <ul id="cats"></ul>
       <h2>Language</h2>
       <ul id="langs"></ul>
     </aside>
-    <section aria-live="polite">
-      <div class="list-head"><h2 id="list-title">All projects</h2><span class="count" id="count"></span></div>
+    <section>
+      <div class="controls" id="controls">
+        <label class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Search projects" aria-label="Search projects" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <select id="cat-select" class="only-narrow" aria-label="Section">${catOptions}</select>
+        <select id="lang-select" class="only-narrow" aria-label="Language">${langOptions}</select>
+        <label class="sort"><span>Sort</span>
+          <select id="sort" aria-label="Sort">
+            <option value="stars">Most stars</option>
+            <option value="updated">Recently updated</option>
+            <option value="newest">Newest</option>
+            <option value="name">Name</option>
+          </select>
+        </label>
+      </div>
+      <div class="list-head" aria-live="polite"><h2 id="list-title">All projects</h2><span class="count" id="count"></span></div>
       <p class="rule" id="rule" hidden></p>
       <ul class="rows" id="rows"></ul>
       <div class="empty" id="empty" hidden>
@@ -155,7 +159,7 @@ function page(index, css, js) {
       <button class="more" id="more" type="button" hidden></button>
       <noscript>${noscript}</noscript>
     </section>
-  </div>
+  </div></div>
 
   <section class="how" id="how">
     <div class="wrap">

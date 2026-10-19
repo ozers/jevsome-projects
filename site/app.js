@@ -129,7 +129,7 @@ function render() {
 
 function sync() { $('q').value = state.q; $('sort').value = state.sort; }
 function set(patch) { Object.assign(state, patch, { shown: PAGE }); render(); }
-function toList() { const y = $('controls').offsetTop; if (scrollY > y) scrollTo({ top: y }); }
+function toList() { const y = $('controls').getBoundingClientRect().top + scrollY - 12; if (scrollY > y) scrollTo({ top: y }); }
 
 readHash(); sync();
 
@@ -194,9 +194,11 @@ play();
 
 const themeBtn = $('theme');
 function paintTheme() {
-  const t = document.documentElement.dataset.theme;
-  themeBtn.textContent = t === 'light' ? 'Light' : t === 'dark' ? 'Dark' : 'Auto';
-  themeBtn.title = t ? `Theme: ${t}. Click to change.` : 'Theme follows your system. Click to change.';
+  const t = document.documentElement.dataset.theme || 'auto';
+  themeBtn.dataset.mode = t;
+  const label = t === 'auto' ? 'Theme: follows your system' : `Theme: ${t}`;
+  themeBtn.title = `${label}. Click to change.`;
+  themeBtn.setAttribute('aria-label', label);
 }
 themeBtn.addEventListener('click', () => {
   const t = document.documentElement.dataset.theme;
