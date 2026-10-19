@@ -4,6 +4,8 @@
 // Jev and still does not belong in a project directory, and a two-day-old
 // weekend experiment should not sit next to a maintained library.
 
+import { TESTY } from './evidence.mjs';
+
 const PERSONAL_CONFIG = /^(\.?dotfiles|dot-?files|my-?configs?|configs?|nvim|neovim|vimrc|zsh|zshrc|bashrc|emacs\.d|home-?manager|nix-?config|machine-?setup|workstation|setup|env)$/i;
 const CONFIG_TOPICS = new Set(['dotfiles', 'dotfile', 'nixos-config', 'home-manager', 'personal-config']);
 const PERSONAL_NOTES = /^(notes?|scratch|tmp|test|testing|playground-?\d*|untitled|new-?repo)$/i;
@@ -106,6 +108,9 @@ export const VERIFIED_MIN_STARS = 5;
 export const OFFICIAL_OWNERS = new Set(['typesafe-ai']);
 
 const STRONG_KINDS = new Set(['api-call', 'sdk-import', 'sdk-call', 'dependency']);
+// A dependency or an import holds wherever it sits; a call in a test, a
+// script or an example only shows that the project knows the URL.
+const HOLDS_ANYWHERE = new Set(['sdk-import', 'dependency']);
 const CODE_FILE = /\.(ts|tsx|js|jsx|mjs|cjs|py|rs|go|rb|ex|exs|php|swift|kt|java|cs|zig|dart|lua|sh|scala|clj|ml|hs|c|cc|cpp|m|mm)$/i;
 const FAKE_PATH = /mock|fixture|stub|snapshot|cassette|__tests__\/fixtures/i;
 
@@ -113,6 +118,7 @@ export function strongProof(proof) {
   if (!proof || proof.strength < 3) return false;
   const path = proof.source?.path ?? proof.path ?? '';
   if (FAKE_PATH.test(path)) return false;
+  if (TESTY.test(path) && !HOLDS_ANYWHERE.has(proof.kind)) return false;
   if (STRONG_KINDS.has(proof.kind)) return true;
   // A pinned route inside source code is a real integration; the same string
   // in a JSON or TOML file is usually a catalogue or a config template.

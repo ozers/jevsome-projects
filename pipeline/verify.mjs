@@ -7,7 +7,7 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { readRepo } from './lib/tarball.mjs';
-import { rate } from './lib/evidence.mjs';
+import { TESTY, rate } from './lib/evidence.mjs';
 
 const REPOS = new URL('../data/repos.json', import.meta.url);
 const VERIFIED = new URL('../data/verified.json', import.meta.url);
@@ -15,11 +15,18 @@ const CONCURRENCY = 6;
 
 // What the line has to be doing. Ordered strongest first.
 const LINE_RULES = [
-  // The endpoint as a value: a whole string literal, a config assignment, or
-  // a curl target. A sentence that mentions the URL is not a call.
+  // The endpoint as a value, host included: a whole string literal, or a curl
+  // target. The bare path "/v1/systemone" is not enough — servers that
+  // *imitate* the API declare exactly that route.
   { kind: 'api-call', strength: 3,
-    re: /(["'`])https?:\/\/api\.typesafe\.ai[^"'`\s]*\1|(["'`])\/v1\/systemone\2|^[^"'`]*(?:^|[\s:=])https?:\/\/api\.typesafe\.ai[^"'`\s]*\s*$|\bcurl\b.*https?:\/\/api\.typesafe\.ai/i,
+    re: /(["'`])https?:\/\/api\.typesafe\.ai[^"'`\s]*\1|\bcurl\b.*https?:\/\/api\.typesafe\.ai/i,
     label: 'calls the System One endpoint' },
+  // Unquoted, only where unquoted values are the norm. In source code a bare
+  // URL on its own line is a docstring.
+  { kind: 'api-call', strength: 3,
+    re: /^[^"'`]*(?:^|[\s:=])https?:\/\/api\.typesafe\.ai[^"'`\s]*\s*$/i,
+    paths: /\.(ya?ml|toml|ini|cfg|conf|properties|env(\.\w+)?|sh)$|(^|\/)(\.env[\w.]*|Dockerfile)$/i,
+    label: 'configures the System One endpoint' },
   { kind: 'sdk-import', strength: 3,
     re: /^\s*(?:from\s+typesafe(?:_sdk|_ai|\.\w+)?\s+import\b|import\s+(?:typesafe(?:_sdk|_ai)?\b|.*\bfrom\s+['"][^'"]*typesafe)|const\s+.*=\s*require\(['"][^'"]*typesafe|use\s+typesafe(?:_\w+)?::|using\s+TypeSafe\.|import\s+['"]@typesafe-ai\/)/i,
     label: 'imports a TypeSafe SDK' },
@@ -89,7 +96,7 @@ const CODE_LIKE = /=|\bawait\b|\breturn\b|\byield\b|^\s*[\w$.\[\]()]+\.\w+\s*\(/
 // Bumped whenever the rules above change. Proofs made under an older version
 // — including those carried forward from the published index — are checked
 // again, so tightening a rule actually removes what it no longer accepts.
-export const RULES_VERSION = 3;
+export const RULES_VERSION = 4;
 
 export function inspect(text, path) {
   const manifest = MANIFEST_DEPS[path] ?? (/(Cargo|pyproject|composer|pubspec)\.(toml|json|yaml)$|requirements\.txt$|go\.mod$|Gemfile$|mix\.exs$/.test(path) ? MANIFEST_DEPS.generic : null);
@@ -112,6 +119,7 @@ export function inspect(text, path) {
     const line = lines[i];
     if (line.length > 500) continue;
     for (const rule of LINE_RULES) {
+      if (rule.paths && !rule.paths.test(path)) continue;
       const m = line.match(rule.re);
       if (!m) continue;
       if (rule.kind === 'sdk-call' && (DEFINITION.test(line) || !corroborated || !CODE_LIKE.test(line))) continue;
@@ -175,7 +183,6 @@ const announces = (r) => ANNOUNCES.test(r.name ?? '') || ANNOUNCES.test(r.descri
 // The best line in the repository: a real call over a pinned name, product
 // code over tests and fixtures, a short path over a deep one.
 const KIND_RANK = { 'api-call': 0, 'sdk-import': 1, 'sdk-call': 2, dependency: 3, 'model-route': 4, 'api-key': 5 };
-const TESTY = /(^|\/)(tests?|__tests__|spec|testdata|fixtures?|examples?|docs?|scripts)\/|[._-](test|spec|smoke)\.[a-z]+$|smoke/i;
 
 async function scanRepo(repo) {
   let archive;

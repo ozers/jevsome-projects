@@ -25,3 +25,8 @@ export function score(evidence = []) {
   rated.sort((a, b) => b.strength - a.strength);
   return { evidence: rated, strength: rated[0]?.strength ?? 0 };
 }
+
+// Tests, fixtures, examples, docs and scripts: where a project talks *about*
+// the API as often as it calls it. Shared by verify (ranking) and quality
+// (the front-page bar).
+export const TESTY = /(^|\/)(tests?|__tests__|spec|testdata|fixtures?|examples?|docs?|scripts)\/|[._-](test|spec|smoke)\.[a-z]+$|smoke/i;
