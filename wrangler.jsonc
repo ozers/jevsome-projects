@@ -3,7 +3,7 @@
   // Static site only: no Worker script, the assets binding serves dist/.
   "name": "jevsome",
   // Not a secret; lets CI deploy with only CLOUDFLARE_API_TOKEN.
-  "account_id": "61d4d7f0703b734f94746dbdce1d02cb",
+  "account_id": "a4ee308d4399160d398927117b6f7684",
   "compatibility_date": "2026-09-18",
   "assets": {
     "directory": "./dist",
