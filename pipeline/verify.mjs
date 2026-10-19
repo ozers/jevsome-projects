@@ -204,7 +204,14 @@ export async function verify() {
   if (retries.length) console.log(`verify: repo-scoped search for ${retries.length} self-described Jev repos`);
   let recovered = 0;
   let i = 0;
+  // Wall-clock budget. Without a PAT one code search can cost a ten-minute
+  // penalty, and a job that hits its timeout commits nothing at all.
+  const deadline = Date.now() + Number(process.env.SECOND_CHANCE_MINUTES ?? 8) * 60_000;
   for (const [key, repo] of retries) {
+    if (Date.now() > deadline && !submitted(repo)) {
+      console.log(`verify: search budget spent after ${i} repos; the rest wait for tomorrow`);
+      break;
+    }
     const proof = await secondChance(repo);
     const today = new Date().toISOString().slice(0, 10);
     if (proof?.strength >= 3) recovered++;

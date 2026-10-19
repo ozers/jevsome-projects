@@ -65,6 +65,7 @@ jobs:
           # Repo-scoped searches per day for self-described Jev repos with no
           # proof yet; reported repos are always searched on top of this.
           SECOND_CHANCE: '25'
+          SECOND_CHANCE_MINUTES: '8'
         run: node pipeline/run.mjs ${{ inputs.stages }}
       # Stages, in order: discover enrich verify classify health build
 
