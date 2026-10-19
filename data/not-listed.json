@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T08:53:44.741Z",
+  "generatedAt": "2026-10-19T10:18:09.302Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -463,6 +463,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "codaaiteam/jev-mcp",
+      "reason": "only a api-call mention (README.md), no call in code"
+    },
+    {
       "repo": "Codeenk/sev",
       "reason": "only a api-call mention (docs/model-cards/kev-0.6b-qwen3.md), no call in code"
     },
@@ -801,6 +805,10 @@
     {
       "repo": "githubnext/localjev",
       "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "giuliosmall/pg_typesafe",
+      "reason": "only a model-route mention (README.md), no call in code"
     },
     {
       "repo": "glowbom/glowbom-oss",
@@ -1227,6 +1235,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "lianghsun/jev-tmmluplus-eval",
+      "reason": "only a model-route mention (README.md), no call in code"
+    },
+    {
       "repo": "libingzheren/Jev-Mem",
       "reason": "no line of code found that calls Jev"
     },
@@ -1237,6 +1249,10 @@
     {
       "repo": "lioensky/VCPToolBox",
       "reason": "only a api-call mention (docs/jev调用文档.md), no call in code"
+    },
+    {
+      "repo": "lirantal/discoprint",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "liuyanghejerry/Clausura",
@@ -1268,6 +1284,10 @@
     },
     {
       "repo": "logicrw/awesome-jev-projects",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "lookski/openjev",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1763,6 +1783,10 @@
       "reason": "only a api-key mention (README.md), no call in code"
     },
     {
+      "repo": "reiswaffel78/jev-agent-toolkit",
+      "reason": "only a sdk-import mention (README.md), no call in code"
+    },
+    {
       "repo": "reticlehq/reticle",
       "reason": "no line of code found that calls Jev"
     },
@@ -1797,6 +1821,10 @@
     {
       "repo": "rowboatlabs/rowboat",
       "reason": "only a model-route mention (apps/harbor/Dockerfile), no call in code"
+    },
+    {
+      "repo": "royalpinto007/jev-msw",
+      "reason": "only a sdk-import mention (README.md), no call in code"
     },
     {
       "repo": "rshade/go-decide",
@@ -1936,6 +1964,10 @@
     },
     {
       "repo": "simota/tenbin",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "SimpleJev/JevAny",
       "reason": "no line of code found that calls Jev"
     },
     {
