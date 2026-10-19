@@ -13,6 +13,8 @@ function token() {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+export class SearchPenalty extends Error {}
+
 let searchGate = Promise.resolve();
 // Serialise search calls and space them out; code search allows 10/min.
 function limitedSearch(fn, spacingMs) {
@@ -55,11 +57,13 @@ export async function gh(path, { params, method = 'GET', accept } = {}) {
       // A 1s Retry-After while the quota window is still open burns the
       // attempt. When the quota is empty, wait for the reset instead.
       const waitMs = Math.max(retryAfterMs, remaining === '0' ? resetMs : 0) || resetMs || 2 ** attempt * 2000;
-      // One ~12 minute penalty per call. A second one means this query is
-      // stuck, and five of them used up the whole job before discovery finished.
-      if (waitMs >= 60_000 && longWaits >= 1) {
-        console.warn(`  rate limited on ${url.pathname}, not waiting again`);
-        break;
+      // Search is a bonus, never the critical path: verification reads
+      // archives and discovery has cheaper sources. A long search penalty is
+      // skipped, not served — waiting it out is what kept the job from ever
+      // finishing. Other endpoints still wait, once.
+      const isSearch = url.pathname.startsWith('/search/');
+      if (waitMs >= 60_000 && (isSearch || longWaits >= 1)) {
+        throw new SearchPenalty(`${url.pathname}: ${Math.ceil(waitMs / 1000)}s penalty, skipped`);
       }
       if (waitMs >= 60_000) longWaits++;
       const capped = Math.min(waitMs, 15 * 60 * 1000);

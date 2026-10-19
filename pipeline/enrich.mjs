@@ -1,73 +1,16 @@
-// Stage 2 — enrichment and evidence.
-// Every candidate gets repo metadata plus a verdict on whether it *actually*
-// uses Jev. Naming the model in a README is not enough: an entry is only
-// "verified" when we can point at a file that calls the API, pins the model
-// route, or declares a TypeSafe SDK dependency.
+// Stage 2 — enrichment.
+// Metadata for every candidate, without spending the REST quota: one GraphQL
+// request per hundred repositories, and READMEs from raw.githubusercontent.
+// Whether a repository actually calls Jev is decided later, in verify, by
+// reading its files; this stage only records what discovery already saw.
 
 import { readFile, writeFile } from 'node:fs/promises';
-import { gh, getReadme, getRepo, graphql } from './lib/github.mjs';
+import { graphql } from './lib/github.mjs';
 
 const CANDIDATES = new URL('../data/candidates.json', import.meta.url);
 const REPOS = new URL('../data/repos.json', import.meta.url);
-
-// Dependency names published by TypeSafe or by community SDK authors.
-const SDK_PACKAGES = [
-  '@typesafe-ai/sdk', 'typesafe-ai', 'typesafe-sdk', 'typesafe_sdk', 'typesafe-rs',
-  'typesafe-ai-rails', 'ruby_llm-typesafe', 's1-rs', 'jev', 'jev-sdk',
-];
-const MANIFESTS = [
-  'package.json', 'requirements.txt', 'pyproject.toml', 'Cargo.toml', 'go.mod',
-  'Gemfile', 'mix.exs', 'composer.json', 'pubspec.yaml', 'build.gradle', 'Package.swift',
-];
-// Ordered strongest first; the first match decides the headline evidence.
-const TEXT_SIGNALS = [
-  { re: /api\.typesafe\.ai\/v1\/systemone/i, kind: 'endpoint', strength: 3, label: 'calls POST /v1/systemone' },
-  { re: /jev-latest|jev-1|models?\/jev\b/i, kind: 'model-route', strength: 3, label: 'pins a jev model route' },
-  { re: /TYPESAFE_API_KEY/, kind: 'api-key', strength: 2, label: 'reads TYPESAFE_API_KEY' },
-  { re: /system\s?one|systemone/i, kind: 'system-one', strength: 1, label: 'mentions System One' },
-];
-
-const strongestOf = (evidence) => evidence.reduce((m, e) => Math.max(m, e.strength ?? 0), 0);
-
-function scanText(text, source) {
-  const out = [];
-  if (!text) return out;
-  for (const sig of TEXT_SIGNALS) {
-    if (sig.re.test(text)) out.push({ kind: sig.kind, strength: sig.strength, label: sig.label, source });
-  }
-  return out;
-}
-
-async function rootFiles(fullName, branch) {
-  const tree = await gh(`/repos/${fullName}/git/trees/${encodeURIComponent(branch)}`).catch(() => null);
-  return new Set((tree?.tree ?? []).filter((n) => n.type === 'blob').map((n) => n.path));
-}
-
-async function rawFile(fullName, path) {
-  return gh(`/repos/${fullName}/contents/${path}`, { accept: 'application/vnd.github.raw' })
-    .catch(() => null);
-}
-
-async function manifestEvidence(repo) {
-  const files = await rootFiles(repo.full_name, repo.default_branch ?? 'main');
-  const out = [];
-  for (const name of MANIFESTS) {
-    if (!files.has(name)) continue;
-    const body = await rawFile(repo.full_name, name);
-    if (typeof body !== 'string') continue;
-    const hit = SDK_PACKAGES.find((pkg) => body.includes(pkg));
-    if (hit) {
-      out.push({
-        kind: 'dependency',
-        strength: 3,
-        label: `declares ${hit}`,
-        source: { path: name, url: `${repo.html_url}/blob/${repo.default_branch}/${name}` },
-      });
-      break;
-    }
-  }
-  return out;
-}
+const README_NAMES = ['README.md', 'readme.md', 'Readme.md', 'README.MD', 'README.rst', 'README'];
+const CONCURRENCY = 8;
 
 function firstParagraph(readme) {
   if (!readme) return null;
@@ -82,9 +25,6 @@ function firstParagraph(readme) {
   return para ? para.replace(/\s+/g, ' ').slice(0, 320) : null;
 }
 
-// Stars, last push, archive state, licence and description change daily;
-// evidence does not. New names get the full treatment below; every known repo
-// gets its metadata refreshed here, a hundred per request.
 const SAFE_NAME = /^[A-Za-z0-9_.-]+$/;
 
 async function refreshMetadata(store) {
@@ -97,7 +37,7 @@ async function refreshMetadata(store) {
       return SAFE_NAME.test(owner) && SAFE_NAME.test(name);
     });
     const fields = `nameWithOwner url homepageUrl description stargazerCount forkCount
-      isFork isArchived createdAt pushedAt primaryLanguage { name } licenseInfo { spdxId }
+      isFork isArchived createdAt pushedAt diskUsage primaryLanguage { name } licenseInfo { spdxId }
       repositoryTopics(first: 20) { nodes { topic { name } } }`;
     const query = `{ ${batch.map((k, n) => {
       const [owner, name] = store[k].fullName.split('/');
@@ -128,6 +68,7 @@ async function refreshMetadata(store) {
         archived: r.isArchived,
         createdAt: r.createdAt,
         pushedAt: r.pushedAt,
+        diskUsage: r.diskUsage,
         metadataAt: new Date().toISOString().slice(0, 10),
       });
       refreshed++;
@@ -136,91 +77,68 @@ async function refreshMetadata(store) {
   console.log(`enrich: metadata refreshed for ${refreshed} repos${vanished ? `, ${vanished} gone` : ''}`);
 }
 
+async function readmeOf(fullName) {
+  for (const name of README_NAMES) {
+    try {
+      const res = await fetch(`https://raw.githubusercontent.com/${fullName}/HEAD/${name}`, {
+        signal: AbortSignal.timeout(15_000),
+      });
+      if (res.ok) return await res.text();
+    } catch {}
+  }
+  return null;
+}
+
+// Code-search hits from discovery are file-level evidence to check first.
+function discoveredEvidence(cand) {
+  return (cand.sources ?? [])
+    .filter((s) => s.path && (s.weight ?? 0) >= 2)
+    .map((s) => ({
+      kind: s.signal,
+      strength: s.weight,
+      label: `code search matched ${s.signal} in ${s.path}`,
+      source: { path: s.path, url: s.url },
+    }));
+}
+
 export async function enrich() {
   const candidates = JSON.parse(await readFile(CANDIDATES, 'utf8'));
   let store = {};
   try { store = JSON.parse(await readFile(REPOS, 'utf8')); } catch {}
 
-  const keys = Object.keys(candidates);
-  console.log(`enrich: ${keys.length} candidates`);
-  let i = 0;
-
-  for (const key of keys) {
-    const cand = candidates[key];
-    i++;
-    // Already enriched on a previous run. The daily job only fetches new names.
-    if (store[key]?.pushedAt && !store[key].gone) continue;
-    let repo;
-    try {
-      repo = await getRepo(cand.fullName);
-    } catch (err) {
-      console.warn(`  ${cand.fullName} -> skipped: ${err.message}`);
-      continue;
-    }
-    if (!repo) {
-      store[key] = { ...store[key], fullName: cand.fullName, gone: true };
-      continue;
-    }
-
-    // Code-search hits from discovery are already file-level proof.
-    let evidence;
-    try {
-    evidence = cand.sources
-      .filter((s) => s.path && (s.weight ?? 0) >= 2)
-      .map((s) => ({
-        kind: s.signal,
-        strength: s.weight,
-        label: `code search matched ${s.signal} in ${s.path}`,
-        source: { path: s.path, url: s.url },
-      }));
-
-    const readme = await getReadme(repo.full_name);
-    if (strongestOf(evidence) < 3) {
-      evidence.push(...scanText(readme, { path: 'README', url: `${repo.html_url}#readme` }));
-    }
-    if (strongestOf(evidence) < 3) {
-      evidence.push(...(await manifestEvidence(repo)));
-    }
-
-    store[key] = {
-      fullName: repo.full_name,
-      name: repo.name,
-      owner: repo.owner.login,
-      url: repo.html_url,
-      homepage: repo.homepage || null,
-      description: repo.description || null,
-      readmeSummary: firstParagraph(readme),
-      language: repo.language || null,
-      license: repo.license?.spdx_id && repo.license.spdx_id !== 'NOASSERTION' ? repo.license.spdx_id : null,
-      stars: repo.stargazers_count,
-      forks: repo.forks_count,
-      openIssues: repo.open_issues_count,
-      topics: repo.topics ?? [],
-      isFork: repo.fork,
-      archived: repo.archived,
-      createdAt: repo.created_at,
-      pushedAt: repo.pushed_at,
-      firstSeen: cand.firstSeen,
-      lastSeen: cand.lastSeen,
-      evidence: evidence.sort((a, b) => b.strength - a.strength).slice(0, 4),
-      evidenceStrength: strongestOf(evidence),
-      gone: false,
-    };
-    } catch (err) {
-      console.warn(`  ${cand.fullName} -> skipped: ${err.message}`);
-      continue;
-    }
-
-    if (i % 25 === 0) {
-      console.log(`  ${i}/${keys.length}`);
-      await writeFile(REPOS, JSON.stringify(store, null, 2) + '\n');
-    }
+  // New names get a stub; evidence from discovery is merged for everyone.
+  const fresh = [];
+  for (const [key, cand] of Object.entries(candidates)) {
+    const entry = (store[key] ??= { fullName: cand.fullName, firstSeen: cand.firstSeen, evidence: [] });
+    entry.lastSeen = cand.lastSeen;
+    const known = new Set((entry.evidence ?? []).map((e) => e.source?.path));
+    for (const ev of discoveredEvidence(cand)) if (!known.has(ev.source.path)) (entry.evidence ??= []).push(ev);
+    if (!entry.pushedAt && !entry.gone) fresh.push(key);
   }
+  console.log(`enrich: ${Object.keys(store).length} known, ${fresh.length} new`);
 
   await refreshMetadata(store);
+
+  // READMEs only for new names; a summary does not need refreshing daily.
+  for (let i = 0; i < fresh.length; i += CONCURRENCY) {
+    await Promise.all(fresh.slice(i, i + CONCURRENCY).map(async (key) => {
+      const entry = store[key];
+      if (entry.gone || !entry.pushedAt) return;
+      entry.readmeSummary = firstParagraph(await readmeOf(entry.fullName));
+      entry.name ??= entry.fullName.split('/')[1];
+      entry.owner ??= entry.fullName.split('/')[0];
+    }));
+  }
+
+  for (const entry of Object.values(store)) {
+    if (!entry.fullName) continue;
+    entry.name = entry.fullName.split('/')[1];
+    entry.owner = entry.fullName.split('/')[0];
+    entry.evidenceStrength = (entry.evidence ?? []).reduce((m, e) => Math.max(m, e.strength ?? 0), 0);
+  }
+
   await writeFile(REPOS, JSON.stringify(store, null, 2) + '\n');
-  const verified = Object.values(store).filter((r) => r.evidenceStrength >= 3).length;
-  console.log(`enrich: ${Object.keys(store).length} repos, ${verified} with hard evidence`);
+  console.log(`enrich: done`);
   return store;
 }
 

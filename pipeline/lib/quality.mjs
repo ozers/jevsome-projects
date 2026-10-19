@@ -11,7 +11,7 @@ const PERSONAL_NOTES = /^(notes?|scratch|tmp|test|testing|playground-?\d*|untitl
 const DOCS_REPO = /(^|[-_])(docs?|documentation|handbook|awesome)$/i;
 // Models that copy Jev's interface without calling Jev. They say so in the
 // first line of their own description.
-const REIMPLEMENTATION = /\b(re-?implementation|re-?creation|reimplements|recreates)\b|\bjev-?(style|like)\b|\bopen[- ]?jev\b/i;
+const REIMPLEMENTATION = /\b(re-?implementation|re-?creation|reimplements|recreates)\b|\bjev-?(style|like|compatible)\b|\bopen[- ]?jev\b|\blike (typesafe'?s )?jev\b|\bopen[- ]weight\b|\balternative to (typesafe|jev)\b|\b(laya|opendecision)\b/i;
 const CATALOGUE = /database of (ai )?models|model (catalog|catalogue|directory)|list of (ai )?models|documentation (site|for)/i;
 
 // A data file describing the model is not a call to it. Model catalogues,

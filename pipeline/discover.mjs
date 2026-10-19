@@ -5,7 +5,7 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { parse } from 'yaml';
-import { searchCode, searchRepos } from './lib/github.mjs';
+import { SearchPenalty, searchCode, searchRepos } from './lib/github.mjs';
 
 // Strong signals: the code itself talks to the API.
 export const CODE_QUERIES = [
@@ -86,9 +86,13 @@ async function pagedCode(store) {
     try {
       found = await drainCode(store, q, signal, weight, MAX_PAGES);
     } catch (err) {
-      // Code search is the strongest signal but not the only one; a token
-      // without access should still leave a usable run behind.
+      // Code search is a bonus. Once GitHub hands out a penalty, every
+      // further query earns another one; stop asking until tomorrow.
       console.warn(`  code ${q} -> skipped: ${err.message}`);
+      if (err instanceof SearchPenalty) {
+        console.warn('  code search penalised; remaining code queries skipped this run');
+        return;
+      }
       continue;
     }
     console.log(`  code ${q} -> ${found} hits`);
@@ -143,12 +147,68 @@ async function addSubmissions(store) {
   if (list.length) console.log(`  submissions -> ${list.length}`);
 }
 
+// New repositories, by creation date. Repository search is lenient (30 a
+// minute, no long penalties) and the ecosystem grows by new repos, so a
+// rolling window catches what code search's first page never reaches.
+const RECENT_DAYS = Number(process.env.RECENT_DAYS ?? 7);
+const RECENT_TERMS = ['jev', 'typesafe', 'systemone', '"system one"'];
+
+async function recentRepos(store) {
+  const since = new Date(Date.now() - RECENT_DAYS * 86_400_000).toISOString().slice(0, 10);
+  for (const term of RECENT_TERMS) {
+    const q = `${term} created:>=${since}`;
+    let found = 0;
+    try {
+      for (let page = 1; page <= 3; page++) {
+        const res = await searchRepos(q, { page, sort: 'created' });
+        const items = res?.items ?? [];
+        for (const item of items) touch(store, item.full_name, { signal: 'recent', weight: 1, url: item.html_url, query: q });
+        found += items.length;
+        if (items.length < 100) break;
+      }
+      console.log(`  recent ${q} -> ${found}`);
+    } catch (err) {
+      console.warn(`  recent ${q} -> skipped: ${err.message}`);
+    }
+  }
+}
+
+// npm packages tagged for Jev, with their source repositories. Outside
+// GitHub's limits entirely.
+const NPM_KEYWORDS = ['jev', 'typesafe-ai', 'system-one', 'systemone'];
+
+async function npmPackages(store) {
+  for (const kw of NPM_KEYWORDS) {
+    try {
+      const url = `https://registry.npmjs.org/-/v1/search?size=250&text=${encodeURIComponent(`keywords:${kw}`)}`;
+      const res = await fetch(url, { signal: AbortSignal.timeout(20_000) }).then((r) => r.json());
+      let n = 0;
+      for (const o of res.objects ?? []) {
+        const m = (o.package.links?.repository ?? '').match(/github\.com\/([\w.-]+\/[\w.-]+?)(?:\.git)?(?:[/#?]|$)/);
+        if (!m) continue;
+        touch(store, m[1], { signal: 'npm', weight: 1, url: `https://www.npmjs.com/package/${o.package.name}`, query: `keywords:${kw}` });
+        n++;
+      }
+      console.log(`  npm keywords:${kw} -> ${n}`);
+    } catch (err) {
+      console.warn(`  npm keywords:${kw} -> skipped: ${err.message}`);
+    }
+  }
+}
+
 export async function discover() {
   const store = await loadExisting();
   const before = Object.keys(store).length;
   console.log(`discover: starting from ${before} known candidates`);
   await addSubmissions(store);
-  await pagedCode(store);
+  await recentRepos(store);
+  await npmPackages(store);
+  await save(store);
+  // Code search is off unless asked for. It is the one GitHub API that hands
+  // out ten-minute penalties, and everything it finds, the archive scan of a
+  // repository found by cheaper means finds too.
+  if (process.env.CODE_SEARCH === '1') await pagedCode(store);
+  else console.log('  code search off (CODE_SEARCH=1 to enable)');
   await pagedRepos(store);
   const after = Object.keys(store).length;
   console.log(`discover: ${after} candidates (+${after - before} new)`);

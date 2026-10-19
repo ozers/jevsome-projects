@@ -58,14 +58,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Optional: with no key, classification falls back to keyword rules.
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
-          # First page only. The published index is carried forward, so this
-          # picks up new repos without re-crawling thousands of hits.
+          # No code search: it is the only API that penalises, and archive
+          # scans of repos found through cheap sources cover what it found.
+          # What this job spends: ~25 GraphQL requests for metadata and ~20
+          # repository searches. Archives come from codeload, outside the API.
+          CODE_SEARCH: '0'
           MAX_PAGES: '1'
-          FACET_PAGES: '0'
-          # Repo-scoped searches per day for self-described Jev repos with no
-          # proof yet; reported repos are always searched on top of this.
-          SECOND_CHANCE: '25'
-          SECOND_CHANCE_MINUTES: '8'
+          # Archive scans per day for repos with no proof yet, by priority:
+          # reported, then self-described Jev repos by stars.
+          SECOND_CHANCE: '300'
+          SECOND_CHANCE_MINUTES: '12'
         run: node pipeline/run.mjs ${{ inputs.stages }}
       # Stages, in order: discover enrich verify classify health build
 
