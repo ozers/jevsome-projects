@@ -16,7 +16,7 @@ const DOCS_REPO = /(^|[-_])(docs?|documentation|handbook|awesome)$/i;
 // or exist to run another model (Laya being the common one). Projects that
 // offer Laya *beside* a real Jev call are not caught: "Jev or Laya" is a
 // choice of backend, not a clone.
-const REIMPLEMENTATION = /\b(re-?implementation|re-?creation|reimplements|recreates)\b|\bjev-?(style|like|compatible)\b|\bopen[- ]?jev\b|\blike (typesafe'?s )?jev\b|\bopen[- ]weight\b|\b(drop-in |open[- ]source |local )?alternative to (typesafe|jev)\b|\bbeating (typesafe )?jev\b|\bopen system[- ]?one\b|\bjev( ai)? alternative\b|\b(run|serve|runtime for|sdk for|server for|interface for) laya\b|\bfor laya\b|\bbut using laya\b/i;
+const REIMPLEMENTATION = /\b(re-?implementation|re-?creation|reimplements|recreates)\b|\bjev-?(style|like|compatible)\b|\bopen[- ]?jev\b|\blike (typesafe'?s )?jev\b|\bopen[- ]weight\b|\b(drop-in |open[- ]source |local )?alternative to (typesafe|jev)\b|\bbeating (typesafe )?jev\b|\bopen system[- ]?one\b|\b(drop-in )?replacement for (typesafe|jev)\b|\breplaces (typesafe'?s )?jev\b|\bimposter\b|\bmimics (typesafe|jev)\b|\bjev( ai)? alternative\b|\b(run|serve|runtime for|sdk for|server for|interface for) laya\b|\bfor laya\b|\bbut using laya\b/i;
 // A repo named after another decision model, unless it names Jev as well.
 const OTHER_MODEL_NAME = /(^|[-_])(laya|ollaya|kev|decider)([-_]|$)/i;
 const CATALOGUE = /database of (ai )?models|model (catalog|catalogue|directory)|list of (ai )?models|documentation (site|for)/i;

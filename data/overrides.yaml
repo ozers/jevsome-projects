@@ -73,3 +73,5 @@ romanslack/jev-drone:
   category: game-sim
 sorrycc/typesafe-snake:
   category: game-sim
+dzhng/jevgrep:
+  category: agent-tooling

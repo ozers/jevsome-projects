@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T11:57:23.537Z",
+  "generatedAt": "2026-10-19T16:23:48.893Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -4357,6 +4357,10 @@
       "reason": "repository no longer reachable"
     },
     {
+      "repo": "iammrduncan/inference-benchmarks",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
+    },
+    {
       "repo": "IgorGanapolsky/trading",
       "reason": "repository no longer reachable"
     },
@@ -4399,6 +4403,10 @@
     {
       "repo": "lewis4x4/Circle-of-Life",
       "reason": "repository no longer reachable"
+    },
+    {
+      "repo": "logan-markewich/jeff",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
     },
     {
       "repo": "lookski/openjev",

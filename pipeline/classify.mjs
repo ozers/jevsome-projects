@@ -30,13 +30,24 @@ const RULES = [
 // support; it is an integration, not a project built on Jev.
 const PROVIDER_PATH = /(^|\/)(providers?|partners?|integrations?|adapters?|plugins?|models)\//i;
 
+// Jev went public on 2026-09-16; a repository older than that which keeps its
+// Jev code under providers/ is an existing product that added support.
+const JEV_PUBLIC = '2026-09-15';
+
 function heuristicCategory(repo) {
   const paths = (repo.evidence ?? []).map((e) => e.source?.path ?? '').join(' ');
-  if (PROVIDER_PATH.test(paths) && repo.stars >= 200) return 'integration';
+  const predates = (repo.createdAt ?? '') < JEV_PUBLIC;
+  if (predates && PROVIDER_PATH.test(paths) && repo.stars >= 200) return 'integration';
 
   const hay = [repo.name, repo.description, repo.readmeSummary, (repo.topics ?? []).join(' ')]
     .filter(Boolean).join(' ');
-  for (const [re, category] of RULES) if (re.test(hay)) return category;
+  for (const [re, category] of RULES) {
+    if (!re.test(hay)) continue;
+    // A repository built for Jev is never an "integration" of it, whatever
+    // it calls itself; that bucket is for products that predate the model.
+    if (category === 'integration' && !predates) continue;
+    return category;
+  }
   return 'app';
 }
 
