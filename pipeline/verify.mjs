@@ -15,7 +15,10 @@ const CONCURRENCY = 6;
 
 // What the line has to be doing. Ordered strongest first.
 const LINE_RULES = [
-  { kind: 'api-call', strength: 3, re: /https?:\/\/api\.typesafe\.ai|["'`\/]v1\/systemone/i,
+  // The endpoint as a value: a whole string literal, a config assignment, or
+  // a curl target. A sentence that mentions the URL is not a call.
+  { kind: 'api-call', strength: 3,
+    re: /(["'`])https?:\/\/api\.typesafe\.ai[^"'`\s]*\1|(["'`])\/v1\/systemone\2|^[^"'`]*(?:^|[\s:=])https?:\/\/api\.typesafe\.ai[^"'`\s]*\s*$|\bcurl\b.*https?:\/\/api\.typesafe\.ai/i,
     label: 'calls the System One endpoint' },
   { kind: 'sdk-import', strength: 3,
     re: /^\s*(?:from\s+typesafe(?:_sdk|_ai|\.\w+)?\s+import\b|import\s+(?:typesafe(?:_sdk|_ai)?\b|.*\bfrom\s+['"][^'"]*typesafe)|const\s+.*=\s*require\(['"][^'"]*typesafe|use\s+typesafe(?:_\w+)?::|using\s+TypeSafe\.|import\s+['"]@typesafe-ai\/)/i,
@@ -80,6 +83,13 @@ const CORROBORATES = /api\.typesafe\.ai|@typesafe-ai\/|\bfrom\s+typesafe|\bimpor
 // A definition is not a call.
 const DEFINITION = /^\s*(?:export\s+)?(?:def|function|fn|func|public|private|protected|static|async\s+(?:def|function)|(?:async\s+)?[A-Za-z_]\w*\s*\([^)]*\)\s*(?::\s*[\w<>\[\], .|]+)?\s*\{)/;
 const JS_FAMILY = /\.(m?[jt]sx?|cjs|vue|svelte|astro)$/i;
+// A statement, not a sentence: assignment, await, return, or a call chain.
+const CODE_LIKE = /=|\bawait\b|\breturn\b|\byield\b|^\s*[\w$.\[\]()]+\.\w+\s*\(/;
+
+// Bumped whenever the rules above change. Proofs made under an older version
+// — including those carried forward from the published index — are checked
+// again, so tightening a rule actually removes what it no longer accepts.
+export const RULES_VERSION = 3;
 
 export function inspect(text, path) {
   const manifest = MANIFEST_DEPS[path] ?? (/(Cargo|pyproject|composer|pubspec)\.(toml|json|yaml)$|requirements\.txt$|go\.mod$|Gemfile$|mix\.exs$/.test(path) ? MANIFEST_DEPS.generic : null);
@@ -104,7 +114,7 @@ export function inspect(text, path) {
     for (const rule of LINE_RULES) {
       const m = line.match(rule.re);
       if (!m) continue;
-      if (rule.kind === 'sdk-call' && (DEFINITION.test(line) || !corroborated)) continue;
+      if (rule.kind === 'sdk-call' && (DEFINITION.test(line) || !corroborated || !CODE_LIKE.test(line))) continue;
       if (rule.kind === 'model-route' && m[1] === '`' && !JS_FAMILY.test(path)) continue;
       // A comment mentioning the endpoint is documentation, not a call.
       const strength = COMMENT.test(line) ? Math.min(rule.strength, 2) : rule.strength;
@@ -143,6 +153,7 @@ export async function verifyOne(repo) {
         ...found,
         source: { path: item.source.path, url: found.line ? `${url.replace(/#.*$/, '')}#L${found.line}` : url },
         verifiedAt: new Date().toISOString().slice(0, 10),
+        rules: RULES_VERSION,
       };
     }
     if (found) weaker = { ...found, source: { path: item.source.path, url } };
@@ -190,6 +201,7 @@ async function scanRepo(repo) {
     kind: best.kind, strength: best.strength, label: best.label, line: best.line, text: best.text,
     source: { path: best.path, url: best.line ? `${url}#L${best.line}` : url },
     verifiedAt: new Date().toISOString().slice(0, 10),
+    rules: RULES_VERSION,
     via: 'archive',
   };
 }
@@ -199,14 +211,25 @@ export async function verify() {
   let store = {};
   try { store = JSON.parse(await readFile(VERIFIED, 'utf8')); } catch {}
 
+  // Check again when the repo changed, or when its proof predates the current
+  // rules. The old proof's own file goes first in line: re-reading it is one
+  // raw fetch, and usually it still holds.
+  const stale = (key) => store[key]?.proof && store[key].proof.rules !== RULES_VERSION;
   const todo = Object.entries(repos).filter(([key, r]) =>
-    !r.gone && (r.evidence ?? []).length && store[key]?.pushedAt !== r.pushedAt);
-  console.log(`verify: ${todo.length} entries to check`);
+    !r.gone && ((r.evidence ?? []).length || stale(key))
+    && (store[key]?.pushedAt !== r.pushedAt || stale(key)));
+  console.log(`verify: ${todo.length} entries to check (${todo.filter(([k]) => stale(k)).length} under older rules)`);
 
   for (let i = 0; i < todo.length; i += CONCURRENCY) {
     const batch = todo.slice(i, i + CONCURRENCY);
-    const results = await Promise.all(batch.map(([, repo]) => verifyOne(repo)));
+    const results = await Promise.all(batch.map(([key, repo]) => {
+      const previous = store[key]?.proof?.source;
+      const evidence = [...(previous?.url ? [{ source: previous }] : []), ...(repo.evidence ?? [])];
+      return verifyOne({ evidence });
+    }));
     batch.forEach(([key, repo], n) => {
+      // A proof that no longer holds clears searchedAt, so the archive scan
+      // below gets a chance at the repository today.
       store[key] = { pushedAt: repo.pushedAt, proof: results[n] };
     });
     if (i % 120 === 0) {
