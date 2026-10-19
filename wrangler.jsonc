@@ -2,6 +2,8 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   // Static site only: no Worker script, the assets binding serves dist/.
   "name": "jevsome",
+  // Not a secret; lets CI deploy with only CLOUDFLARE_API_TOKEN.
+  "account_id": "61d4d7f0703b734f94746dbdce1d02cb",
   "compatibility_date": "2026-09-18",
   "assets": {
     "directory": "./dist",

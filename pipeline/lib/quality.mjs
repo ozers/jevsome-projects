@@ -57,7 +57,7 @@ export function disqualify(repo) {
 // Jev went public on 2026-09-16. A repository created after that date and
 // calling the API exists *because of* Jev; one created years earlier does not.
 const JEV_PUBLIC = '2026-09-15';
-const ANNOUNCES_JEV = /\bjev\b|typesafe|system[- ]one/i;
+const ANNOUNCES_JEV = /\bjev|typesafe|system[- ]one/i;
 
 // Proof that a project calls Jev does not say how much Jev matters to it.
 // A framework where Jev is the hundredth provider and a game that cannot run

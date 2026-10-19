@@ -99,3 +99,23 @@ export const getRepo = (fullName) => gh(`/repos/${fullName}`);
 export const getReadme = (fullName) =>
   gh(`/repos/${fullName}/readme`, { accept: 'application/vnd.github.raw' })
     .catch(() => null);
+
+// GraphQL: one request answers a hundred repositories. Used for the daily
+// metadata pass, which the REST API would turn into fifteen hundred calls.
+export async function graphql(query) {
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const res = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: { authorization: `Bearer ${token()}`, 'content-type': 'application/json', 'user-agent': UA },
+      body: JSON.stringify({ query }),
+    });
+    if (res.status >= 500 || res.status === 403 || res.status === 429) {
+      await sleep(2 ** attempt * 3000);
+      continue;
+    }
+    if (!res.ok) throw new Error(`GitHub GraphQL ${res.status}: ${await res.text()}`);
+    // Partial data is normal: a renamed or deleted repo errors on its own alias.
+    return (await res.json()).data ?? {};
+  }
+  throw new Error('GitHub GraphQL: gave up after retries');
+}

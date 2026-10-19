@@ -69,8 +69,10 @@ written to `data/not-listed.json` under `excluded`, with its reason:
 
 **A public GitHub repository:** you usually do not need to do anything. The daily
 refresh searches GitHub code and repositories, and a repo with any of the evidence
-above is picked up within a day. If yours was missed, open an issue with the link
-and the file that proves the call — that is a pipeline bug worth fixing.
+above is usually picked up within a day or two. If yours was missed, open an issue
+with the link and the file that proves the call. It goes into
+[`data/submissions.yaml`](data/submissions.yaml) and through the same verification
+as everything else — a submission guarantees a look, not a listing.
 
 **Anything else** (hosted demo, playground, service with no public repo): add it to
 [`data/seeds.yaml`](data/seeds.yaml).
@@ -147,7 +149,7 @@ The daily job needs two secrets:
 | `GH_PAT` | yes | GitHub code search. The token Actions provides cannot query that endpoint, so discovery falls back to repository search without it. A fine-grained PAT with public read access is enough. |
 | `TYPESAFE_API_KEY` | no | Classification by Jev. Without it the keyword rules run and the README says so. |
 
-| `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` | for deploys | Publishes `dist/` to Cloudflare Workers at jevsome.ozersubasi.com. Without them the job refreshes the data and skips the deploy. |
+| `CLOUDFLARE_API_TOKEN` | for deploys | Publishes `dist/` to Cloudflare Workers at jevsome.ozersubasi.com. Without them the job refreshes the data and skips the deploy. |
 
 `data/index.json` is the published index. `data/candidates.json` is committed as
 well, because a cancelled run never writes the Actions cache and the next day

@@ -36,6 +36,11 @@ for (const b of blocklist.repos ?? []) {
   if (!b?.reason) errors.push(`blocklist.yaml ${b?.repo}: every exclusion needs a reason`);
 }
 
+const submissions = await yaml('data/submissions.yaml');
+for (const sub of submissions.repos ?? []) {
+  if (!/^[\w.-]+\/[\w.-]+$/.test(sub?.repo ?? '')) errors.push(`submissions.yaml: "${sub?.repo}" must be owner/repo`);
+}
+
 if (errors.length) {
   console.error('validate: failed\n' + errors.map((e) => `  - ${e}`).join('\n'));
   process.exit(1);

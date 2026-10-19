@@ -5,7 +5,7 @@
 // route, or declares a TypeSafe SDK dependency.
 
 import { readFile, writeFile } from 'node:fs/promises';
-import { gh, getReadme, getRepo } from './lib/github.mjs';
+import { gh, getReadme, getRepo, graphql } from './lib/github.mjs';
 
 const CANDIDATES = new URL('../data/candidates.json', import.meta.url);
 const REPOS = new URL('../data/repos.json', import.meta.url);
@@ -80,6 +80,60 @@ function firstParagraph(readme) {
     .replace(/[`*_>]/g, '');
   const para = body.split(/\n\s*\n/).map((s) => s.trim()).find((s) => s.length > 40 && !s.startsWith('|'));
   return para ? para.replace(/\s+/g, ' ').slice(0, 320) : null;
+}
+
+// Stars, last push, archive state, licence and description change daily;
+// evidence does not. New names get the full treatment below; every known repo
+// gets its metadata refreshed here, a hundred per request.
+const SAFE_NAME = /^[A-Za-z0-9_.-]+$/;
+
+async function refreshMetadata(store) {
+  const keys = Object.keys(store).filter((k) => !store[k].gone && store[k].fullName);
+  let refreshed = 0;
+  let vanished = 0;
+  for (let i = 0; i < keys.length; i += 100) {
+    const batch = keys.slice(i, i + 100).filter((k) => {
+      const [owner, name] = store[k].fullName.split('/');
+      return SAFE_NAME.test(owner) && SAFE_NAME.test(name);
+    });
+    const fields = `nameWithOwner url homepageUrl description stargazerCount forkCount
+      isFork isArchived createdAt pushedAt primaryLanguage { name } licenseInfo { spdxId }
+      repositoryTopics(first: 20) { nodes { topic { name } } }`;
+    const query = `{ ${batch.map((k, n) => {
+      const [owner, name] = store[k].fullName.split('/');
+      return `r${n}: repository(owner: "${owner}", name: "${name}") { ${fields} }`;
+    }).join('\n')} }`;
+
+    let data;
+    try { data = await graphql(query); } catch (err) {
+      console.warn(`  metadata batch ${i / 100 + 1}: ${err.message}`);
+      continue;
+    }
+    batch.forEach((k, n) => {
+      const r = data[`r${n}`];
+      if (r === undefined) return;          // batch failed for this alias; keep what we had
+      if (r === null) { store[k].gone = true; vanished++; return; }
+      const spdx = r.licenseInfo?.spdxId;
+      Object.assign(store[k], {
+        fullName: r.nameWithOwner,
+        url: r.url,
+        homepage: r.homepageUrl || null,
+        description: r.description || null,
+        language: r.primaryLanguage?.name ?? null,
+        license: spdx && spdx !== 'NOASSERTION' ? spdx : null,
+        stars: r.stargazerCount,
+        forks: r.forkCount,
+        topics: r.repositoryTopics.nodes.map((t) => t.topic.name),
+        isFork: r.isFork,
+        archived: r.isArchived,
+        createdAt: r.createdAt,
+        pushedAt: r.pushedAt,
+        metadataAt: new Date().toISOString().slice(0, 10),
+      });
+      refreshed++;
+    });
+  }
+  console.log(`enrich: metadata refreshed for ${refreshed} repos${vanished ? `, ${vanished} gone` : ''}`);
 }
 
 export async function enrich() {
@@ -163,6 +217,7 @@ export async function enrich() {
     }
   }
 
+  await refreshMetadata(store);
   await writeFile(REPOS, JSON.stringify(store, null, 2) + '\n');
   const verified = Object.values(store).filter((r) => r.evidenceStrength >= 3).length;
   console.log(`enrich: ${Object.keys(store).length} repos, ${verified} with hard evidence`);

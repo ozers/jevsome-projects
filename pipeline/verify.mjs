@@ -143,7 +143,7 @@ export async function verifyOne(repo) {
 // endpoint, the SDK imports and the API key alike.
 const SECOND_CHANCE_LIMIT = Number(process.env.SECOND_CHANCE ?? 600);
 const RETRY_AFTER_DAYS = 14;
-const ANNOUNCES = /\bjev\b|typesafe|system[- ]one/i;
+const ANNOUNCES = /\bjev|typesafe|system[- ]one/i;
 const announces = (r) => ANNOUNCES.test(r.name ?? '') || ANNOUNCES.test(r.description ?? '')
   || (r.topics ?? []).some((t) => ANNOUNCES.test(t));
 
@@ -182,11 +182,24 @@ export async function verify() {
   // repo-scoped search, strongest signals first. Each attempt is dated so a
   // daily run does not re-search the same silence forever.
   const cutoff = new Date(Date.now() - RETRY_AFTER_DAYS * 86_400_000).toISOString().slice(0, 10);
+  // Where a repo came from lives with the candidates, not the metadata.
+  let candidates = {};
+  try { candidates = JSON.parse(await readFile(new URL('../data/candidates.json', import.meta.url), 'utf8')); } catch {}
+  const reportedKeys = new Set(Object.entries(candidates)
+    .filter(([, c]) => (c.sources ?? []).some((x) => x.signal === 'submitted'))
+    .map(([k]) => k));
+  const submitted = (r) => reportedKeys.has((r.fullName ?? '').toLowerCase());
   const retries = Object.entries(repos)
     .filter(([key, r]) => !r.gone && !(store[key]?.proof?.strength >= 3))
-    .filter(([key, r]) => announces(r) && !(store[key]?.searchedAt > cutoff))
+    .filter(([key, r]) => (announces(r) || submitted(r)) && !(store[key]?.searchedAt > cutoff));
+  // Reported repositories first and outside the daily budget; then the rest
+  // by stars, as many as the budget allows.
+  const reported = retries.filter(([, r]) => submitted(r));
+  const rest = retries.filter(([, r]) => !submitted(r))
     .sort((a, b) => b[1].stars - a[1].stars)
     .slice(0, SECOND_CHANCE_LIMIT);
+  retries.length = 0;
+  retries.push(...reported, ...rest);
 
   if (retries.length) console.log(`verify: repo-scoped search for ${retries.length} self-described Jev repos`);
   let recovered = 0;

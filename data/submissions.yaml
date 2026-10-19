@@ -1,0 +1,7 @@
+# Repositories reported by people, usually through an issue, that search did
+# not find. Being here only guarantees a look: each one goes through the same
+# line-by-line verification as everything else, with a repo-scoped search so a
+# moved file does not sink a real project. It earns no other exemption.
+repos:
+  - repo: xinyao27/jevonian
+    issue: 1

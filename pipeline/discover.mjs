@@ -4,6 +4,7 @@
 // endpoint or an official SDK is proof the project actually calls Jev.
 
 import { readFile, writeFile } from 'node:fs/promises';
+import { parse } from 'yaml';
 import { searchCode, searchRepos } from './lib/github.mjs';
 
 // Strong signals: the code itself talks to the API.
@@ -128,10 +129,25 @@ async function pagedRepos(store) {
   }
 }
 
+const SUBMISSIONS = new URL('../data/submissions.yaml', import.meta.url);
+
+// Reported repositories enter as candidates like any search hit. The signal
+// is recorded so verification knows to give them a scoped search.
+async function addSubmissions(store) {
+  let list = [];
+  try { list = parse(await readFile(SUBMISSIONS, 'utf8'))?.repos ?? []; } catch {}
+  for (const s of list) {
+    if (!s?.repo) continue;
+    touch(store, s.repo, { signal: 'submitted', weight: 1, url: `https://github.com/${s.repo}`, query: `issue #${s.issue ?? '?'}` });
+  }
+  if (list.length) console.log(`  submissions -> ${list.length}`);
+}
+
 export async function discover() {
   const store = await loadExisting();
   const before = Object.keys(store).length;
   console.log(`discover: starting from ${before} known candidates`);
+  await addSubmissions(store);
   await pagedCode(store);
   await pagedRepos(store);
   const after = Object.keys(store).length;
