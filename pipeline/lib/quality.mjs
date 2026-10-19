@@ -9,9 +9,14 @@ const CONFIG_TOPICS = new Set(['dotfiles', 'dotfile', 'nixos-config', 'home-mana
 const PERSONAL_NOTES = /^(notes?|scratch|tmp|test|testing|playground-?\d*|untitled|new-?repo)$/i;
 
 const DOCS_REPO = /(^|[-_])(docs?|documentation|handbook|awesome)$/i;
-// Models that copy Jev's interface without calling Jev. They say so in the
-// first line of their own description.
-const REIMPLEMENTATION = /\b(re-?implementation|re-?creation|reimplements|recreates)\b|\bjev-?(style|like|compatible)\b|\bopen[- ]?jev\b|\blike (typesafe'?s )?jev\b|\bopen[- ]weight\b|\balternative to (typesafe|jev)\b|\b(laya|opendecision)\b/i;
+// Models that copy Jev's interface without calling Jev. They say so in their
+// own description — "alternative to Jev", "Jev-compatible", "open-weight" —
+// or exist to run another model (Laya being the common one). Projects that
+// offer Laya *beside* a real Jev call are not caught: "Jev or Laya" is a
+// choice of backend, not a clone.
+const REIMPLEMENTATION = /\b(re-?implementation|re-?creation|reimplements|recreates)\b|\bjev-?(style|like|compatible)\b|\bopen[- ]?jev\b|\blike (typesafe'?s )?jev\b|\bopen[- ]weight\b|\b(drop-in |open[- ]source |local )?alternative to (typesafe|jev)\b|\bbeating (typesafe )?jev\b|\bjev( ai)? alternative\b|\b(run|serve|runtime for|sdk for|server for|interface for) laya\b|\bfor laya\b|\bbut using laya\b/i;
+// A repo named after another decision model, unless it names Jev as well.
+const OTHER_MODEL_NAME = /(^|[-_])(laya|ollaya|kev|decider)([-_]|$)/i;
 const CATALOGUE = /database of (ai )?models|model (catalog|catalogue|directory)|list of (ai )?models|documentation (site|for)/i;
 
 // A data file describing the model is not a call to it. Model catalogues,
@@ -48,7 +53,9 @@ export function disqualify(repo) {
   if (CATALOGUE.test(repo.description ?? '')) {
     return 'catalogue of models, not a project built on Jev';
   }
-  if (REIMPLEMENTATION.test(`${repo.name} ${repo.description ?? ''}`)) {
+  const named = repo.name ?? '';
+  if (REIMPLEMENTATION.test(`${named} ${repo.description ?? ''}`)
+    || (OTHER_MODEL_NAME.test(named) && !/jev/i.test(`${named} ${repo.description ?? ''}`))) {
     return 'reimplementation of the Jev interface on another model; does not call Jev';
   }
   return null;
