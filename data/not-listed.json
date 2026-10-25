@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T08:59:31.268Z",
+  "generatedAt": "2026-10-25T09:15:45.623Z",
   "note": "Search hits that are not on the list, and why. \"unverified\" means no line of code calling Jev was found — most were never Jev projects, some are and will be picked up. \"excluded\" means proof was found but the repository is not a project built on Jev.",
   "unverified": [
     {
@@ -27,6 +27,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "a-kamarzardi/VLM-JEV",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "abhash-er/jev-grpo",
       "reason": "no line of code found that calls Jev"
     },
@@ -37,6 +41,30 @@
     {
       "repo": "abrar225/Abrar-Akhunji",
       "reason": "only a sdk-import mention (src/content/blogs/2026-09-25-typesafe-ai-jev-non-autoregressive-decision-engine.md), no call in code"
+    },
+    {
+      "repo": "ACRT-EVAL/trpc-421-cr1",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "ACRT-EVAL/trpc-421-cr10",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "ACRT-EVAL/trpc-421-cr11",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "ACRT-EVAL/trpc-421-cr5",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "ACRT-EVAL/trpc-421-cr7",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "ACRT-EVAL/trpc-421-cr9",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "ACRT-EVAL/trpc-55-cr1",
@@ -271,6 +299,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "aosus/mirsad",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "apache/airflow",
       "reason": "only a model-route mention (providers/common/ai/docs/decision_models.rst), no call in code"
     },
@@ -288,6 +320,10 @@
     },
     {
       "repo": "asaidaoui-netria/xift",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "AshfaaqMohammed/mini-jev",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -347,6 +383,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "balys/extract-index",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "barclayd/prolix",
       "reason": "no line of code found that calls Jev"
     },
@@ -389,10 +429,6 @@
     {
       "repo": "Blyuger/jev-benchmark",
       "reason": "no line of code found that calls Jev"
-    },
-    {
-      "repo": "botassembly/thinkthen",
-      "reason": "only a api-call mention (spec/decide.md), no call in code"
     },
     {
       "repo": "brida-ai/reflex",
@@ -443,10 +479,6 @@
       "reason": "only a model-route mention (docs/typesafe.md), no call in code"
     },
     {
-      "repo": "chain8back/jevnog",
-      "reason": "no line of code found that calls Jev"
-    },
-    {
       "repo": "Charlyhno-eng/jev-document-classification",
       "reason": "no line of code found that calls Jev"
     },
@@ -464,6 +496,10 @@
     },
     {
       "repo": "ckddns0-create/-_GJ_Tools",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "clabc0808/jevkit_poc_violence",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -559,6 +595,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "DarkCipher0x/ServerManagement",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "DarkStark9000/system-one-bench",
       "reason": "no line of code found that calls Jev"
     },
@@ -635,6 +675,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "Dlmily/minimind-jev-dlmily",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "DLYZZT/pi-desktop",
       "reason": "no line of code found that calls Jev"
     },
@@ -656,6 +700,10 @@
     },
     {
       "repo": "DreamBlooms/dohnuts.cpp",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "dsgdhtttt/--JEV-AI-",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -783,6 +831,14 @@
       "reason": "only a sdk-import mention (skills/agent-plugin-eval/SKILL.md), no call in code"
     },
     {
+      "repo": "farouqaldori/yapsketch",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "fartherWinter/jev-agent-pruning",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "fatwang2/awesome-jev",
       "reason": "no line of code found that calls Jev"
     },
@@ -823,6 +879,10 @@
       "reason": "only a sdk-import mention (pt-BR/developer-guides/llm-sdks-and-frameworks/jev.mdx), no call in code"
     },
     {
+      "repo": "Firefox2100/dsh-ai-providers",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "fla-sil/PyTorrent",
       "reason": "no line of code found that calls Jev"
     },
@@ -848,6 +908,14 @@
     },
     {
       "repo": "frederikvonsperling/sanity-plugin-jev-fields",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "fromaaage/vardr",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "fslit/orca-jev-system",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -915,6 +983,10 @@
       "reason": "only a sdk-import mention (docs/platforms/javascript/common/configuration/integrations/typesafe.mdx), no call in code"
     },
     {
+      "repo": "ghhjhjj111/JEV-AI-q",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "giladgd/semantic-golfer",
       "reason": "no line of code found that calls Jev"
     },
@@ -975,10 +1047,6 @@
       "reason": "only a api-call mention (docs/content/recipes/real-time/ai-columns-jev/javascript/worker.js), no call in code"
     },
     {
-      "repo": "harboryarn80/jevjm",
-      "reason": "no line of code found that calls Jev"
-    },
-    {
       "repo": "hardness1020/learn-agent-architecture",
       "reason": "no line of code found that calls Jev"
     },
@@ -988,6 +1056,10 @@
     },
     {
       "repo": "HarleyCoops/Math-To-Manim",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "Harshall25/jev-mcp-tool",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1255,6 +1327,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "jevicng-19/JEVIX-Supervision-Complet",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "JevilIRL/JevilIRLL",
       "reason": "no line of code found that calls Jev"
     },
@@ -1383,7 +1459,15 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "kanakOS01/jev-vs-gpt",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "karanb192/jev-architect",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "karvachiik-lgtm/jev58",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1468,6 +1552,14 @@
     },
     {
       "repo": "ksmarty/typesafe-openai-proxy",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "kunaldoliya90/jeve-be-copy",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "kunaldoliya90/jeve-fe-copy",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1579,6 +1671,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "lswdneil/pi_jev_desktop",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "lucasjinreal/Crane",
       "reason": "no line of code found that calls Jev"
     },
@@ -1633,6 +1729,14 @@
     {
       "repo": "majiayu000/claude-skill-registry-data",
       "reason": "only a sdk-import mention (quality/agent-plugin-eval/SKILL.md), no call in code"
+    },
+    {
+      "repo": "majid-sharif-soleimani/indeed-job-filter",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "majid-sharif-soleimani/linkedin-job-filter",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "malDuffin/typesafe-3d-chess",
@@ -1739,6 +1843,10 @@
       "reason": "only a api-call mention (jev/README.md), no call in code"
     },
     {
+      "repo": "mhshabbir/jev-claude-router",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "MichaelKinsy/pigpen",
       "reason": "only a sdk-call mention (components/pi-typesafe-api/README.md), no call in code"
     },
@@ -1779,6 +1887,14 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "mohameddhameem/systemone-decider",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "mohameddhameem/systemone-jev",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "mohan-cao/pi-extensions",
       "reason": "no line of code found that calls Jev"
     },
@@ -1812,6 +1928,10 @@
     },
     {
       "repo": "mplemay/rowx",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "Mr-CG-end/JevReflex",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1895,15 +2015,15 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "neasdw-eng/jev-resource-pack",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "NeelContractor/jev-train",
       "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "neko32/systemone_box_test",
-      "reason": "no line of code found that calls Jev"
-    },
-    {
-      "repo": "neonseal144/jevb",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -1960,6 +2080,10 @@
     },
     {
       "repo": "nononsense-ai/jev-image",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "nosial/FederationJevGuard",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -2183,6 +2307,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "rabecaps/jev-live-flow",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "RachitMittal247/Legal-Clause-Extraction",
       "reason": "no line of code found that calls Jev"
     },
@@ -2319,6 +2447,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "saembit/godot-jev-actions",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "Sai-hustler/college-event-moderator",
       "reason": "no line of code found that calls Jev"
     },
@@ -2355,6 +2487,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "sarath/krestel",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "sarvesh-astrophile/e2e-typesafe-fastapi-tanstack-starter",
       "reason": "no line of code found that calls Jev"
     },
@@ -2376,6 +2512,10 @@
     },
     {
       "repo": "senna-lang/omp-bonsai-system-one",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "Serverings/apk_gamevault_jevlin",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -2435,6 +2575,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "Shivam557/System-One-Model",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "shivendrasoni/vector-cache",
       "reason": "only a api-key mention (README.md), no call in code"
     },
@@ -2447,7 +2591,15 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "ShotaTanemura/system-one-model-play-switch-demo",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "ShuleHao/jev-study",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "siddiqui1910/siddiqui1910",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -2525,6 +2677,18 @@
     {
       "repo": "Sreehari05055/thesys-core",
       "reason": "only a dependency mention (requirements.txt), no call in code"
+    },
+    {
+      "repo": "SriGoli-0123/Jev-MIA",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "srinidhi2028/jevshield_project",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
+      "repo": "srivaishnavi2028/JevShield_project",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "stackql/stackql.io",
@@ -2947,6 +3111,10 @@
       "reason": "no line of code found that calls Jev"
     },
     {
+      "repo": "wssab314/systemone-mcp-core",
+      "reason": "no line of code found that calls Jev"
+    },
+    {
       "repo": "wzshiming/system-one-api-client",
       "reason": "no line of code found that calls Jev"
     },
@@ -2964,10 +3132,6 @@
     },
     {
       "repo": "xiangxinai/xiangxin-sdk-js",
-      "reason": "no line of code found that calls Jev"
-    },
-    {
-      "repo": "xiaoberber8-ai/jev_cookbook_learning",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -2989,6 +3153,10 @@
     {
       "repo": "xuzhougeng/wisp-science",
       "reason": "only a api-key mention (src-tauri/src/models.rs), no call in code"
+    },
+    {
+      "repo": "Yakvenalex/Habr-Jev-Agent",
+      "reason": "no line of code found that calls Jev"
     },
     {
       "repo": "yanng981/awesome-system-one",
@@ -3096,10 +3264,6 @@
     },
     {
       "repo": "Zuma206/typarse",
-      "reason": "no line of code found that calls Jev"
-    },
-    {
-      "repo": "zuosus/dsh-startlux-decision",
       "reason": "no line of code found that calls Jev"
     },
     {
@@ -3321,6 +3485,10 @@
       "reason": "repository no longer reachable"
     },
     {
+      "repo": "chain8back/jevnog",
+      "reason": "repository no longer reachable"
+    },
+    {
       "repo": "chenrui333/jev-docs",
       "reason": "documentation repository, not a project"
     },
@@ -3391,6 +3559,10 @@
     {
       "repo": "dmitry99540/Jev-Mem",
       "reason": "repository no longer reachable"
+    },
+    {
+      "repo": "dmonteroh/sys1_mcp",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
     },
     {
       "repo": "donnahughes06/quicksilver",
@@ -3549,6 +3721,10 @@
       "reason": "repository no longer reachable"
     },
     {
+      "repo": "harboryarn80/jevjm",
+      "reason": "repository no longer reachable"
+    },
+    {
       "repo": "harutogregory58/Jev-Mem",
       "reason": "repository no longer reachable"
     },
@@ -3610,6 +3786,10 @@
     },
     {
       "repo": "HusseinTeixeira814/jevmem",
+      "reason": "repository no longer reachable"
+    },
+    {
+      "repo": "hwj123hwj/jev-demo",
       "reason": "repository no longer reachable"
     },
     {
@@ -3791,10 +3971,6 @@
     {
       "repo": "KenjiKobayashi220/jevmem",
       "reason": "repository no longer reachable"
-    },
-    {
-      "repo": "KHAEntertainment/pi-jev2",
-      "reason": "unmodified fork"
     },
     {
       "repo": "khalidgreco02405/jev-social",
@@ -3981,6 +4157,10 @@
       "reason": "repository no longer reachable"
     },
     {
+      "repo": "murabcd/fev",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
+    },
+    {
       "repo": "mustafadeluca/building-with-typesafe-jev",
       "reason": "repository no longer reachable"
     },
@@ -4007,6 +4187,10 @@
     {
       "repo": "NandhaKishorM/laya",
       "reason": "reimplementation of the Jev interface on another model; does not call Jev"
+    },
+    {
+      "repo": "neonseal144/jevb",
+      "reason": "repository no longer reachable"
     },
     {
       "repo": "nereacastro6340/building-with-typesafe-jev",
@@ -4403,6 +4587,14 @@
     {
       "repo": "YutaDupont75922/Jev-Mem",
       "reason": "repository no longer reachable"
+    },
+    {
+      "repo": "zuosus/dsh-decision-engine",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
+    },
+    {
+      "repo": "zuosus/dsh-decision-engine",
+      "reason": "reimplementation of the Jev interface on another model; does not call Jev"
     }
   ]
 }
