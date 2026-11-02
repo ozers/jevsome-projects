@@ -75,6 +75,11 @@ function page(index, css, js) {
 <meta property="og:description" content="${entries.length} projects that provably call Jev. Each one shows you the line.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${SITE_URL}">
+<meta property="og:image" content="${SITE_URL}og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Jevsome: projects that provably run on Jev.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f2f4f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f1420" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232747c9'/><path d='M9 16.5l4.5 4.5L23 11.5' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
@@ -140,6 +145,9 @@ function page(index, css, js) {
         </label>
         <select id="cat-select" class="only-narrow" aria-label="Section">${catOptions}</select>
         <select id="lang-select" class="only-narrow" aria-label="Language">${langOptions}</select>
+      </div>
+      <div class="list-head">
+        <div aria-live="polite"><h2 id="list-title">All projects</h2><span class="count" id="count"></span></div>
         <label class="sort"><span>Sort</span>
           <select id="sort" aria-label="Sort">
             <option value="stars">Most stars</option>
@@ -149,7 +157,6 @@ function page(index, css, js) {
           </select>
         </label>
       </div>
-      <div class="list-head" aria-live="polite"><h2 id="list-title">All projects</h2><span class="count" id="count"></span></div>
       <p class="rule" id="rule" hidden></p>
       <ul class="rows" id="rows"></ul>
       <div class="empty" id="empty" hidden>
@@ -188,6 +195,28 @@ function page(index, css, js) {
 `;
 }
 
+function notFound(css) {
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Page not found: Jevsome</title>
+<style>${css}</style>
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<main class="wrap lost">
+  <h1>This page doesn't exist.</h1>
+  <p>The directory lives on one page.</p>
+  <a class="btn" href="/">Browse projects</a>
+</main>
+</body>
+</html>
+`;
+}
+
 const index = JSON.parse(await readFile(at('data/index.json'), 'utf8'));
 const [css, js] = await Promise.all([
   readFile(at('site/styles.css'), 'utf8'),
@@ -196,5 +225,11 @@ const [css, js] = await Promise.all([
 
 await mkdir(at('dist'), { recursive: true });
 await writeFile(at('dist/index.html'), page(index, css, js));
+await writeFile(at('dist/404.html'), notFound(css));
+await writeFile(at('dist/robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
+await writeFile(at('dist/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${SITE_URL}</loc><lastmod>${index.generatedAt.slice(0, 10)}</lastmod></url></urlset>
+`);
+await cp(at('assets/social-preview.png'), at('dist/og.png'));
 await cp(at('data/index.json'), at('dist/projects.json'));
 console.log(`site: dist/index.html with ${index.entries.filter((e) => e.tier === 'verified').length} verified entries`);

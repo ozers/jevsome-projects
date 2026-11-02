@@ -164,7 +164,8 @@ export async function verifyOne(repo) {
         rules: RULES_VERSION,
       };
     }
-    if (found) weaker = { ...found, source: { path: item.source.path, url } };
+    // Stamped too: a claim checked under today's rules needs no re-reading tomorrow.
+    if (found) weaker = { ...found, rules: RULES_VERSION, source: { path: item.source.path, url } };
   }
   return weaker;
 }
